@@ -8,7 +8,7 @@ function HeaderComponent() {
     <>
       <Container>
         <Header >
-          <img src={Logo} alt="fone" width="200" height='200'
+          <img src={Logo} alt="fone" width="200" height='280'
             style={{ borderRadius: '50px', marginBottom: '10px' }}
           />
           <ContainerLinks>
