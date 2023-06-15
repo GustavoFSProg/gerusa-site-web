@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
 
 
@@ -22,6 +22,7 @@ export const ImgSlide = styled.img`
 
  @media screen and (max-width: 800px){
   width: 100%; 
+ height: 30%;
 
  }
 
@@ -35,12 +36,13 @@ export const Menu = styled.div`
           @media screen and (max-width: 800px){
             display: flex;
    width: 90%;
-          height: 250px;
+          height: 60px;
           border: 1px solid black;
            border-radius: 10px;
           align-items: center;
           justify-content: center;
           margin-bottom: 20px;
+          /* margin-top: -50px; */
           }
 
 

@@ -11,7 +11,6 @@ function HeaderComponent() {
           <img src={Logo} alt="fone" width="200" height='200'
             style={{ borderRadius: '50px', marginBottom: '10px' }}
           />
-
           <ContainerLinks>
             <span >
               HOME

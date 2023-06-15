@@ -9,6 +9,11 @@ export const Container = styled.div`
   justify-content: center;
 
 
+  @media screen and (max-width: 820px){
+  height: 30vh;
+
+  }
+
 `
 
 export const Header = styled.div`
@@ -17,13 +22,13 @@ export const Header = styled.div`
   height: 195px;
   align-items: center;
   justify-content: left;
-  /* color: white; */
   font-size: 0.9rem;
   padding-left: 33px;
 
   @media screen and (max-width: 820px){
   justify-content: center;
-  padding-left: 0px;
+  /* margin-top: -100px; */
+
 
 
   }
