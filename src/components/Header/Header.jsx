@@ -8,8 +8,8 @@ function HeaderComponent() {
     <>
       <Container>
         <Header >
-          <img src={Logo} alt="fone" width="200" height='280'
-            style={{ borderRadius: '50px', marginBottom: '10px' }}
+          <img src={Logo} alt="fone" width="200" height='200'
+            style={{ borderRadius: '50px', marginBottom: '10px', zIndex: '-100' }}
           />
           <ContainerLinks>
             <span >
