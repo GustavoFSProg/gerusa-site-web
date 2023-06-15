@@ -12,3 +12,37 @@ export const Container = styled.div`
 
 
 `
+
+
+export const ImgSlide = styled.img` 
+
+ width: 40%; 
+ height: 50%;
+ margin-bottom: 300px;
+
+ @media screen and (max-width: 800px){
+  width: 100%; 
+
+ }
+
+`
+
+
+export const Menu = styled.div`
+  display: none;
+  
+
+          @media screen and (max-width: 800px){
+            display: flex;
+   width: 90%;
+          height: 250px;
+          border: 1px solid black;
+           border-radius: 10px;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          }
+
+
+
+`
