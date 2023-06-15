@@ -14,14 +14,19 @@ export const Container = styled.div`
 export const Header = styled.div`
   display: flex;
   width: 100vw;
-  height: 185px;
+  height: 235px;
   align-items: center;
   justify-content: left;
   /* color: white; */
   font-size: 0.9rem;
   padding-left: 33px;
 
+  @media screen and (max-width: 820px){
+  justify-content: center;
+  padding-left: 0px;
 
+
+  }
 `
 
 export const ContainerLinks = styled.div`
