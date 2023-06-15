@@ -11,6 +11,9 @@ export const Container = styled.div`
 
   @media screen and (max-width: 820px){
   height: 30vh;
+  margin-top: 50px;
+  align-items: center;
+
 
   }
 
