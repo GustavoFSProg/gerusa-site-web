@@ -64,39 +64,39 @@ function App() {
               zIndex: '999',
               background: 'lightgray',
               flexDirection: 'column',
-              fontSize: '20px',
+              fontSize: '17px',
               paddingTop: '25px',
               paddingBottom: '25px',
             }}
           >
 
-            <span>
+            <span style={{ marginBottom: '10px' }}>
               HOME
             </span>
 
-            <span>
+            <span style={{ marginBottom: '10px' }}>
               QUEM SOMOS
             </span>
 
-            <span>
+            <span style={{ marginBottom: '10px' }}>
               AREAS DE ATUAÇAO
             </span>
 
-            <span >
+            <span style={{ marginBottom: '10px' }}>
               SERVIÇOS DE TRADUÇÃO
             </span>
 
-            <span >
+            <span style={{ marginBottom: '10px' }}>
               BLOG
             </span>
 
 
-            <span >
+            <span style={{ marginBottom: '10px' }}>
               CLIENTES
             </span>
 
 
-            <span >
+            <span style={{ marginBottom: '10px' }}>
               CONTATO
             </span>
           </div>

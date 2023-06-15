@@ -36,7 +36,7 @@ export const Menu = styled.div`
           @media screen and (max-width: 800px){
             display: flex;
    width: 90%;
-          height: 60px;
+          height: 50px;
           border: 1px solid black;
            border-radius: 10px;
           align-items: center;
