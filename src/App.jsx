@@ -14,9 +14,7 @@ function App() {
       <Container>
         <HeaderTop />
         <HeaderComponent />
-        <Menu style={{
-
-        }}>
+        <Menu>
           MENU
         </Menu>
         <ImgSlide src={slide} alt="slide" />

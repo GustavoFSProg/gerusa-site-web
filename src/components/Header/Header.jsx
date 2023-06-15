@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Container, Header, ContainerLinks } from './style'
-import Logo from '../../assets/logoB.png'
+import Logo from '../../assets/iconelogo.jpg'
 
 function HeaderComponent() {
 
@@ -8,7 +8,7 @@ function HeaderComponent() {
     <>
       <Container>
         <Header >
-          <img src={Logo} alt="fone" width="240"
+          <img src={Logo} alt="fone" width="200" height='150'
           />
 
           <ContainerLinks>

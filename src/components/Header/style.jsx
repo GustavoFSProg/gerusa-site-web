@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const Header = styled.div`
   display: flex;
   width: 100vw;
-  height: 120px;
+  height: 185px;
   align-items: center;
   justify-content: left;
   /* color: white; */
