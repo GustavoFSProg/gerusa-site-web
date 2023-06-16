@@ -13,19 +13,19 @@ function HeaderComponent() {
             style={{ borderRadius: '50px', marginBottom: '10px', zIndex: '-100' }}
           />
           <ContainerLinks>
-            <Link to="/">
-              <span >
+            <Link to="/" style={{ color: '#213547' }}>
+              <span style={{ color: '#213547' }} >
                 HOME
               </span>
             </Link>
-            <span >
+            <span style={{ color: '#213547' }}>
               QUEM SOU
             </span>
-            <span >
+            <span style={{ color: '#213547' }} >
               AREAS DE ATUAÇÃO
             </span>
 
-            <span >
+            <span style={{ color: '#213547' }} >
               SERVIÇOS DE TRADUÇÃO
             </span>
 
@@ -43,7 +43,7 @@ function HeaderComponent() {
               CONTATO
             </span>
 
-            <Link to="/login">
+            <Link to="/login" style={{ color: '#213547' }}>
               <span >
                 ADMIN
               </span>

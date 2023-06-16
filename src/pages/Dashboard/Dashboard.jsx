@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
+import HeaderComponent from '../../components/Header/Header'
 
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 500px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -24,6 +25,10 @@ export const ContainerInput = styled.div`
 function Dashboard() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const Token = localStorage.getItem('Token')
+
+
 
 
   async function handleSubmit(event) {
@@ -46,7 +51,9 @@ function Dashboard() {
 
   return (
     <Container>
-      <h1 >DASHBOARD</h1>
+      <HeaderComponent />
+      {Token ? <h1 >DASHBOARD</h1> : <h1 >ACESSO PROIBIDO!!!</h1>}
+
 
     </Container>
   )

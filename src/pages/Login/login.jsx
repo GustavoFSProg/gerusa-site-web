@@ -3,11 +3,12 @@ import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
 import { useNavigate } from 'react-router-dom'
+import HeaderComponent from '../../components/Header/Header'
 
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -49,6 +50,7 @@ function Login() {
 
   return (
     <Container>
+      <HeaderComponent />
       <h1 >LOGIN</h1>
       <ContainerInput>
         <form onSubmit={handleSubmit} style={{ width: '30%' }}>
