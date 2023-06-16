@@ -69,40 +69,41 @@ function App() {
               paddingBottom: '25px',
               opacity: '0.6'
             }}
+            onClick={() => handleOpenButtonClicked()}
+            onMouseLeave={() => handleDismissButtonClicked()}
           >
 
-            <span style={{ marginBottom: '10px', }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               HOME
             </span>
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               QUEM SOMOS
             </span>
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               AREAS DE ATUAÇAO
             </span>
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               SERVIÇOS DE TRADUÇÃO
             </span>
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               BLOG
             </span>
 
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               CLIENTES
             </span>
 
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
               CONTATO
             </span>
           </div>
         ) : null}
-
 
         <ImgSlide src={slide} alt="slide" style={{
 
