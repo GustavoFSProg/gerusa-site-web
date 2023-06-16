@@ -31,8 +31,8 @@ function App() {
               onClick={() => handleOpenButtonClicked()}
             >
               MENU
-            </button>{' '}
-            :{' '}
+            </button>
+
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -106,6 +106,7 @@ function App() {
         ) : null}
 
         <ImgSlide src={slide} alt="slide" style={{
+          marginTop: '5px',
 
           zIndex: '-10',
         }} />

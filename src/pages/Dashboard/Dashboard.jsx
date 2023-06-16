@@ -28,16 +28,13 @@ function Dashboard() {
   const token = localStorage.getItem('token')
 
   async function HandleAuth() {
-
     const { data } = await api.post('/auth', token)
 
-    console.log(data)
 
     if (data) {
-      setDados("OK")
+      setDados('OK')
     }
 
-    console.log(dados)
 
     return dados
   }
@@ -49,7 +46,7 @@ function Dashboard() {
   return (
     <Container>
       <HeaderComponent />
-      {dados === "OK" ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
     </Container>
   )
 }
