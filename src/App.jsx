@@ -60,7 +60,7 @@ function App() {
               justifyContent: 'space-between',
               width: '100%',
               height: '750px',
-              marginTop: '220px',
+              marginTop: '-65px',
               zIndex: '999',
               background: 'lightgray',
               flexDirection: 'column',
