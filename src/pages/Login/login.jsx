@@ -24,8 +24,8 @@ export const ContainerInput = styled.div`
 `
 
 function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('ana@gmail.com')
+  const [password, setPassword] = useState('1234')
 
   const navigate = useNavigate()
 
@@ -33,10 +33,8 @@ function Login() {
     event.preventDefault()
 
     try {
-      console.log({ email, password })
       const { data } = await api.post('/login', { email, password })
 
-      console.log(data.token)
 
       localStorage.setItem('Token', data.token)
       navigate("/dashboard")

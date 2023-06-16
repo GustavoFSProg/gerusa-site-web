@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
@@ -22,39 +22,23 @@ export const ContainerInput = styled.div`
   flex-direction: column;
 `
 
-function Dashboard() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+let msg = ''
 
+function Dashboard() {
   const Token = localStorage.getItem('Token')
 
-
-
-
-  async function handleSubmit(event) {
-    event.preventDefault()
-
-    try {
-      console.log({ email, password })
-      const { data } = await api.post('/login', { email, password })
-
-      console.log(data.token)
-
-      localStorage.setItem('Token', data.token)
-
-
-      return alert('Login  realizado com sucesso!')
-    } catch (error) {
-      return alert(`Erro no Login ${error}`)
-    }
+  async function HandleAuth() {
+    return await api.post('/auth', Token)
   }
+
+  useEffect(() => {
+    HandleAuth()
+  }, [])
 
   return (
     <Container>
       <HeaderComponent />
-      {Token ? <h1 >DASHBOARD</h1> : <h1 >ACESSO PROIBIDO!!!</h1>}
-
-
+      {Token ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
     </Container>
   )
 }
