@@ -22,13 +22,24 @@ export const ContainerInput = styled.div`
   flex-direction: column;
 `
 
-let msg = ''
-
 function Dashboard() {
-  const Token = localStorage.getItem('Token')
+  const [dados, setDados] = useState()
+
+  const token = localStorage.getItem('token')
 
   async function HandleAuth() {
-    return await api.post('/auth', Token)
+
+    const { data } = await api.post('/auth', token)
+
+    console.log(data)
+
+    if (data) {
+      setDados("OK")
+    }
+
+    console.log(dados)
+
+    return dados
   }
 
   useEffect(() => {
@@ -38,7 +49,7 @@ function Dashboard() {
   return (
     <Container>
       <HeaderComponent />
-      {Token ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === "OK" ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
     </Container>
   )
 }
