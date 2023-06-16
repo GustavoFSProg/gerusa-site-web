@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container, Header, ContainerLinks } from './style'
 import Logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom'
 
 function HeaderComponent() {
 
@@ -12,9 +13,11 @@ function HeaderComponent() {
             style={{ borderRadius: '50px', marginBottom: '10px', zIndex: '-100' }}
           />
           <ContainerLinks>
-            <span >
-              HOME
-            </span>
+            <Link to="/">
+              <span >
+                HOME
+              </span>
+            </Link>
             <span >
               QUEM SOU
             </span>
@@ -39,6 +42,12 @@ function HeaderComponent() {
             <span >
               CONTATO
             </span>
+
+            <Link to="/login">
+              <span >
+                ADMIN
+              </span>
+            </Link>
 
 
           </ ContainerLinks>
