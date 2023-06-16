@@ -24,8 +24,8 @@ export const ContainerInput = styled.div`
 `
 
 function Login() {
-  const [email, setEmail] = useState('ana@gmail.com')
-  const [password, setPassword] = useState('1234')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const navigate = useNavigate()
 
