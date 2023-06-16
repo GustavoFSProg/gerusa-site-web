@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
-import { useNavigate } from 'react-router-dom'
 
 export const Container = styled.div`
   display: flex;
@@ -22,11 +21,10 @@ export const ContainerInput = styled.div`
   flex-direction: column;
 `
 
-function Login() {
+function Dashboard() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const navigate = useNavigate()
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -38,7 +36,6 @@ function Login() {
       console.log(data.token)
 
       localStorage.setItem('Token', data.token)
-      navigate("/dashboard")
 
 
       return alert('Login  realizado com sucesso!')
@@ -49,32 +46,10 @@ function Login() {
 
   return (
     <Container>
-      <h1 >LOGIN</h1>
-      <ContainerInput>
-        <form onSubmit={handleSubmit} style={{ width: '30%' }}>
-          <Input
-            type="email"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            invalid={true}
-          // errorMessage="Email inválido"
-          />
+      <h1 >DASHBOARD</h1>
 
-          <Input
-            type="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            invalid={false}
-            errorMessage="Invalid password"
-          />
-
-          <button type="submit">Login</button>
-        </form>
-      </ContainerInput>
     </Container>
   )
 }
 
-export default Login
+export default Dashboard
