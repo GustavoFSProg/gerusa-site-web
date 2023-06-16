@@ -60,17 +60,18 @@ function App() {
               justifyContent: 'space-between',
               width: '100%',
               height: '750px',
-              marginTop: '-65px',
+              marginTop: '-75px',
               zIndex: '999',
               background: 'lightgray',
               flexDirection: 'column',
               fontSize: '17px',
               paddingTop: '25px',
               paddingBottom: '25px',
+              opacity: '0.6'
             }}
           >
 
-            <span style={{ marginBottom: '10px' }}>
+            <span style={{ marginBottom: '10px', }}>
               HOME
             </span>
 
