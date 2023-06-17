@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
-import { Container, ImgSlide, Menu } from './style-app'
+import { Container, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from './assets/slide-1.jpg'
+import bandeira from './assets/bandeira.jpeg'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -105,11 +106,23 @@ function App() {
           </div>
         ) : null}
 
-        <ImgSlide src={slide} alt="slide" style={{
-          marginTop: '5px',
+        <ContainerImagens style={{ zIndex: '-10', }}>
 
-          zIndex: '-10',
-        }} />
+          <ImgSlide src={slide} alt="slide" style={{
+            marginTop: '5px',
+
+            zIndex: '-10',
+          }} />
+
+          <ImgSlide src={bandeira} alt="slide" style={{
+            marginTop: '5px',
+
+            zIndex: '-10',
+          }} />
+
+        </ ContainerImagens >
+
+
       </Container>
     </>
   )
