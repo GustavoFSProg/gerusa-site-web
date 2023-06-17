@@ -30,7 +30,8 @@ export const Header = styled.div`
 
   @media screen and (max-width: 820px){
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 
 
 
