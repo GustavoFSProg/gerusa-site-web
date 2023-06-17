@@ -65,19 +65,22 @@ function ContactComponent() {
 
             <p >
               Nome: {item.nome}
-              <br />
-              Email: {item.email}
-              <br />
-
-              Fone: {item.telefone}
-              <br />
-
-              Mensagem: {item.message}
-              <br />
-              Data: {getDateWithoutTime(item.createdAt)}
-              <br />
-              <br />
             </p>
+
+            <p >
+              Email: {item.email}
+            </p>
+
+            <p >
+              Telefone: {item.telefone}
+            </p>
+
+            <p >
+              Mensagem: {item.message}
+            </p>
+            <br />
+            <br />
+            <br />
           </div>
 
         )
