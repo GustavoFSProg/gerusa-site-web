@@ -10,7 +10,7 @@ function HeaderTop() {
     <>
       <Container>
         <Header >
-          <img src={fone} alt="fone" width="15" style={{ marginRight: '5px' }} />
+          {/* <img src={fone} alt="fone" width="15" style={{ marginRight: '5px' }} /> */}
           (51) 3065-2220 | Whatsapp (51) 9396-5345 /  gerusagamm@gmail.com
         </Header >
       </Container>
