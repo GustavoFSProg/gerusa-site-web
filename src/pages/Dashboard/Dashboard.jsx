@@ -29,6 +29,11 @@ export const ContainerLinks = styled.div`
 
   @media screen and (max-width: 800px){
   margin-top: 30px;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+
 
   }
 `
