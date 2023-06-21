@@ -8,10 +8,29 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 500px;
+  height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   flex-direction: column;
+  /* background: orange; */
+
+`
+
+
+export const ContainerLinks = styled.div`
+  display: flex;
+  width: 90vw;
+  height: 90px;
+  align-items: center;
+  justify-content: space-around;
+  background: green;
+  margin-top: -650px;
+  margin-bottom: 200px;
+
+  @media screen and (max-width: 800px){
+  margin-top: 30px;
+
+  }
 `
 
 export const ContainerInput = styled.div`
@@ -47,15 +66,24 @@ function Dashboard() {
   return (
     <Container>
       <HeaderComponent />
-      <Link to="/contacts">
-        CONTACTS
-      </Link>
+      <ContainerLinks>
+        <Link to="/dashboard" style={{ color: 'yellow' }}>
+          DASHBOARD
+        </Link>
 
-      <Link to="/posts">
-        POSTS
-      </Link>
+        <Link to="/contacts" style={{ color: 'yellow' }}>
+          CONTATOS
+        </Link>
+
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          POSTS
+        </Link>
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          USUÁRIOS
+        </Link>
+      </ ContainerLinks>
       {dados === 'OK' ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
-    </Container>
+    </Container >
   )
 }
 

@@ -4,14 +4,37 @@ import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
+
 
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 500px;
+  height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   flex-direction: column;
+  /* background: orange; */
+   margin-top: -20px; 
+
+
+`
+
+
+export const ContainerLinks = styled.div`
+  display: flex;
+  width: 90vw;
+  height: 90px;
+  align-items: center;
+  justify-content: space-around;
+  background: green;
+  margin-top: 50px;
+  /* margin-bottom: 200px; */
+
+  @media screen and (max-width: 800px){
+  margin-top: 30px;
+
+  }
 `
 
 export const ContainerInput = styled.div`
@@ -56,6 +79,22 @@ function ContactComponent() {
 
   return (
     <Container>
+      <ContainerLinks>
+        <Link to="/dashboard" style={{ color: 'yellow' }}>
+          DASHBOARD
+        </Link>
+
+        <Link to="/contacts" style={{ color: 'yellow' }}>
+          CONTATOS
+        </Link>
+
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          POSTS
+        </Link>
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          USUÁRIOS
+        </Link>
+      </ ContainerLinks>
 
       <h1>MENSAGENS</h1>
 

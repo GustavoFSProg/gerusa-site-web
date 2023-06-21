@@ -13,6 +13,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 110px;
+  
 `
 
 export const ContainerInput = styled.div`
@@ -77,7 +79,7 @@ function Contacts() {
   return (
     <Container>
       <HeaderComponent />
-      {dados === 'OK' ? <ContactComponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? <ContactComponent /> : <h5>ACESSO PROIBIDO!!!</h5>}
 
 
 
