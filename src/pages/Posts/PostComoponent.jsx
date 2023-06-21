@@ -151,7 +151,7 @@ function PostComponent() {
               </p>
 
               <p >
-                {item.createdAt}
+                {getDateWithoutTime(item.createdAt)}
               </p>
               <br />
               <br />

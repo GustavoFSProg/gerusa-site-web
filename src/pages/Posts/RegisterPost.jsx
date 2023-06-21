@@ -146,8 +146,6 @@ function RegisterPosts() {
           LOGIN
         </Link>
       </ ContainerLinks>
-
-
       <br />
       {dados === 'OK' ? <RegisterComponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
