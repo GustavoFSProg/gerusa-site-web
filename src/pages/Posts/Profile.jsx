@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ export const ContainerLinks = styled.div`
   align-items: center;
   justify-content: space-around;
   background: green;
-  margin-top: -660px;
+  /* margin-top: -660px; */
   margin-bottom: 200px;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -68,36 +68,32 @@ const ContainerMaps = styled.div`
   `
 
 
-function PostComponent() {
-  const [dados, setDados] = useState([])
-
-  const navigate = useNavigate()
+function Profile() {
+  const [dados, setDados] = useState({})
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
   }
 
 
-  function setItem(id) {
-    localStorage.setItem('ID', id)
 
-    navigate('/profile')
-
-
-  }
 
   const token = localStorage.getItem('token')
 
-  async function HandleAuth() {
-    const { data } = await api.get('/get-all-posts')
+  const id = localStorage.getItem('ID')
 
-    setDados(data.data)
+  async function HandleAuth() {
+    const id = localStorage.getItem('ID')
+
+
+    const { data } = await api.get(`/get-post/${id}`)
+
+
+    setDados(data)
 
     console.log(dados)
 
-    return (< p >
-
-    </p>)
+    return dados
   }
 
   useEffect(() => {
@@ -121,7 +117,7 @@ function PostComponent() {
         <Link to="/posts" style={{ color: 'yellow' }}>
           POSTS
         </Link>
-        <Link to="/posts" style={{ color: 'yellow' }}>
+        <Link to="/end" style={{ color: 'yellow' }}>
           EDITAR
         </Link>
       </ ContainerLinks>
@@ -129,51 +125,45 @@ function PostComponent() {
 
       <ContainerMaps>
         <h1  >
-          POSTS
+          PROFILE
         </h1>
-        {dados.map(item => {
-          return (
-            <div key={item.id}>
-              <button onClick={() => setItem(item.id)}>
+        <div key={dados.id}>
 
 
-                <h2 style={{ fontSize: '34px' }} >
-                  <p >
-                    {item.title}
-                  </p>
-                </h2>
-                <img src={item.image} alt="imagem" width="300" />
-                <div style={{
-                  width: '100%', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center'
-                }}>
-                  <p style={{
-                    width: '50%', display: 'flex',
-                    alignItems: 'center', justifyContent: 'center'
-                  }}>
-                    {item.text}
-                  </p>
-                </div>
+          <h2 style={{ fontSize: '34px' }} >
+            <p >
+              {dados.title}
+            </p>
+          </h2>
+          <img src={dados.image} alt="imagem" width="300" />
+          <div style={{
+            width: '100%', display: 'flex',
+            alignItems: 'center', justifyContent: 'center'
+          }}>
+            <p style={{
+              width: '50%', display: 'flex',
+              alignItems: 'center', justifyContent: 'center'
+            }}>
+              {dados.text}
+            </p>
+          </div>
 
-                <p >
-                  {item.desc}
-                </p>
+          <p >
+            {dados.desc}
+          </p>
 
-                <p >
-                  {getDateWithoutTime(item.createdAt)}
-                </p>
-                <br />
-                <br />
-                <br />
-              </button>
-            </div>
+          <p >
+            {getDateWithoutTime(dados.createdAt)}
+          </p>
+          <br />
+          <br />
+          <br />
+        </div>
 
-          )
-        })}
       </ ContainerMaps>
 
     </Container >
   )
 }
 
-export default PostComponent
+export default Profile

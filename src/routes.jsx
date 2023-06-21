@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Contacts from './pages/Contacts/Contacts'
 import Posts from './pages/Posts/Posts'
 import RegisterPosts from './pages/Posts/RegisterPost'
+import Profile from './pages/Posts/Profile'
 
 function Routeres() {
   return (
@@ -16,6 +17,7 @@ function Routeres() {
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/register-post" element={<RegisterPosts />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   )
