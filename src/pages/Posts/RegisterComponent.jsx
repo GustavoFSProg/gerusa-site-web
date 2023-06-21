@@ -6,7 +6,6 @@ import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
-import RegisterComponent from './RegisterComponent'
 
 export const Container = styled.div`
   display: flex;
@@ -43,7 +42,7 @@ export const ContainerLinks = styled.div`
   }
   `
 
-function RegisterPosts() {
+function RegisterComponent() {
   const [dados, setDados] = useState([])
   const [able, setAble] = useState(false)
 
@@ -128,32 +127,46 @@ function RegisterPosts() {
 
   return (
     <Container>
-      <HeaderComponent />
 
-      <ContainerLinks style={{ height: '100px' }}>
-        <Link to="/dashboard" style={{ color: 'yellow' }}>
-          DASHBOARD
-        </Link>
-
-        <Link to="/register-post" style={{ color: 'yellow' }}>
-          CADASTRO DE POST
-        </Link>
-
-        <Link to="/posts" style={{ color: 'yellow' }}>
-          POSTS
-        </Link>
-        <Link to="/login" style={{ color: 'yellow' }}>
-          LOGIN
-        </Link>
-      </ ContainerLinks>
-
+      <h1  >
+        CADASTRO DE  POSTS
+      </h1>
 
       <br />
-      {dados === 'OK' ? <RegisterComponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
+        <br />
+        Imagem   <input
+          type="file"
+          id="image"
+          className="botao-imagem"
+          onChange={(e) => setImage(e.target.files[0])}
+        />
+        <br />
+        Title <input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <br />
+        Text    <textarea
+          rows="22"
+          // cols="63"
+          id="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          style={{
+            borderRadius: '8px',
+            border: '1px solid #a6a6a6',
+          }}
+        />
+        <br />
+        Descrição  <input id="autor" value={desc} onChange={(e) => setDesc(e.target.value)} />
+        <br />
+        Autor  <input id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <br /><br />
+        {dados === 'OK' ? <button type="submit">Cadastrar</button> : "Botao desabiitado!!"}
 
+      </form>
     </Container>
   )
 }
 
-export default RegisterPosts
+export default RegisterComponent
