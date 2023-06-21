@@ -3,6 +3,8 @@ import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
+import moment from 'moment'
+import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
@@ -23,40 +25,54 @@ export const ContainerInput = styled.div`
   flex-direction: column;
 `
 
-function Dashboard() {
-  const [dados, setDados] = useState()
+function Posts() {
+  const [dados, setDados] = useState([])
+
+  function getDateWithoutTime(date) {
+    return moment(date).format('DD-MM-YYYY')
+  }
 
   const token = localStorage.getItem('token')
 
+  async function HandlePosts() {
+    const { data } = await api.get('/get-all-contacts')
+
+    setDados(data.data)
+
+    console.log(dados)
+
+    return <p></p>
+  }
+
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)
-
 
     if (data) {
       setDados('OK')
     }
 
-
     return dados
   }
-
   useEffect(() => {
     HandleAuth()
+    // HandleContacts()
   }, [])
 
   return (
     <Container>
-      <HeaderComponent />
-      <Link to="/contacts">
-        CONTACTS
-      </Link>
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
+      <br /><br /><br /><br />
 
-      <Link to="/posts">
-        POSTS
-      </Link>
-      {dados === 'OK' ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
+      <HeaderComponent />
+      <br /><br /><br /><br /><br />
+
+      <br /><br /><br />
+      {dados === 'OK' ? <PostComoponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
     </Container>
   )
 }
 
-export default Dashboard
+export default Posts
