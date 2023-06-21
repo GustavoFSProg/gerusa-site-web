@@ -73,7 +73,7 @@ function Dashboard() {
       <HeaderComponent />
       <ContainerLinks>
         <Link to="/dashboard" style={{ color: 'yellow' }}>
-          DASHBOARD
+          PAINEL
         </Link>
 
         <Link to="/contacts" style={{ color: 'yellow' }}>
@@ -87,7 +87,7 @@ function Dashboard() {
           USUÁRIOS
         </Link>
       </ ContainerLinks>
-      {dados === 'OK' ? <h1>DASHBOARD</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? <h1>PAINEL</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
     </Container >
   )
 }

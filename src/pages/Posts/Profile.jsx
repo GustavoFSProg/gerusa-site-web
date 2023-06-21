@@ -108,9 +108,11 @@ function Profile() {
 
   return (
     <Container>
+      <HeaderComponent />
+
       <ContainerLinks style={{ height: '100px' }}>
         <Link to="/dashboard" style={{ color: 'yellow' }}>
-          DASHBOARD
+          PAINEL
         </Link>
 
         <Link to="/register-post" style={{ color: 'yellow' }}>
@@ -126,7 +128,7 @@ function Profile() {
       </ContainerLinks>
 
       <ContainerMaps>
-        <h1>PROFILE</h1>
+        <h1>PERFIL</h1>
         <div key={dados.id}>
           <h2 style={{ fontSize: '34px' }}>
             <p>{dados.title}</p>

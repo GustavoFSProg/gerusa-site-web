@@ -132,7 +132,7 @@ function RegisterPosts() {
 
       <ContainerLinks style={{ height: '100px' }}>
         <Link to="/dashboard" style={{ color: 'yellow' }}>
-          DASHBOARD
+          PAINEL
         </Link>
 
         <Link to="/register-post" style={{ color: 'yellow' }}>
