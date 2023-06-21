@@ -10,20 +10,12 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 500px;
+  height: auto;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `
 
-export const ContainerInput = styled.div`
-  display: flex;
-  width: 100%;
-  height: 350px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
 
 function Posts() {
   const [dados, setDados] = useState([])
@@ -60,16 +52,10 @@ function Posts() {
 
   return (
     <Container>
-      <br /><br /><br /><br />
-      <br /><br /><br /><br />
-      <br /><br /><br /><br />
-      <br /><br /><br /><br />
-      <br /><br /><br /><br />
+
 
       <HeaderComponent />
-      <br /><br /><br /><br /><br />
 
-      <br /><br /><br />
       {dados === 'OK' ? <PostComoponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
     </Container>
   )
