@@ -5,7 +5,7 @@ import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 export const Container = styled.div`
@@ -67,6 +67,8 @@ function UpdateComponent() {
   const [views, setViews] = useState('1')
   const [likes, setLikes] = useState('1')
 
+  const navigate = useNavigate()
+
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -105,13 +107,11 @@ function UpdateComponent() {
       data.append('views', views)
       data.append('likes', likes)
       data.append('desc', desc)
-      // data.append('token', token)
-
-      // await api.post('/register', data)
 
       await api.put(`/update-post/${id}`, data)
 
-      // history.push('/')
+
+      navigate('/posts')
 
       return alert('Edição realizado com sucesso!')
     } catch (error) {

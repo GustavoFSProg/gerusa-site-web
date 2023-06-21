@@ -14,7 +14,6 @@ export const Container = styled.div`
   justify-content: top;
   flex-direction: column;
   /* background: orange; */
-
 `
 
 export const ContainerLinks = styled.div`
@@ -29,20 +28,14 @@ export const ContainerLinks = styled.div`
   padding-top: 28px;
   padding-bottom: 28px;
 
-
-
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
-  `
-
-
+`
 
 const ContainerMaps = styled.div`
   display: flex;
@@ -55,18 +48,14 @@ const ContainerMaps = styled.div`
   /* margin-bottom: 200px; */
   flex-direction: column;
 
-
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
-  `
-
+`
 
 function Profile() {
   const [dados, setDados] = useState({})
@@ -75,34 +64,26 @@ function Profile() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-
   const navigate = useNavigate()
 
   function HandleEditar() {
     const id = localStorage.getItem('ID')
 
-
     navigate('/update')
   }
-
 
   async function deletePost() {
     const id = localStorage.getItem('ID')
     try {
       await api.delete(`/delete-post/${id}`)
 
-      return alert(" Post Deletado!!")
+      navigate('/posts')
 
+      return alert(' Post Deletado!!')
     } catch (error) {
       return alert(error)
-
     }
 
-
-
-
-
-    navigate('/update')
   }
 
   const token = localStorage.getItem('token')
@@ -112,10 +93,7 @@ function Profile() {
   async function HandleAuth() {
     const id = localStorage.getItem('ID')
 
-
-
     const { data } = await api.get(`/get-post/${id}`)
-
 
     setDados(data)
 
@@ -130,9 +108,6 @@ function Profile() {
 
   return (
     <Container>
-
-
-
       <ContainerLinks style={{ height: '100px' }}>
         <Link to="/dashboard" style={{ color: 'yellow' }}>
           DASHBOARD
@@ -148,57 +123,48 @@ function Profile() {
         <Link to="/end" style={{ color: 'yellow' }}>
           EDITAR
         </Link>
-      </ ContainerLinks>
-
+      </ContainerLinks>
 
       <ContainerMaps>
-        <h1  >
-          PROFILE
-        </h1>
+        <h1>PROFILE</h1>
         <div key={dados.id}>
-
-
-          <h2 style={{ fontSize: '34px' }} >
-            <p >
-              {dados.title}
-            </p>
+          <h2 style={{ fontSize: '34px' }}>
+            <p>{dados.title}</p>
           </h2>
           <img src={dados.image} alt="imagem" width="300" />
-          <div style={{
-            width: '100%', display: 'flex',
-            alignItems: 'center', justifyContent: 'center'
-          }}>
-            <p style={{
-              width: '50%', display: 'flex',
-              alignItems: 'center', justifyContent: 'center'
-            }}>
+          <div
+            style={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <p
+              style={{
+                width: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
               {dados.text}
             </p>
           </div>
 
-          <p >
-            {dados.desc}
-          </p>
+          <p>{dados.desc}</p>
 
-          <p >
-            {getDateWithoutTime(dados.createdAt)}
-          </p>
+          <p>{getDateWithoutTime(dados.createdAt)}</p>
           <br />
           <br />
           <br />
         </div>
+      </ContainerMaps>
 
-      </ ContainerMaps>
+      <button onClick={HandleEditar}>EDITAR</button>
 
-      <button onClick={HandleEditar}>
-        EDITAR
-      </button>
-
-      <button onClick={deletePost}>
-        DELETAR
-      </button>
-
-    </Container >
+      <button onClick={deletePost}>DELETAR</button>
+    </Container>
   )
 }
 
