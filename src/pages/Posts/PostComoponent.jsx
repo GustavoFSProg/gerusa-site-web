@@ -50,7 +50,7 @@ const ContainerMaps = styled.div`
   height: auto;
   align-items: center;
   justify-content: space-around;
-  background: pink;
+  /* background: pink; */
   margin-top: -150px;
   /* margin-bottom: 200px; */
   flex-direction: column;
