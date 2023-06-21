@@ -10,21 +10,38 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 500px;
+  height: 100vh;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   flex-direction: column;
+  /* background: orange; */
+
 `
 
-export const ContainerInput = styled.div`
+export const ContainerLinks = styled.div`
   display: flex;
-  width: 100%;
-  height: 350px;
+  width: 90vw;
+  height: 100rem;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-`
+  justify-content: space-around;
+  background: green;
+  /* margin-top: -660px; */
+  margin-bottom: 60px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 
+
+
+  @media screen and (max-width: 800px){
+  margin-top: 30px;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+
+
+  }
+  `
 function RegisterPosts() {
   const [dados, setDados] = useState([])
 
@@ -106,13 +123,27 @@ function RegisterPosts() {
   return (
     <Container>
       <HeaderComponent />
-      <Link to="/register-post">
-        CADASTRO DE POST
-      </Link>
-      <br /><br />
-      <Link to="/posts">
-        LISTA DE POSTS
-      </Link>
+
+      <ContainerLinks style={{ height: '100px' }}>
+        <Link to="/dashboard" style={{ color: 'yellow' }}>
+          DASHBOARD
+        </Link>
+
+        <Link to="/register-post" style={{ color: 'yellow' }}>
+          CADASTRO DE POST
+        </Link>
+
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          POSTS
+        </Link>
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          EDITAR
+        </Link>
+      </ ContainerLinks>
+
+      <h1  >
+        CADASTRO DE  POSTS
+      </h1>
 
       <br />
       {dados === 'OK' ? "entrou no cadastro" : <h1>ACESSO PROIBIDO!!!</h1>}

@@ -106,7 +106,7 @@ function PostComponent() {
           DASHBOARD
         </Link>
 
-        <Link to="/contacts" style={{ color: 'yellow' }}>
+        <Link to="/register-post" style={{ color: 'yellow' }}>
           CADASTRO DE POST
         </Link>
 
@@ -127,12 +127,13 @@ function PostComponent() {
           return (
             <div key={item.id}>
 
-              <p >
-                <h2 style={{ fontSize: '34px' }} >
+
+              <h2 style={{ fontSize: '34px' }} >
+                <p >
                   {item.title}
-                </h2>
-              </p>
-              <img src={item.image} alt="imagem" width="200" />
+                </p>
+              </h2>
+              <img src={item.image} alt="imagem" width="300" />
               <div style={{
                 width: '100%', display: 'flex',
                 alignItems: 'center', justifyContent: 'center'
