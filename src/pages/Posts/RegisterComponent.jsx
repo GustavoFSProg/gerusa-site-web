@@ -18,6 +18,17 @@ export const Container = styled.div`
 
 `
 
+// export const Input = styled.input`
+//   display: flex;
+//   width: 50%;
+//   height: 2rem;
+//   align-items: center;
+//   justify-content: center;
+//   /* flex-direction: column; */
+//   /* background: orange; */
+
+// `
+
 export const ContainerLinks = styled.div`
   display: flex;
   width: 90vw;
@@ -135,7 +146,10 @@ function RegisterComponent() {
       <br />
       {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
+      <form onSubmit={handleSubmit} style={{
+        display: 'flex',
+        flexDirection: 'column', width: '40%'
+      }}>
         <br />
         Imagem   <input
           type="file"
@@ -144,23 +158,38 @@ function RegisterComponent() {
           onChange={(e) => setImage(e.target.files[0])}
         />
         <br />
-        Title <input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <Input
+
+          placeholder="Titulo"
+          invalid={true}
+          id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <br />
-        Text    <textarea
+        Texto    <textarea
           rows="22"
-          // cols="63"
+          cols="50"
           id="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
           style={{
             borderRadius: '8px',
-            border: '1px solid #a6a6a6',
+            border: '1px solid rgba(37, 0, 50, 0.25)',
+            boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)'
+
           }}
         />
         <br />
-        Descrição  <input id="autor" value={desc} onChange={(e) => setDesc(e.target.value)} />
+        <Input
+
+          placeholder="Descrição"
+          invalid={true}
+
+          id="autor" value={desc} onChange={(e) => setDesc(e.target.value)} />
         <br />
-        Autor  <input id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <Input
+
+          placeholder="Autor"
+          invalid={true}
+          id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <br /><br />
         {dados === 'OK' ? <button type="submit">Cadastrar</button> : "Botao desabiitado!!"}
 

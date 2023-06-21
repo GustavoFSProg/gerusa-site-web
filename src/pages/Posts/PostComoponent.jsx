@@ -125,8 +125,6 @@ function PostComponent() {
           EDITAR
         </Link>
       </ ContainerLinks>
-
-
       <ContainerMaps>
         <h1  >
           POSTS
@@ -165,6 +163,9 @@ function PostComponent() {
                 <br />
                 <br />
                 <br />
+              </button>
+              <button>
+                EDITAR
               </button>
             </div>
 
