@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Container = styled.div`
   display: flex;
@@ -76,7 +76,34 @@ function Profile() {
   }
 
 
+  const navigate = useNavigate()
 
+  function HandleEditar() {
+    const id = localStorage.getItem('ID')
+
+
+    navigate('/update')
+  }
+
+
+  async function deletePost() {
+    const id = localStorage.getItem('ID')
+    try {
+      await api.delete(`/delete-post/${id}`)
+
+      return alert(" Post Deletado!!")
+
+    } catch (error) {
+      return alert(error)
+
+    }
+
+
+
+
+
+    navigate('/update')
+  }
 
   const token = localStorage.getItem('token')
 
@@ -84,6 +111,7 @@ function Profile() {
 
   async function HandleAuth() {
     const id = localStorage.getItem('ID')
+
 
 
     const { data } = await api.get(`/get-post/${id}`)
@@ -161,6 +189,14 @@ function Profile() {
         </div>
 
       </ ContainerMaps>
+
+      <button onClick={HandleEditar}>
+        EDITAR
+      </button>
+
+      <button onClick={deletePost}>
+        DELETAR
+      </button>
 
     </Container >
   )

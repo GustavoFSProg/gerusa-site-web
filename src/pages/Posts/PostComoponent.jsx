@@ -164,9 +164,7 @@ function PostComponent() {
                 <br />
                 <br />
               </button>
-              <button>
-                EDITAR
-              </button>
+
             </div>
 
           )

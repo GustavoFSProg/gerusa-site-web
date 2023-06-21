@@ -6,6 +6,7 @@ import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
+import UpdateComponent from './UpdateComponent'
 
 export const Container = styled.div`
   display: flex;
@@ -18,17 +19,6 @@ export const Container = styled.div`
 
 `
 
-// export const Input = styled.input`
-//   display: flex;
-//   width: 50%;
-//   height: 2rem;
-//   align-items: center;
-//   justify-content: center;
-//   /* flex-direction: column; */
-//   /* background: orange; */
-
-// `
-
 export const ContainerLinks = styled.div`
   display: flex;
   width: 90vw;
@@ -36,7 +26,7 @@ export const ContainerLinks = styled.div`
   align-items: center;
   justify-content: space-around;
   background: green;
-  /* margin-top: -660px; */
+  /* margin-top: 660px; */
   margin-bottom: 60px;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -53,7 +43,7 @@ export const ContainerLinks = styled.div`
   }
   `
 
-function RegisterComponent() {
+function UpdatePost() {
   const [dados, setDados] = useState([])
   const [able, setAble] = useState(false)
 
@@ -129,8 +119,6 @@ function RegisterComponent() {
 
     return dados
   }
-
-
   useEffect(() => {
     HandleAuth()
     // HandleContacts()
@@ -140,64 +128,15 @@ function RegisterComponent() {
 
   return (
     <Container>
+      <HeaderComponent />
 
-      <h1  >
-        CADASTRO DE  POSTS
-      </h1>
 
       <br />
-      {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? <UpdateComponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
-      <form onSubmit={handleSubmit} style={{
-        display: 'flex',
-        flexDirection: 'column', width: '40%'
-      }}>
-        <br />
-        Imagem   <input
-          type="file"
-          id="image"
-          className="botao-imagem"
-          onChange={(e) => setImage(e.target.files[0])}
-        />
-        <br />
-        <Input
 
-          placeholder="Titulo"
-          invalid={true}
-          id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <br />
-        Texto    <textarea
-          rows="22"
-          cols="50"
-          id="text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          style={{
-            borderRadius: '8px',
-            border: '1px solid rgba(37, 0, 50, 0.25)',
-            boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)'
-
-          }}
-        />
-        <br />
-        <Input
-
-          placeholder="Descrição"
-          invalid={true}
-
-          id="autor" value={desc} onChange={(e) => setDesc(e.target.value)} />
-        <br />
-        <Input
-
-          placeholder="Autor"
-          invalid={true}
-          id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <br /><br />
-        {dados === 'OK' ? <button type="submit">Cadastrar</button> : "Botao desabiitado!!"}
-
-      </form>
     </Container>
   )
 }
 
-export default RegisterComponent
+export default UpdatePost

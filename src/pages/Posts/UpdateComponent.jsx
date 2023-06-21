@@ -7,6 +7,7 @@ import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
 
+
 export const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -18,17 +19,6 @@ export const Container = styled.div`
 
 `
 
-// export const Input = styled.input`
-//   display: flex;
-//   width: 50%;
-//   height: 2rem;
-//   align-items: center;
-//   justify-content: center;
-//   /* flex-direction: column; */
-//   /* background: orange; */
-
-// `
-
 export const ContainerLinks = styled.div`
   display: flex;
   width: 90vw;
@@ -36,7 +26,7 @@ export const ContainerLinks = styled.div`
   align-items: center;
   justify-content: space-around;
   background: green;
-  /* margin-top: -660px; */
+  /* margin-top: 660px; */
   margin-bottom: 60px;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -53,7 +43,19 @@ export const ContainerLinks = styled.div`
   }
   `
 
-function RegisterComponent() {
+// export const Input = styled.input`
+//   display: flex;
+//   width: 50%;
+//   height: 2rem;
+//   align-items: center;
+//   justify-content: center;
+//   /* flex-direction: column; */
+//   /* background: orange; */
+
+// `
+
+
+function UpdateComponent() {
   const [dados, setDados] = useState([])
   const [able, setAble] = useState(false)
 
@@ -86,6 +88,8 @@ function RegisterComponent() {
 
   async function handleSubmit(event) {
     event.preventDefault()
+    const id = localStorage.getItem('ID')
+
 
     try {
       console.log(`Token:${token}`)
@@ -105,20 +109,30 @@ function RegisterComponent() {
 
       // await api.post('/register', data)
 
-      await api.post('/register', data)
+      await api.put(`/update-post/${id}`, data)
 
       // history.push('/')
 
-      return alert('Cadastro realizado com sucesso!')
+      return alert('Edição realizado com sucesso!')
     } catch (error) {
       return alert(error)
     }
   }
 
-  function handleAbled() {
-    setAble(true)
-    return
+
+  async function Update() {
+
+    try {
+      await api.put('/update-post')
+
+      return alert("Post Editado!")
+    } catch (error) {
+      return alert(error)
+
+    }
   }
+
+
 
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)
@@ -133,21 +147,36 @@ function RegisterComponent() {
 
   useEffect(() => {
     HandleAuth()
-    // HandleContacts()
   }, [])
-
-
 
   return (
     <Container>
+      <HeaderComponent />
 
+      <ContainerLinks style={{ height: '100px' }}>
+        <Link to="/dashboard" style={{ color: 'yellow' }}>
+          DASHBOARD
+        </Link>
+
+        <Link to="/register-post" style={{ color: 'yellow' }}>
+          CADASTRO DE POST
+        </Link>
+
+        <Link to="/posts" style={{ color: 'yellow' }}>
+          POSTS
+        </Link>
+        <Link to="/login" style={{ color: 'yellow' }}>
+          LOGIN
+        </Link>
+      </ ContainerLinks>
       <h1  >
-        CADASTRO DE  POSTS
+        EDIÇÃO DE  POST
       </h1>
 
       <br />
-      {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
+      <br />
+
       <form onSubmit={handleSubmit} style={{
         display: 'flex',
         flexDirection: 'column', width: '40%'
@@ -193,11 +222,18 @@ function RegisterComponent() {
           invalid={true}
           id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <br /><br />
-        {dados === 'OK' ? <button type="submit">Cadastrar</button> : "Botao desabiitado!!"}
+        {dados === 'OK' ? <button type="submit">Editar</button> : "Botao desabiitado!!"}
+        <br />
+        <br />
+        <br />
+        <br />
 
       </form>
+
+
+
     </Container>
   )
 }
 
-export default RegisterComponent
+export default UpdateComponent
