@@ -39,11 +39,12 @@ export const ContainerLinks = styled.div`
   padding-bottom: 30px;
   justify-content: space-between;
 
-
   }
   `
+
 function RegisterPosts() {
   const [dados, setDados] = useState([])
+  const [able, setAble] = useState(false)
 
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
@@ -103,6 +104,10 @@ function RegisterPosts() {
     }
   }
 
+  function handleAbled() {
+    setAble(true)
+    return
+  }
 
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)
@@ -146,7 +151,7 @@ function RegisterPosts() {
       </h1>
 
       <br />
-      {dados === 'OK' ? "entrou no cadastro" : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
         <br />
@@ -175,10 +180,7 @@ function RegisterPosts() {
         <br />
         Autor  <input id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <br /><br />
-
-        <button type="submit">
-          Cadastrar
-        </button>
+        {dados === 'OK' ? <button type="submit">Cadastrar</button> : "Botao desabiitado!!"}
 
       </form>
     </Container>
