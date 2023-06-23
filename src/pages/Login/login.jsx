@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import api from '../../api'
 import { useNavigate } from 'react-router-dom'
 import HeaderComponent from '../../components/Header/Header'
-import { Button } from '../../components/styled-button'
+import { Button } from '../../components/Buttons/styled-button'
 
 
 export const Container = styled.div`

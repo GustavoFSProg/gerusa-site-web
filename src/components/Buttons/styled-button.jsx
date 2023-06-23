@@ -10,6 +10,15 @@ align-items: center;
 justify-content: center;
 background: lightgray;
 margin-bottom: 20px;
+transition: all ease 0.6s;
+cursor: pointer;
+
+&:hover{
+background: gray;
+color: blue;
+
+
+}
 
 
 `

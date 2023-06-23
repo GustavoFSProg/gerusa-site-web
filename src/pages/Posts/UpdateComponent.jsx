@@ -6,7 +6,7 @@ import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button } from '../../components/styled-button'
+import { Button } from '../../components/Buttons/styled-button'
 
 
 export const Container = styled.div`

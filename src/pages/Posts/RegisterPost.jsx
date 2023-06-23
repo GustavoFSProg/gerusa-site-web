@@ -4,10 +4,8 @@ import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
-import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
 import RegisterComponent from './RegisterComponent'
-import { Button } from '../../components/styled-button'
 
 
 export const Container = styled.div`
