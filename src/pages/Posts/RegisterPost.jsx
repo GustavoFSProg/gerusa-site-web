@@ -15,7 +15,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: top;
   flex-direction: column;
-  /* background: orange; */
 
 `
 

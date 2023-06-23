@@ -40,7 +40,6 @@ export const ContainerLinks = styled.div`
   align-items: center;
   justify-content: space-around;
   background: green;
-  /* margin-top: -660px; */
   margin-bottom: 60px;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -50,7 +49,9 @@ export const ContainerLinks = styled.div`
     flex-direction: column;
     padding-top: 30px;
     padding-bottom: 30px;
-    justify-content: space-between;
+    justify-content: center;
+  align-items: center;
+
   }
 `
 
@@ -199,7 +200,6 @@ function RegisterComponent() {
           id="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          style={{}}
         />
         <br />
         <Input

@@ -15,18 +15,53 @@ export const Container = styled.div`
   align-items: center;
   justify-content: top;
   flex-direction: column;
-  /* background: orange; */
 `
 
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
   font-size: 40px;
+  margin-bottom: -30px;
 
   @media screen and (max-width: 800px) {
     font-size: 22px;
+  margin-bottom: -35px;
+
+   
   }
 `
+const TextArea = styled.textarea`
+  border-radius: 8px;
+  border: 1px solid rgba(37, 0, 50, 0.25);
+  box-shadow: 0px 0px 5px 1px rgba(37, 0, 50, 0.25);
+  font-family: 'Roboto';
+  font-size: 1rem;
+
+  @media screen and (max-width: 850px) {
+    display: flex;
+  /* width: 30%; */
+  height: auto;
+  align-items: center;
+  justify-content: center;
+    
+    width: 110%;
+  }
+`
+
+export const Form = styled.form`
+  display: flex;
+  width: 34%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+
+  @media screen and (max-width: 850px) {
+    width: 70%;
+  }
+`
+
 
 export const ContainerLinks = styled.div`
   display: flex;
@@ -35,7 +70,6 @@ export const ContainerLinks = styled.div`
   align-items: center;
   justify-content: space-around;
   background: green;
-  /* margin-top: 660px; */
   margin-bottom: 60px;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -49,16 +83,6 @@ export const ContainerLinks = styled.div`
   }
 `
 
-// export const Input = styled.input`
-//   display: flex;
-//   width: 50%;
-//   height: 2rem;
-//   align-items: center;
-//   justify-content: center;
-//   /* flex-direction: column; */
-//   /* background: orange; */
-
-// `
 
 function UpdateComponent() {
   const [dados, setDados] = useState([])
@@ -169,21 +193,18 @@ function UpdateComponent() {
       <br />
       <br />
 
-      <form
+      <Form
         onSubmit={handleSubmit}
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          width: '40%',
-        }}
+
       >
         <br />
-        Imagem{' '}
+        Imagem:
         <input
           type="file"
           id="image"
           className="botao-imagem"
           onChange={(e) => setImage(e.target.files[0])}
+          style={{ marginTop: '30px' }}
         />
         <br />
         <Input
@@ -195,9 +216,9 @@ function UpdateComponent() {
         />
         <br />
         Texto{' '}
-        <textarea
+        <TextArea
           rows="22"
-          cols="50"
+          cols="54"
           id="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -230,7 +251,7 @@ function UpdateComponent() {
         <br />
         <br />
         <br />
-      </form>
+      </Form>
     </Container>
   )
 }
