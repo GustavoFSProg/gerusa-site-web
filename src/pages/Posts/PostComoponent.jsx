@@ -155,8 +155,11 @@ function PostComponent() {
                   <p >
                     {item.title}
                   </p>
+
+
+
                 </h2>
-                <img src={item.image} alt="imagem" width="300" />
+                <img src={`http://localhost:5000/files/${item.image}`} alt="imagem" width="300" />
                 <div style={{
                   width: '100%', display: 'flex',
                   alignItems: 'center', justifyContent: 'center'

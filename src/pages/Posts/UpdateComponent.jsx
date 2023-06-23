@@ -143,15 +143,6 @@ function UpdateComponent() {
     }
   }
 
-  async function Update() {
-    try {
-      await api.put('/update-post')
-
-      return alert('Post Editado!')
-    } catch (error) {
-      return alert(error)
-    }
-  }
 
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)
