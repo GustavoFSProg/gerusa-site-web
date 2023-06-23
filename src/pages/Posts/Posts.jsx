@@ -16,6 +16,16 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
+export const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 22px;
+  }
+`
+
 
 function Posts() {
   const [dados, setDados] = useState([])

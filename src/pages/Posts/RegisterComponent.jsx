@@ -8,7 +8,6 @@ import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
 import { Button } from '../../components/Buttons/styled-button'
 
-
 export const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -17,19 +16,22 @@ export const Container = styled.div`
   justify-content: top;
   flex-direction: column;
   /* background: orange; */
-
 `
 
-// export const Input = styled.input`
-//   display: flex;
-//   width: 50%;
-//   height: 2rem;
-//   align-items: center;
-//   justify-content: center;
-//   /* flex-direction: column; */
-//   /* background: orange; */
 
-// `
+export const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+
+
+
+  @media screen and (max-width: 800px) {
+    font-size: 22px;
+  
+  }
+
+`
 
 export const ContainerLinks = styled.div`
   display: flex;
@@ -43,17 +45,45 @@ export const ContainerLinks = styled.div`
   padding-top: 28px;
   padding-bottom: 28px;
 
-
-
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
-  `
+`
+
+export const Form = styled.form`
+  display: flex;
+  width: 30%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 850px) {
+    width: 70%;
+  }
+`
+
+export const TextArea = styled.textarea`
+  border-radius: 8px;
+  border: 1px solid rgba(37, 0, 50, 0.25);
+  box-shadow: 0px 0px 5px 1px rgba(37, 0, 50, 0.25);
+  font-family: 'Roboto';
+  font-size: 1rem;
+
+  @media screen and (max-width: 850px) {
+    display: flex;
+  /* width: 30%; */
+  height: auto;
+  align-items: center;
+  justify-content: center;
+    
+    width: 110%;
+  }
+`
 
 function RegisterComponent() {
   const [dados, setDados] = useState([])
@@ -66,7 +96,6 @@ function RegisterComponent() {
   const [desc, setDesc] = useState('')
   const [views, setViews] = useState('1')
   const [likes, setLikes] = useState('1')
-
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -83,8 +112,6 @@ function RegisterComponent() {
 
     return <p></p>
   }
-
-
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -132,30 +159,25 @@ function RegisterComponent() {
     return dados
   }
 
-
   useEffect(() => {
     HandleAuth()
     // HandleContacts()
   }, [])
 
-
-
   return (
     <Container>
-
-      <h1  >
-        CADASTRO DE  POSTS
-      </h1>
+      <H1>CADASTRO DE POSTS</H1>
 
       <br />
       {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>}
       <br />
-      <form onSubmit={handleSubmit} style={{
-        display: 'flex',
-        flexDirection: 'column', width: '40%'
-      }}>
+      <Form onSubmit={handleSubmit}>
         <br />
-        Imagem   <input
+        Imagem:
+        <br />
+        <br />
+
+        <input
           type="file"
           id="image"
           className="botao-imagem"
@@ -163,41 +185,42 @@ function RegisterComponent() {
         />
         <br />
         <Input
-
           placeholder="Titulo"
           invalid={true}
-          id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
         <br />
-        Texto    <textarea
+        Texto:{' '}
+        <TextArea
           rows="22"
-          cols="50"
+          cols="58"
           id="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          style={{
-            borderRadius: '8px',
-            border: '1px solid rgba(37, 0, 50, 0.25)',
-            boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)'
-
-          }}
+          style={{}}
         />
         <br />
         <Input
-
           placeholder="Descrição"
           invalid={true}
-
-          id="autor" value={desc} onChange={(e) => setDesc(e.target.value)} />
+          id="autor"
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
+        />
         <br />
         <Input
-
           placeholder="Autor"
           invalid={true}
-          id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <br /><br />
-        {dados === 'OK' ? <Button type="submit">Cadastrar</Button> : "Botao desabiitado!!"}
-
-      </form>
+          id="autor"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <br />
+        <br />
+        {dados === 'OK' ? <Button type="submit">Cadastrar</Button> : 'Botao desabiitado!!'}
+      </Form>
     </Container>
   )
 }

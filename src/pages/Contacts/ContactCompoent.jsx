@@ -20,6 +20,18 @@ export const Container = styled.div`
 
 `
 
+export const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  margin-top: 80px;
+
+
+  @media screen and (max-width: 800px) {
+    font-size: 29px;
+    margin-top: 50px;
+  }
+`
 
 export const ContainerLinks = styled.div`
   display: flex;
@@ -101,7 +113,7 @@ function ContactComponent() {
         </Link>
       </ ContainerLinks>
 
-      <h1>MENSAGENS</h1>
+      <H1>MENSAGENS</H1>
 
       {dados.map(item => {
         return (

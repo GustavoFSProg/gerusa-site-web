@@ -19,6 +19,16 @@ export const Container = styled.div`
 
 `
 
+export const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 22px;
+  }
+`
+
 export const ContainerLinks = styled.div`
   display: flex;
   width: 90vw;
@@ -147,7 +157,7 @@ function RegisterPosts() {
         </Link>
       </ ContainerLinks>
       <br />
-      {dados === 'OK' ? <RegisterComponent /> : <h1>ACESSO PROIBIDO!!!</h1>}
+      {dados === 'OK' ? <RegisterComponent /> : <H1>ACESSO PROIBIDO!!!</H1>}
       <br />
 
     </Container>

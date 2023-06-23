@@ -18,6 +18,16 @@ export const Container = styled.div`
   /* background: orange; */
 `
 
+export const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 29px;
+  }
+`
+
 export const ContainerLinks = styled.div`
   display: flex;
   width: 90vw;
@@ -74,6 +84,8 @@ const ContainerMaps = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
     justify-content: space-between;
+  margin-top: -200px;
+
   }
 `
 
@@ -148,7 +160,7 @@ function Profile() {
       </ContainerLinks>
 
       <ContainerMaps>
-        <h1>PERFIL</h1>
+        <H1>PERFIL</H1>
         <div key={dados.id}>
           <h2 style={{ fontSize: '34px' }}>
             <p>{dados.title}</p>

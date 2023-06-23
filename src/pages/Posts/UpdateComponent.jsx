@@ -8,7 +8,6 @@ import PostComoponent from './PostComoponent'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Buttons/styled-button'
 
-
 export const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -17,7 +16,16 @@ export const Container = styled.div`
   justify-content: top;
   flex-direction: column;
   /* background: orange; */
+`
 
+export const H1 = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 22px;
+  }
 `
 
 export const ContainerLinks = styled.div`
@@ -32,18 +40,14 @@ export const ContainerLinks = styled.div`
   padding-top: 28px;
   padding-bottom: 28px;
 
-
-
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
-  `
-
+`
 
 // export const Input = styled.input`
 //   display: flex;
@@ -55,7 +59,6 @@ export const ContainerLinks = styled.div`
 //   /* background: orange; */
 
 // `
-
 
 function UpdateComponent() {
   const [dados, setDados] = useState([])
@@ -70,7 +73,6 @@ function UpdateComponent() {
   const [likes, setLikes] = useState('1')
 
   const navigate = useNavigate()
-
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -88,12 +90,9 @@ function UpdateComponent() {
     return <p></p>
   }
 
-
-
   async function handleSubmit(event) {
     event.preventDefault()
     const id = localStorage.getItem('ID')
-
 
     try {
       console.log(`Token:${token}`)
@@ -112,7 +111,6 @@ function UpdateComponent() {
 
       await api.put(`/update-post/${id}`, data)
 
-
       navigate('/posts')
 
       return alert('Edição realizado com sucesso!')
@@ -121,20 +119,15 @@ function UpdateComponent() {
     }
   }
 
-
   async function Update() {
-
     try {
       await api.put('/update-post')
 
-      return alert("Post Editado!")
+      return alert('Post Editado!')
     } catch (error) {
       return alert(error)
-
     }
   }
-
-
 
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)
@@ -145,7 +138,6 @@ function UpdateComponent() {
 
     return dados
   }
-
 
   useEffect(() => {
     HandleAuth()
@@ -170,21 +162,24 @@ function UpdateComponent() {
         <Link to="/login" style={{ color: 'yellow' }}>
           LOGIN
         </Link>
-      </ ContainerLinks>
-      <h1  >
-        EDIÇÃO DE  POST
-      </h1>
+      </ContainerLinks>
+      <H1>EDIÇÃO DE POST</H1>
 
       <br />
       <br />
       <br />
 
-      <form onSubmit={handleSubmit} style={{
-        display: 'flex',
-        flexDirection: 'column', width: '40%'
-      }}>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '40%',
+        }}
+      >
         <br />
-        Imagem   <input
+        Imagem{' '}
+        <input
           type="file"
           id="image"
           className="botao-imagem"
@@ -192,12 +187,15 @@ function UpdateComponent() {
         />
         <br />
         <Input
-
           placeholder="Titulo"
           invalid={true}
-          id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+          id="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
         <br />
-        Texto    <textarea
+        Texto{' '}
+        <textarea
           rows="22"
           cols="50"
           id="text"
@@ -206,34 +204,33 @@ function UpdateComponent() {
           style={{
             borderRadius: '8px',
             border: '1px solid rgba(37, 0, 50, 0.25)',
-            boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)'
-
+            boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)',
           }}
         />
         <br />
         <Input
-
           placeholder="Descrição"
           invalid={true}
-
-          id="autor" value={desc} onChange={(e) => setDesc(e.target.value)} />
+          id="autor"
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
+        />
         <br />
         <Input
-
           placeholder="Autor"
           invalid={true}
-          id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <br /><br />
-        {dados === 'OK' ? <Button type="submit">Editar</Button> : "Botao desabiitado!!"}
+          id="autor"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <br />
+        <br />
+        {dados === 'OK' ? <Button type="submit">Editar</Button> : 'Botao desabiitado!!'}
         <br />
         <br />
         <br />
         <br />
-
       </form>
-
-
-
     </Container>
   )
 }
