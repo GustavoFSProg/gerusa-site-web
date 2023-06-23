@@ -5,7 +5,7 @@ import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Buttons/styled-button'
 
 export const Container = styled.div`
@@ -98,6 +98,8 @@ function RegisterComponent() {
   const [views, setViews] = useState('1')
   const [likes, setLikes] = useState('1')
 
+  const navigate = useNavigate()
+
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
   }
@@ -137,7 +139,7 @@ function RegisterComponent() {
 
       await api.post('/register', data)
 
-      // history.push('/')
+      navigate('/posts')
 
       return alert('Cadastro realizado com sucesso!')
     } catch (error) {
