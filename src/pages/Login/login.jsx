@@ -23,21 +23,30 @@ export const ContainerInput = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 850px){
+    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -26px;
+
+  }
 `
 
 
+export const Form = styled.form`
+  display: flex;
+  width: 30%;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-// const Button = styled.button`
-//   display: flex;
-//   /* width: 90vw; */
-//   /* height: auto; */
-//   align-items: center;
-//   justify-content: center;
-//   background: gray;
-//   margin-bottom: 20px;
-
-
-// `
+  @media screen and (max-width: 850px){
+    width: 70%;
+  }
+`
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -67,7 +76,7 @@ function Login() {
       <HeaderComponent />
       <h1 >LOGIN</h1>
       <ContainerInput>
-        <form onSubmit={handleSubmit} style={{ width: '30%' }}>
+        <Form onSubmit={handleSubmit} >
           <Input
             type="email"
             placeholder="Email"
@@ -75,6 +84,7 @@ function Login() {
             value={email}
             invalid={true}
           // errorMessage="Email inválido"
+
           />
 
           <Input
@@ -87,7 +97,7 @@ function Login() {
           />
 
           <Button type="submit">Login</Button>
-        </form>
+        </Form>
       </ContainerInput>
     </Container>
   )
