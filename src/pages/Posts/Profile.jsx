@@ -5,6 +5,8 @@ import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
+import { Button } from '../../components/styled-button'
+
 
 export const Container = styled.div`
   display: flex;
@@ -36,6 +38,24 @@ export const ContainerLinks = styled.div`
     justify-content: space-between;
   }
 `
+
+
+export const ContainerButtons = styled.div`
+  display: flex;
+  width: 30rem;
+  /* height: 100rem; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 200px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`
+
 
 const ContainerMaps = styled.div`
   display: flex;
@@ -163,10 +183,20 @@ function Profile() {
         </div>
       </ContainerMaps>
 
-      <button onClick={HandleEditar}>EDITAR</button>
+      <ContainerButtons >
 
-      <button onClick={deletePost}>DELETAR</button>
+
+        <Button onClick={HandleEditar}>EDITAR</Button>
+
+        <Button onClick={deletePost}>DELETAR</Button>
+      </ContainerButtons>
+      <br />
+      <br />
+      <br />
+      <br />
+
     </Container>
+
   )
 }
 

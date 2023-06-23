@@ -7,6 +7,8 @@ import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
 import RegisterComponent from './RegisterComponent'
+import { Button } from '../../components/styled-button'
+
 
 export const Container = styled.div`
   display: flex;

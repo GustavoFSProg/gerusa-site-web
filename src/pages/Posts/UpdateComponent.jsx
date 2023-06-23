@@ -6,6 +6,7 @@ import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link, useNavigate } from 'react-router-dom'
+import { Button } from '../../components/styled-button'
 
 
 export const Container = styled.div`
@@ -42,6 +43,7 @@ export const ContainerLinks = styled.div`
 
   }
   `
+
 
 // export const Input = styled.input`
 //   display: flex;
@@ -222,7 +224,7 @@ function UpdateComponent() {
           invalid={true}
           id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <br /><br />
-        {dados === 'OK' ? <button type="submit">Editar</button> : "Botao desabiitado!!"}
+        {dados === 'OK' ? <Button type="submit">Editar</Button> : "Botao desabiitado!!"}
         <br />
         <br />
         <br />

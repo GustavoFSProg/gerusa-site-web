@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import api from '../../api'
 import { useNavigate } from 'react-router-dom'
 import HeaderComponent from '../../components/Header/Header'
+import { Button } from '../../components/styled-button'
+
 
 export const Container = styled.div`
   display: flex;
@@ -22,6 +24,20 @@ export const ContainerInput = styled.div`
   justify-content: center;
   flex-direction: column;
 `
+
+
+
+// const Button = styled.button`
+//   display: flex;
+//   /* width: 90vw; */
+//   /* height: auto; */
+//   align-items: center;
+//   justify-content: center;
+//   background: gray;
+//   margin-bottom: 20px;
+
+
+// `
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -70,7 +86,7 @@ function Login() {
             errorMessage="Invalid password"
           />
 
-          <button type="submit">Login</button>
+          <Button type="submit">Login</Button>
         </form>
       </ContainerInput>
     </Container>

@@ -6,6 +6,8 @@ import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import PostComoponent from './PostComoponent'
 import { Link } from 'react-router-dom'
+import { Button } from '../../components/styled-button'
+
 
 export const Container = styled.div`
   display: flex;
@@ -193,7 +195,7 @@ function RegisterComponent() {
           invalid={true}
           id="autor" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <br /><br />
-        {dados === 'OK' ? <button type="submit">Cadastrar</button> : "Botao desabiitado!!"}
+        {dados === 'OK' ? <Button type="submit">Cadastrar</Button> : "Botao desabiitado!!"}
 
       </form>
     </Container>
