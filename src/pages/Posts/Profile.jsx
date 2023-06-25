@@ -7,7 +7,6 @@ import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Buttons/styled-button'
 
-
 export const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -17,6 +16,9 @@ export const Container = styled.div`
   flex-direction: column;
   /* background: orange; */
 `
+
+
+
 
 export const H1 = styled.h1`
   display: flex;
@@ -49,7 +51,6 @@ export const ContainerLinks = styled.div`
   }
 `
 
-
 export const ContainerButtons = styled.div`
   display: flex;
   width: 30rem;
@@ -65,7 +66,6 @@ export const ContainerButtons = styled.div`
     flex-direction: column;
   }
 `
-
 
 const ContainerMaps = styled.div`
   display: flex;
@@ -84,8 +84,7 @@ const ContainerMaps = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
     justify-content: space-between;
-  margin-top: -200px;
-
+    margin-top: -200px;
   }
 `
 
@@ -115,7 +114,6 @@ function Profile() {
     } catch (error) {
       return alert(error)
     }
-
   }
 
   const token = localStorage.getItem('token')
@@ -195,20 +193,32 @@ function Profile() {
         </div>
       </ContainerMaps>
 
-      <ContainerButtons >
-
-
+      <ContainerButtons>
         <Button onClick={HandleEditar}>EDITAR</Button>
 
-        <Button onClick={deletePost}>DELETAR</Button>
+        <Link to="/delete" style={{
+
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'lightgray',
+          marginBottom: '20px',
+          transition: 'all ease 0.6s',
+          cursor: 'pointer',
+          color: 'black',
+          padding: '8px',
+          paddingLeft: '12px',
+          paddingRight: '12px',
+          borderRadius: '10px'
+
+
+        }}> DELETAR</Link>
       </ContainerButtons>
       <br />
       <br />
       <br />
       <br />
-
     </Container>
-
   )
 }
 
