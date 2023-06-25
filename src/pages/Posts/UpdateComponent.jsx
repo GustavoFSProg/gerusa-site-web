@@ -86,7 +86,7 @@ export const ContainerLinks = styled.div`
 
 function UpdateComponent() {
   const [dados, setDados] = useState([])
-  const [able, setAble] = useState(false)
+  const [datas, setDatas] = useState({})
 
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
@@ -154,8 +154,22 @@ function UpdateComponent() {
     return dados
   }
 
+
+  async function ProfileHandle() {
+    const id = localStorage.getItem('ID')
+
+    const { data } = await api.get(`/get-post/${id}`)
+
+    setDatas(data)
+
+    console.log(datas)
+
+    return datas
+  }
+
   useEffect(() => {
     HandleAuth()
+    ProfileHandle()
   }, [])
 
   return (
@@ -198,6 +212,9 @@ function UpdateComponent() {
           style={{ marginTop: '30px' }}
         />
         <br />
+        <label target="title">
+          {datas.title}
+        </label>
         <Input
           placeholder="Titulo"
           invalid={true}
@@ -206,19 +223,24 @@ function UpdateComponent() {
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
+
         Texto{' '}
         <TextArea
           rows="22"
           cols="54"
           id="text"
           value={text}
+          // readOnly="false"
+
+          // placeholder={datas.text}
           onChange={(e) => setText(e.target.value)}
           style={{
             borderRadius: '8px',
             border: '1px solid rgba(37, 0, 50, 0.25)',
             boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)',
           }}
-        />
+        >
+        </TextArea>
         <br />
         <Input
           placeholder="Descrição"
