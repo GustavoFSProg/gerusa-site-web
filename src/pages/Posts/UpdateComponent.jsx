@@ -212,19 +212,20 @@ function UpdateComponent() {
           style={{ marginTop: '30px' }}
         />
         <br />
-        <label target="title">
-          {datas.title}
-        </label>
+
         <Input
-          placeholder="Titulo"
+          placeholder={datas.title}
           invalid={true}
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+
         <br />
 
         Texto{' '}
+        {datas.text}
+
         <TextArea
           rows="22"
           cols="54"
@@ -232,15 +233,14 @@ function UpdateComponent() {
           value={text}
           // readOnly="false"
 
-          // placeholder={datas.text}
+          placeholder={datas.text}
           onChange={(e) => setText(e.target.value)}
           style={{
             borderRadius: '8px',
             border: '1px solid rgba(37, 0, 50, 0.25)',
             boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)',
           }}
-        >
-        </TextArea>
+        />
         <br />
         <Input
           placeholder="Descrição"
