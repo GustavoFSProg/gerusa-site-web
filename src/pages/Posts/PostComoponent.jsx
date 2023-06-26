@@ -14,22 +14,16 @@ export const Container = styled.div`
   justify-content: top;
   flex-direction: column;
   /* background: orange; */
-
 `
-
 
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
   font-size: 40px;
 
-
-
   @media screen and (max-width: 800px) {
     font-size: 29px;
-  
   }
-
 `
 
 export const ContainerLinks = styled.div`
@@ -44,20 +38,14 @@ export const ContainerLinks = styled.div`
   padding-top: 28px;
   padding-bottom: 28px;
 
-
-
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
-  `
-
-
+`
 
 const ContainerMaps = styled.div`
   display: flex;
@@ -70,19 +58,15 @@ const ContainerMaps = styled.div`
   /* margin-bottom: 200px; */
   flex-direction: column;
 
-
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-  margin-top: -200px;
-
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    margin-top: -200px;
   }
-  `
-
+`
 
 function PostComponent() {
   const [dados, setDados] = useState([])
@@ -93,13 +77,10 @@ function PostComponent() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-
   function setItem(id) {
     localStorage.setItem('ID', id)
 
     navigate('/profile')
-
-
   }
 
   const token = localStorage.getItem('token')
@@ -111,9 +92,7 @@ function PostComponent() {
 
     console.log(dados)
 
-    return (< p >
-
-    </p>)
+    return <p></p>
   }
 
   useEffect(() => {
@@ -122,9 +101,6 @@ function PostComponent() {
 
   return (
     <Container>
-
-
-
       <ContainerLinks style={{ height: '100px' }}>
         <Link to="/dashboard" style={{ color: 'yellow' }}>
           PAINEL
@@ -140,54 +116,55 @@ function PostComponent() {
         <Link to="/posts" style={{ color: 'yellow' }}>
           EDITAR
         </Link>
-      </ ContainerLinks>
+      </ContainerLinks>
       <ContainerMaps>
-        <H1  >
-          POSTS
-        </H1>
-        {dados.map(item => {
+        <H1>POSTS</H1>
+        {dados.map((item) => {
           return (
             <div key={item.id}>
               <button onClick={() => setItem(item.id)}>
-
-
-                <h2 style={{ fontSize: '34px' }} >
-                  <p >
-                    {item.title}
-                  </p>
+                <h2 style={{ fontSize: '34px' }}>
+                  <p>{item.title}</p>
                 </h2>
+
                 <img src={item.image} alt="imagem" width="300" />
-                <div style={{
-                  width: '100%', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center'
-                }}>
-                  <p style={{
-                    width: '50%', display: 'flex',
-                    alignItems: 'center', justifyContent: 'center'
-                  }}>
+                {/* <img
+                  src={`https://gerusa-site-api-juab.vercel.app/files/${item.image}`}
+                  alt="imagem"
+                  width="300"
+                /> */}
+                <div
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <p
+                    style={{
+                      width: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
                     {item.text}
                   </p>
                 </div>
 
-                <p >
-                  {item.desc}
-                </p>
+                <p>{item.desc}</p>
 
-                <p >
-                  {getDateWithoutTime(item.createdAt)}
-                </p>
+                <p>{getDateWithoutTime(item.createdAt)}</p>
                 <br />
                 <br />
                 <br />
               </button>
-
             </div>
-
           )
         })}
-      </ ContainerMaps>
-
-    </Container >
+      </ContainerMaps>
+    </Container>
   )
 }
 
