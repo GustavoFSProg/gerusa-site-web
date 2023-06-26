@@ -165,7 +165,7 @@ function Profile() {
           </h2>
           {/* <img src={`http://localhost:5000/files/${dados.image}`} alt="imagem" width="300" /> */}
           <img
-            src={`https://gerusa-site-api-juab.vercel.app/files/${item.image}`}
+            src={`https://gerusa-site-api-juab.vercel.app/files/${dados.image}`}
 
             alt="imagem" width="300" />
 
