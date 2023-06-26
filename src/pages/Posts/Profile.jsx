@@ -163,7 +163,12 @@ function Profile() {
           <h2 style={{ fontSize: '34px' }}>
             <p>{dados.title}</p>
           </h2>
-          <img src={`http://localhost:5000/files/${dados.image}`} alt="imagem" width="300" />
+          {/* <img src={`http://localhost:5000/files/${dados.image}`} alt="imagem" width="300" /> */}
+          <img
+            src={`https://gerusa-site-api-juab.vercel.app/files/${item.image}`}
+
+            alt="imagem" width="300" />
+
           <div
             style={{
               width: '100%',
