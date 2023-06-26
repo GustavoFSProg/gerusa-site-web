@@ -127,13 +127,12 @@ function PostComponent() {
                   <p>{item.title}</p>
                 </h2>
 
-                {item.image}
-                {/* <img src={`http://localhost:5000/files/${item.image}`} alt="imagem" width="300" /> */}
-                <img
+                <img src={item.image} alt="imagem" width="300" />
+                {/* <img
                   src={`https://gerusa-site-api-juab.vercel.app/files/${item.image}`}
                   alt="imagem"
                   width="300"
-                />
+                /> */}
                 <div
                   style={{
                     width: '100%',
