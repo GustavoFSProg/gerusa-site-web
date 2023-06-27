@@ -19,10 +19,10 @@ export const Container = styled.div`
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
-  font-size: 40px;
+  font-size: 60px;
 
   @media screen and (max-width: 800px) {
-    font-size: 29px;
+    font-size: 60px;
   }
 `
 
@@ -123,7 +123,7 @@ function PostComponent() {
           return (
             <div key={item.id}>
               <button onClick={() => setItem(item.id)}>
-                <h2 style={{ fontSize: '34px' }}>
+                <h2 style={{ fontSize: '32px' }}>
                   <p>{item.title}</p>
                 </h2>
 
@@ -143,10 +143,12 @@ function PostComponent() {
                 >
                   <p
                     style={{
-                      width: '50%',
+                      width: '520px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
+                      fontSize: '18px',
+                      lineHeight: '140%',
                     }}
                   >
                     {item.text}

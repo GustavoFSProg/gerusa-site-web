@@ -4,9 +4,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: auto;
+  height: 70px;
   align-items: top;
   justify-content: center;
+  /* background: orange; */
+  margin-top: -50px;
+  margin-bottom: -25px;
 
   @media screen and (max-width: 800px){
     display: none;
