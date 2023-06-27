@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
-import { Container, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import { Container, ImgSlideDois, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from './assets/slide-1.jpg'
 import bandeira from './assets/bandeira.jpeg'
 
@@ -100,7 +100,7 @@ function App() {
             }}
           />
 
-          <ImgSlide
+          <ImgSlideDois
             src={bandeira}
             alt="slide"
             style={{

@@ -41,7 +41,15 @@ export const ImgSlide = styled.img`
     height: 50%;
   }
 `
+export const ImgSlideDois = styled.img`
+  width: 40%;
+  height: 50%;
+  margin-bottom: 30px;
 
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`
 export const Menu = styled.div`
   display: none;
 
