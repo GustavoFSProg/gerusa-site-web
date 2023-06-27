@@ -22,7 +22,7 @@ export const Container = styled.div`
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
-  font-size: 40px;
+  font-size: 50px;
 
 
 
