@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
-import { Container, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import { Container, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from './assets/building.jpg'
 import bandeira from './assets/bandeira.jpeg'
 import card1 from './assets/thebandeira.jpg'
@@ -136,7 +136,7 @@ function App() {
 
         <ContainerCards>
           <Cards>
-            <img src={card1} alt="alt" width="370" />
+            <ImagemCard src={card1} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
@@ -150,7 +150,7 @@ function App() {
           </ Cards>
 
           <Cards>
-            <img src={card2} alt="alt" width="370" />
+            <ImagemCard src={card2} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Sobre a Profissional</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
@@ -163,7 +163,7 @@ function App() {
             </div>
           </ Cards>
           <Cards>
-            <img src={card3} alt="alt" width="350" />
+            <ImagemCard src={card3} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>

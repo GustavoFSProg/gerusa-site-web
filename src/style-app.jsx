@@ -169,3 +169,18 @@ export const Cards = styled.div`
     height: 120%; */
   }
 `
+
+
+
+
+
+export const ImagemCard = styled.img`
+  display: flex;
+  width: 370px;
+  
+
+  @media screen and (max-width: 800px) {
+    width: 270px;
+
+  }
+`
