@@ -5,7 +5,7 @@ import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
 import { Container, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
-import slide from './assets/slide-1.jpg'
+import slide from './assets/building.jpg'
 import bandeira from './assets/bandeira.jpeg'
 import card1 from './assets/thebandeira.jpg'
 import card2 from './assets/peopple.jpg'
@@ -98,6 +98,7 @@ function App() {
             alt="slide"
             style={{
               marginTop: '5px',
+              height: '315px',
 
               zIndex: '-10',
             }}
@@ -120,43 +121,45 @@ function App() {
         </ContainerH1>
 
         <ContainerText>
-          O constante desenvolvimento científico
-          e tecnológico e o crescente intercâmbio acadêmico
-          e profissional faz com que a tradução, seja juramentada
-          ou simples, esteja sempre presente na vida pessoal, profissional
-          e empresarial do mundo moderno. A tradução exige muito mais do
-          que fluência na língua estrangeira; é preciso conhecer e viver
-          de perto a cultura dos nativos deste idioma. Ana Laura, além do
-          grande conhecimento adquirido nos muitos cursos que fez, morou
-          nos E.U.A e vivenciou a língua de uma maneira muito além dos livros.
+          It is a long established fact that a reader will be
+          distracted by the readable content of a page when
+          looking at its layout. The point of using Lorem Ipsum is
+          that it has a more-or-less normal distribution of letters,
+          as opposed to using 'Content here,
+          It is a long established fact that a reader will be
+          distracted by the readable content of a page when
+          looking at its layout. The point of using Lorem Ipsum is
+          that it has a more-or-less normal distribution of letters,
+          as opposed to using 'Content here,
+          normal distribution of letters,
         </ContainerText>
 
         <ContainerCards>
           <Cards>
             <img src={card1} alt="alt" width="370" />
-            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Qualidade</h2>
+            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', marginTop: '10px' }}>
 
-              O constante desenvolvimento científico
-              e tecnológico e o crescente intercâmbio acadêmico
-              e profissional faz com que a tradução, seja juramentada
-              ou simples, esteja sempre presente na vida pessoal, profissional
-              e empresarial do mundo moderno.
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
             </div>
           </ Cards>
 
           <Cards>
             <img src={card2} alt="alt" width="370" />
-            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>A Profissional</h2>
+            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Sobre a Profissional</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', marginTop: '10px' }}>
 
-              O constante desenvolvimento científico
-              e tecnológico e o crescente intercâmbio acadêmico
-              e profissional faz com que a tradução, seja juramentada
-              ou simples, esteja sempre presente na vida pessoal, profissional
-              e empresarial do mundo moderno.
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
             </div>
           </ Cards>
           <Cards>
@@ -164,12 +167,11 @@ function App() {
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', marginTop: '10px' }}>
-
-              O constante desenvolvimento científico
-              e tecnológico e o crescente intercâmbio acadêmico
-              e profissional faz com que a tradução, seja juramentada
-              ou simples, esteja sempre presente na vida pessoal, profissional
-              e empresarial do mundo moderno.
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
             </div>
           </ Cards>
         </ ContainerCards>
