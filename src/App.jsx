@@ -10,6 +10,7 @@ import bandeira from './assets/bandeira.jpeg'
 import card1 from './assets/thebandeira.jpg'
 import card2 from './assets/peopple.jpg'
 import card3 from './assets/building.jpg'
+import emblema from './assets/emblema.png'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -216,11 +217,7 @@ function App() {
               width: '100%', textIndent: '6px', marginTop: '10px',
               color: 'white'
             }}>
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
+              <img src={emblema} alt="emblema" width="220" style={{ marginTop: '16px' }} />
             </div>
           </div>
 
@@ -242,11 +239,11 @@ function App() {
             }} />
 
             <div style={{ width: '100%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.207003175042!2d-51.15582380000001!3d-29.6847776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95194314fd114013%3A0x2ccaf0e00ad7665a!2sR.%20Gov.%20Valter%20Jobim%2C%20272%20-%20Primavera%2C%20Novo%20Hamburgo%20-%20RS%2C%2093344-380!5e0!3m2!1spt-BR!2sbr!4v1687981816631!5m2!1spt-BR!2sbr" width="600" height="450"
+                style={{ color: 'black', border: '0', width: '270px', height: '290px' }}
+                allowFullScreen=""
+                loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <div style={{
