@@ -190,7 +190,7 @@ export const ContainerFooter
   height: 500px;
   /* margin-left: 11px; */
   /* margin-bottom: 50px; */
-  padding-top: 50px;
+  padding-top: 20px;
 
   margin-top: -40px;
   background: #008080;

@@ -178,39 +178,103 @@ function App() {
 
         <ContainerFooter>
           <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-            It is a long established fact that a reader will be
-            distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here,
+            <h1 style={{
+              width: '85%',
+              marginTop: '10px', color: 'white', fontSize: '22px'
+            }}>
+              Quem Somos
+            </h1>
+            <hr style={{
+              width: '88%', marginTop: '-2px', marginLeft: '45px',
+              color: 'white'
+            }} />
+
+
+            <div style={{ width: '100%', marginLeft: '28px', marginTop: '20px', color: 'white' }}>
+
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
+            </div>
+          </div>
+          <div style={{ width: '90%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
+            <h1 style={{
+              width: '85%',
+              marginTop: '10px', color: 'white', fontSize: '22px',
+              marginLeft: '10px'
+            }}>
+              Tradutora Certificada
+            </h1>
+            <hr style={{
+              width: '88%', marginTop: '-2px', marginLeft: '18px',
+              color: 'white'
+            }} />
+
+            <div style={{
+              width: '100%', textIndent: '6px', marginTop: '10px',
+              color: 'white'
+            }}>
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
+            </div>
           </div>
 
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-            It is a long established fact that a reader will be
-            distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here,
-          </div>
+          <div style={{
+            width: '85%', textIndent: '6px', marginTop: '10px',
+            color: 'white'
+          }}>
+            <h1 style={{
+              width: '65%',
+              marginTop: '10px', color: 'white', fontSize: '22px',
+              marginLeft: '-6px'
 
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-            It is a long established fact that a reader will be
-            distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here,
-          </div>
+            }}>
+              Localização
+            </h1>
+            <hr style={{
+              width: '88%', marginTop: '-2px', marginLeft: '18px',
+              color: 'white'
+            }} />
 
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-            It is a long established fact that a reader will be
-            distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here,
+            <div style={{ width: '100%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
+            </div>
+          </div>
+          <div style={{
+            width: '85%', textIndent: '6px', marginTop: '10px',
+            color: 'white'
+          }}>
+            <h1 style={{
+              width: '65%',
+              marginTop: '10px', color: 'white', fontSize: '22px',
+              marginLeft: '-17px'
+
+            }}>
+              Contatos
+            </h1>
+            <hr style={{
+              width: '88%', marginTop: '-2px', marginLeft: '18px',
+              color: 'white'
+            }} />
+
+            <div style={{ width: '100%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
+              It is a long established fact that a reader will be
+              distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is
+              that it has a more-or-less normal distribution of letters,
+              as opposed to using 'Content here,
+            </div>
           </div>
         </ ContainerFooter>
-
-
       </Container>
     </>
   )
