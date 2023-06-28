@@ -177,7 +177,7 @@ function App() {
         </ ContainerCards>
 
         <ContainerFooter>
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
             It is a long established fact that a reader will be
             distracted by the readable content of a page when
             looking at its layout. The point of using Lorem Ipsum is
@@ -185,7 +185,7 @@ function App() {
             as opposed to using 'Content here,
           </div>
 
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
             It is a long established fact that a reader will be
             distracted by the readable content of a page when
             looking at its layout. The point of using Lorem Ipsum is
@@ -193,7 +193,7 @@ function App() {
             as opposed to using 'Content here,
           </div>
 
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
             It is a long established fact that a reader will be
             distracted by the readable content of a page when
             looking at its layout. The point of using Lorem Ipsum is
@@ -201,7 +201,7 @@ function App() {
             as opposed to using 'Content here,
           </div>
 
-          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
             It is a long established fact that a reader will be
             distracted by the readable content of a page when
             looking at its layout. The point of using Lorem Ipsum is

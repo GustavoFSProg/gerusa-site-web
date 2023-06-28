@@ -190,9 +190,11 @@ export const ContainerFooter
   height: 500px;
   /* margin-left: 11px; */
   /* margin-bottom: 50px; */
+  padding-top: 50px;
+
   margin-top: -40px;
   background: #008080;
-   /* align-items: center;  */
+  color: white;
   /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
