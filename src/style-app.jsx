@@ -140,11 +140,9 @@ export const ContainerCards = styled.div`
   /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
-    /* flex-direction: column;
-    justify-content: center;
-    margin-top: 30px;
-
-    height: 120%; */
+     flex-direction: column;
+   display: flex;
+    
   }
 `
 

@@ -63,7 +63,7 @@ function App() {
               alignItems: 'center',
               justifyContent: 'space-between',
               width: '100%',
-              height: '750px',
+              height: '250px',
               marginTop: '-75px',
               zIndex: '999',
               background: 'lightgray',
@@ -134,7 +134,7 @@ function App() {
         <ContainerCards>
           <Cards>
             <img src={card1} alt="alt" width="370" />
-            <h2 style={{ fontSize: '32px', marginTop: '10px' }}>A Profissional</h2>
+            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Qualidade</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', marginTop: '10px' }}>
 
@@ -148,7 +148,7 @@ function App() {
 
           <Cards>
             <img src={card2} alt="alt" width="370" />
-            <h2 style={{ fontSize: '32px', marginTop: '10px' }}>A Profissional</h2>
+            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>A Profissional</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', marginTop: '10px' }}>
 
@@ -161,7 +161,7 @@ function App() {
           </ Cards>
           <Cards>
             <img src={card3} alt="alt" width="350" />
-            <h2 style={{ fontSize: '32px', marginTop: '10px' }}>Serviços</h2>
+            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', marginTop: '10px' }}>
 
