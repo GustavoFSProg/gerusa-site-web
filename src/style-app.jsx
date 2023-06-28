@@ -180,3 +180,28 @@ export const ImagemCard = styled.img`
 
   }
 `
+
+export const ContainerFooter
+  = styled.div`
+   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 500px;
+  /* margin-left: 11px; */
+  /* margin-bottom: 50px; */
+  margin-top: -40px;
+  background: #008080;
+   /* align-items: center;  */
+  /* justify-content: center; */
+
+  @media screen and (max-width: 800px) {
+     flex-direction: column;
+   display: flex;
+  height: auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+    
+  }
+`

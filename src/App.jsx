@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
-import { Container, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import { Container, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from './assets/building.jpg'
 import bandeira from './assets/bandeira.jpeg'
 import card1 from './assets/thebandeira.jpg'
@@ -175,6 +175,41 @@ function App() {
             </div>
           </ Cards>
         </ ContainerCards>
+
+        <ContainerFooter>
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+          </div>
+
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+          </div>
+
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+          </div>
+
+          <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+          </div>
+        </ ContainerFooter>
+
 
       </Container>
     </>
