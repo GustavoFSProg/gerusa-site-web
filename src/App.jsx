@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
-import { Container, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import { Container, ImagemCardTres, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from './assets/building.jpg'
 import bandeira from './assets/bandeira.jpeg'
 import card1 from './assets/thebandeira.jpg'
@@ -163,7 +163,7 @@ function App() {
             </div>
           </ Cards>
           <Cards>
-            <ImagemCard src={card3} alt="alt" />
+            <ImagemCardTres src={card3} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>

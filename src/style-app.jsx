@@ -207,3 +207,22 @@ export const ContainerFooter
     
   }
 `
+
+
+
+
+
+
+export const ImagemCardTres = styled.img`
+  display: flex;
+  width: 370px;
+  height: 248px;
+  
+
+  @media screen and (max-width: 800px) {
+    width: 307px;
+  height: 200px;
+
+
+  }
+`
