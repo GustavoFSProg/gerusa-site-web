@@ -248,7 +248,9 @@ function App() {
           </div>
           <div style={{
             width: '85%', textIndent: '6px', marginTop: '10px',
-            color: 'white'
+            color: 'white',
+            display: 'flex', flexDirection: 'column',
+            alignItems: 'flex-start',
           }}>
             <h1 style={{
               width: '65%',
@@ -264,11 +266,53 @@ function App() {
             }} />
 
             <div style={{ width: '100%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
+
+              <div style={{
+                display: 'flex', flexDirection: 'column',
+                alignItems: 'flex-start',
+                width: '100%', marginTop: '-18px', color: 'white',
+                marginLeft: '15px'
+              }}>
+                <h2>
+                  Endereço:
+                </h2>
+                <div style={{ marginTop: '-11px', fontSize: '18px' }}>
+
+                  Rua Walter Jobin 272
+                </div>
+              </div>
+
+              <div style={{
+                display: 'flex', flexDirection: 'column',
+                alignItems: 'flex-start',
+                width: '100%', marginTop: '8px', color: 'white',
+                marginLeft: '15px'
+              }}>
+                <h2>
+                  Telefone:
+                </h2>
+                <div style={{ marginTop: '-11px', fontSize: '18px' }}>
+
+                  (51) 9396-5345
+                </div>
+              </div>
+
+
+              <div style={{
+                display: 'flex', flexDirection: 'column',
+                alignItems: 'flex-start',
+                width: '100%', marginTop: '8px', color: 'white',
+                marginLeft: '15px'
+              }}>
+                <h2>
+                  Email:
+                </h2>
+                <div style={{ marginTop: '-11px', fontSize: '18px' }}>
+
+                  gerusagamm@gmail.com
+                </div>
+              </div>
+
             </div>
           </div>
         </ ContainerFooter>
