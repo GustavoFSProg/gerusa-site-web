@@ -125,3 +125,45 @@ export const ContainerText = styled.div`
   font-size: 17px;
   }
 `
+
+
+
+export const ContainerCards = styled.div`
+   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 94%;
+  margin-left: 11px;
+  margin-bottom: 200px;
+  margin-top: -40px;
+   /* align-items: center;  */
+  /* justify-content: center; */
+
+  @media screen and (max-width: 800px) {
+    /* flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+
+    height: 120%; */
+  }
+`
+
+
+export const Cards = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  /* float: left; */
+  text-align: left;
+  
+  /* margin-top: -5px;  */
+
+  @media screen and (max-width: 800px) {
+    /* flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+
+    height: 120%; */
+  }
+`

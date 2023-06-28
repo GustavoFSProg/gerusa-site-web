@@ -4,9 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
-import { Container, ImgSlideDois, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import { Container, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from './assets/slide-1.jpg'
 import bandeira from './assets/bandeira.jpeg'
+import card1 from './assets/thebandeira.jpg'
+import card2 from './assets/peopple.jpg'
+import card3 from './assets/building.jpg'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -127,6 +130,50 @@ function App() {
           grande conhecimento adquirido nos muitos cursos que fez, morou
           nos E.U.A e vivenciou a língua de uma maneira muito além dos livros.
         </ContainerText>
+
+        <ContainerCards>
+          <Cards>
+            <img src={card1} alt="alt" width="370" />
+            <h2 style={{ fontSize: '32px', marginTop: '10px' }}>A Profissional</h2>
+            <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
+            <div style={{ width: '85%', marginTop: '10px' }}>
+
+              O constante desenvolvimento científico
+              e tecnológico e o crescente intercâmbio acadêmico
+              e profissional faz com que a tradução, seja juramentada
+              ou simples, esteja sempre presente na vida pessoal, profissional
+              e empresarial do mundo moderno.
+            </div>
+          </ Cards>
+
+          <Cards>
+            <img src={card2} alt="alt" width="370" />
+            <h2 style={{ fontSize: '32px', marginTop: '10px' }}>A Profissional</h2>
+            <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
+            <div style={{ width: '85%', marginTop: '10px' }}>
+
+              O constante desenvolvimento científico
+              e tecnológico e o crescente intercâmbio acadêmico
+              e profissional faz com que a tradução, seja juramentada
+              ou simples, esteja sempre presente na vida pessoal, profissional
+              e empresarial do mundo moderno.
+            </div>
+          </ Cards>
+          <Cards>
+            <img src={card3} alt="alt" width="350" />
+            <h2 style={{ fontSize: '32px', marginTop: '10px' }}>Serviços</h2>
+            <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
+            <div style={{ width: '85%', marginTop: '10px' }}>
+
+              O constante desenvolvimento científico
+              e tecnológico e o crescente intercâmbio acadêmico
+              e profissional faz com que a tradução, seja juramentada
+              ou simples, esteja sempre presente na vida pessoal, profissional
+              e empresarial do mundo moderno.
+            </div>
+          </ Cards>
+        </ ContainerCards>
+
       </Container>
     </>
   )
