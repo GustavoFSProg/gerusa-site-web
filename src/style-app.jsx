@@ -76,6 +76,7 @@ export const ContainerH1 = styled.div`
   /* background: green; */
   font-size: 32px;
   margin-top: 148px;
+  color: #595959;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -108,6 +109,7 @@ export const ContainerText = styled.div`
   font-size: 19px;
   margin-top: -67px;
   margin-bottom: 200px;
+  color: #666666;
 
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;

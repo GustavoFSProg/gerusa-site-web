@@ -139,7 +139,7 @@ function App() {
             <img src={card1} alt="alt" width="370" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
-            <div style={{ width: '85%', marginTop: '10px' }}>
+            <div style={{ width: '85%', marginTop: '10px', color: '#595959' }}>
 
               It is a long established fact that a reader will be
               distracted by the readable content of a page when
@@ -153,7 +153,7 @@ function App() {
             <img src={card2} alt="alt" width="370" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Sobre a Profissional</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
-            <div style={{ width: '85%', marginTop: '10px' }}>
+            <div style={{ width: '85%', marginTop: '10px', color: '#595959' }}>
 
               It is a long established fact that a reader will be
               distracted by the readable content of a page when
@@ -166,7 +166,7 @@ function App() {
             <img src={card3} alt="alt" width="350" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
-            <div style={{ width: '85%', marginTop: '10px' }}>
+            <div style={{ width: '85%', marginTop: '10px', color: '#595959' }}>
               It is a long established fact that a reader will be
               distracted by the readable content of a page when
               looking at its layout. The point of using Lorem Ipsum is
