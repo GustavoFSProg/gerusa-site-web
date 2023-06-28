@@ -180,7 +180,7 @@ export const ImagemCard = styled.img`
   
 
   @media screen and (max-width: 800px) {
-    width: 270px;
+    width: 300px;
 
   }
 `
