@@ -70,14 +70,16 @@ export const Menu = styled.div`
 export const ContainerH1 = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   height: 100vh;
   align-items: left;
   justify-content: center;
   /* background: green; */
   font-size: 32px;
-  margin-top: 108px;
+  /* margin-top: 108px; */
   color: #595959;
+  text-align: left;
+  margin-left: 180px;
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -101,15 +103,14 @@ export const Hr = styled.hr`
 
 export const ContainerText = styled.div`
   display: flex;
-  /* flex-direction: column; */
-  width: 70%;
+  flex-direction: column;
+  width: 45%;
   height: 500px;
   align-items: center;
   justify-content: center;
-  /* background: green; */
   font-size: 19px;
-  margin-top: -162px;
-  margin-bottom: 200px;
+  margin-top: -330px;
+  margin-bottom: 200px;  
   color: #666666;
 
   @media screen and (min-width: 300px) and (max-width: 450px) {
@@ -230,11 +231,11 @@ export const ImagemCardTres = styled.img`
 
 export const ContainerTextImage = styled.div`
    display: flex;
-  /* margin-left: 11px; */
+  margin-left: 31px;
   /* margin-top: -470px; */
-   align-items: center; 
+   align-items: flex-start; 
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   text-align: justify;
   height: 100vh;
   width: 100%;
@@ -256,7 +257,7 @@ export const ContainerTextAll = styled.div`
   /* margin-top: -470px; */
    /* align-items: top;  */
   /* justify-content: top; */
-  /* flex-direction: column; */
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
 

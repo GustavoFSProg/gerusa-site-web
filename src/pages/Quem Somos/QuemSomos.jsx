@@ -2,7 +2,22 @@ import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import HeaderTop from '../../components/HeaderTop/HeaderTop'
 import HeaderComponent from '../../components/Header/Header'
-import { Container, ContainerTextImage, ContainerTextAll, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import {
+  Container,
+  ContainerTextImage,
+  ContainerTextAll,
+  ContainerFooter,
+  ImagemCard,
+  ImgSlideDois,
+  ContainerCards,
+  Cards,
+  ContainerText,
+  ContainerH1,
+  Hr,
+  ImgSlide,
+  Menu,
+  ContainerImagens,
+} from './style-app'
 import slide from '../../assets/building.jpg'
 import rosto from '../../assets/rosto.jpg'
 import Footer from '../../components/Footer/Footer'
@@ -88,48 +103,51 @@ function QuemSomos() {
           </div>
         ) : null}
 
-        < ContainerTextAll>
-
+        <ContainerTextAll>
+          <ContainerH1>
+            Quem Sou
+            <Hr />
+          </ContainerH1>
           <ContainerTextImage>
-
-            <ContainerH1>
-              Quem Sou
-              <Hr />
-            </ContainerH1>
-
+            <img
+              src={rosto}
+              width="300"
+              style={{
+                display: 'flex',
+                width: '300px',
+                justifyContent: 'left',
+                alignItems: 'flex-start',
+                marginTop: '-265px',
+                marginRight: '22px',
+              }}
+            />
             <ContainerText>
-              <img src={rosto} width="300" style={{
-                display: 'flex', width: "300px",
-                justifyContent: 'center', alignItems: 'top', marginTop: '-265px',
-                marginRight: '22px'
-              }} />
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-              normal distribution of letters,
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-              normal distribution of letters,
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-              normal distribution of letters,
+              It is a long established fact that a reader will be distracted by the readable content
+              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+              more-or-less normal distribution of letters, as opposed to using 'Content here, It is
+              a long established fact that a reader will be distracted by the readable content of a
+              page when looking at its layout. The point of using Lorem Ipsum is that it has a
+              more-or-less normal distribution of letters, as opposed to using 'Content here, normal
+              distribution of letters, It is a long established fact that a reader will be
+              distracted by the readable content of a page when looking at its layout. The point of
+              using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+              opposed to using 'Content here, normal distribution of letters,
+              {/* <div
+                style={{
+                  display: 'flex',
+                  width: '50rem',
+                  height: '200px',
+                  marginLeft: '-200px',
+                }}
+              >
+                AAAAAA It is a long established fact that a reader will be distracted by the
+                readable content of a page when looking at its layout. The point of using Lorem
+                Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                using 'Content here, normal distribution of letters,
+              </div> */}
             </ContainerText>
-          </ ContainerTextImage>
-        </ ContainerTextAll>
-
+          </ContainerTextImage>
+        </ContainerTextAll>
 
         {/* <ContainerCards> */}
         {/* <Cards> */}
