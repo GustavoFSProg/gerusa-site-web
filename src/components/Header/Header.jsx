@@ -18,9 +18,13 @@ function HeaderComponent() {
                 HOME
               </span>
             </Link>
-            <span style={{ color: '#213547' }}>
-              QUEM SOU
-            </span>
+            <Link to="/somos" style={{ color: '#213547' }}>
+
+              <span style={{ color: '#213547' }}>
+                QUEM SOU
+              </span>
+            </Link>
+
             <span style={{ color: '#213547' }} >
               AREAS DE ATUAÇÃO
             </span>

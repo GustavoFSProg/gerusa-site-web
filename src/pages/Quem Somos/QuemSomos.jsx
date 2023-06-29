@@ -1,19 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import HeaderTop from './components/HeaderTop/HeaderTop'
-import HeaderComponent from './components/Header/Header'
+import HeaderTop from '../../components/HeaderTop/HeaderTop'
+import HeaderComponent from '../../components/Header/Header'
 import { Container, ImagemCardTres, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
-import slide from './assets/building.jpg'
-import bandeira from './assets/bandeira.jpeg'
-import card1 from './assets/thebandeira.jpg'
-import card2 from './assets/peopple.jpg'
-import card3 from './assets/building.jpg'
-import emblema from './assets/emblema.png'
-import Footer from './components/Footer/Footer'
+import slide from '../../assets/building.jpg'
+import bandeira from '../../assets/bandeira.jpeg'
+import Footer from '../../components/Footer/Footer'
 
-function App() {
+function QuemSomos() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
 
   function handleDismissButtonClicked() {
@@ -118,7 +112,7 @@ function App() {
           />
         </ContainerImagens>
         <ContainerH1>
-          Bem vindos, conheçam meu trabalho!
+          Ola, Quem somos!
           <Hr />
         </ContainerH1>
 
@@ -136,9 +130,9 @@ function App() {
           normal distribution of letters,
         </ContainerText>
 
-        <ContainerCards>
-          <Cards>
-            <ImagemCard src={card1} alt="alt" />
+        {/* <ContainerCards> */}
+        {/* <Cards> */}
+        {/* <ImagemCard src={card1} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
@@ -175,8 +169,8 @@ function App() {
               that it has a more-or-less normal distribution of letters,
               as opposed to using 'Content here,
             </div>
-          </ Cards>
-        </ ContainerCards>
+          </ Cards> */}
+        {/* </ ContainerCards> */}
 
         <Footer />
       </Container>
@@ -184,4 +178,4 @@ function App() {
   )
 }
 
-export default App
+export default QuemSomos

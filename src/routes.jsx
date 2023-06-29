@@ -8,6 +8,7 @@ import RegisterPosts from './pages/Posts/RegisterPost'
 import Profile from './pages/Posts/Profile'
 import UpdateComponent from './pages/Posts/UpdateComponent'
 import Delete from './pages/Posts/Delete'
+import QuemSomos from './pages/Quem Somos/QuemSomos'
 
 function Routeres() {
   return (
@@ -22,6 +23,7 @@ function Routeres() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/update" element={<UpdateComponent />} />
         <Route path="/delete" element={<Delete />} />
+        <Route path="/somos" element={<QuemSomos />} />
       </Routes>
     </BrowserRouter>
   )
