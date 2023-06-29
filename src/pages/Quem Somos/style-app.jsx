@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 800px) {
    
-    height: 220%;
+    height: auto;
   }
 `
 
@@ -84,8 +84,12 @@ export const ContainerH1 = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: 138px;
+    /* margin-top: 138px; */
   font-size: 26px;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left: 20px;
+
 
 
   }
@@ -97,7 +101,9 @@ export const Hr = styled.hr`
   margin-bottom: 250px;
 
   @media screen and (max-width: 800px) {
-    width: 78%;
+    margin-left: 17px;
+  width: 12rem;
+
   }
 `
 
@@ -116,10 +122,13 @@ export const ContainerText = styled.div`
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: 70px;
-  font-size: 17px;
+    /* margin-top: 70px; */
+  font-size: 15px;
   margin-bottom: 260px;
-
+  width: 88%;
+  margin-top: 40px;
+  text-indent: 20px;
+  height: 800px;
 
 
   }
@@ -244,6 +253,8 @@ export const ContainerTextImage = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
+  margin-top: 70px; 
+
     
   }
 `
