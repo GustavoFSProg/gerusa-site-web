@@ -2,9 +2,9 @@ import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import HeaderTop from '../../components/HeaderTop/HeaderTop'
 import HeaderComponent from '../../components/Header/Header'
-import { Container, ImagemCardTres, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
+import { Container, ContainerTextImage, ContainerFooter, ImagemCard, ImgSlideDois, ContainerCards, Cards, ContainerText, ContainerH1, Hr, ImgSlide, Menu, ContainerImagens } from './style-app'
 import slide from '../../assets/building.jpg'
-import bandeira from '../../assets/bandeira.jpeg'
+import rosto from '../../assets/rosto.jpg'
 import Footer from '../../components/Footer/Footer'
 
 function QuemSomos() {
@@ -88,47 +88,46 @@ function QuemSomos() {
           </div>
         ) : null}
 
-        <ContainerImagens style={{ zIndex: '-10' }}>
-          <ImgSlide
-            src={slide}
-            alt="slide"
-            style={{
-              marginTop: '5px',
-              height: '315px',
 
-              zIndex: '-10',
-            }}
-          />
+        <ContainerTextImage>
 
-          <ImgSlideDois
-            src={bandeira}
-            alt="slide"
-            style={{
-              marginTop: '5px',
-              height: '317px',
+          <ContainerH1>
+            Quem Sou
+            <Hr />
+          </ContainerH1>
 
-              zIndex: '-10',
-            }}
-          />
-        </ContainerImagens>
-        <ContainerH1>
-          Ola, Quem somos!
-          <Hr />
-        </ContainerH1>
+          <ContainerText>
+            <img src={rosto} width="300" style={{
+              display: 'flex', width: "300px",
+              justifyContent: 'center', alignItems: 'top', marginTop: '-265px',
+              marginRight: '22px'
+            }} />
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+            normal distribution of letters,
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+            normal distribution of letters,
+            It is a long established fact that a reader will be
+            distracted by the readable content of a page when
+            looking at its layout. The point of using Lorem Ipsum is
+            that it has a more-or-less normal distribution of letters,
+            as opposed to using 'Content here,
+            normal distribution of letters,
+          </ContainerText>
+        </ ContainerTextImage>
 
-        <ContainerText>
-          It is a long established fact that a reader will be
-          distracted by the readable content of a page when
-          looking at its layout. The point of using Lorem Ipsum is
-          that it has a more-or-less normal distribution of letters,
-          as opposed to using 'Content here,
-          It is a long established fact that a reader will be
-          distracted by the readable content of a page when
-          looking at its layout. The point of using Lorem Ipsum is
-          that it has a more-or-less normal distribution of letters,
-          as opposed to using 'Content here,
-          normal distribution of letters,
-        </ContainerText>
 
         {/* <ContainerCards> */}
         {/* <Cards> */}

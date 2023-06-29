@@ -75,7 +75,7 @@ export const ContainerH1 = styled.div`
   justify-content: center;
   /* background: green; */
   font-size: 32px;
-  margin-top: 148px;
+  /* margin-top: -548px; */
   color: #595959;
 
   @media screen and (max-width: 800px) {
@@ -100,14 +100,14 @@ export const Hr = styled.hr`
 
 export const ContainerText = styled.div`
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 70%;
-  height: 100px;
+  height: 500px;
   align-items: center;
   justify-content: center;
   /* background: green; */
   font-size: 19px;
-  margin-top: -67px;
+  margin-top: -82px;
   margin-bottom: 200px;
   color: #666666;
 
@@ -224,5 +224,27 @@ export const ImagemCardTres = styled.img`
   height: 200px;
 
 
+  }
+`
+
+
+
+
+
+
+export const ContainerTextImage = styled.div`
+   display: flex;
+  /* margin-left: 11px; */
+  margin-top: -470px;
+   align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+
+
+  @media screen and (max-width: 800px) {
+     flex-direction: column;
+   display: flex;
+    
   }
 `
