@@ -11,8 +11,7 @@ export const Container = styled.div`
 
 
   @media screen and (max-width: 800px) {
-  margin-top: 0px;
-   
+  margin-top: 0px;   
     height: auto;
   }
 `
@@ -277,6 +276,17 @@ export const ContainerTextAll = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
+    
+  }
+`
+
+export const DivFooter = styled.div` 
+ margin-top: -90px;
+
+
+ @media screen and (max-width: 800px) {
+  margin-top: 0px;
+
     
   }
 `

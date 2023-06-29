@@ -17,6 +17,7 @@ import {
   ImgSlide,
   Menu,
   ContainerImagens,
+  DivFooter
 } from './style-app'
 import slide from '../../assets/building.jpg'
 import rosto from '../../assets/rosto.jpg'
@@ -138,8 +139,10 @@ function QuemSomos() {
         </ContainerTextAll>
 
 
+        <DivFooter >
 
-        <Footer style={{ display: 'flex', paddingBottom: '100px' }} />
+          <Footer />
+        </DivFooter>
       </Container>
     </>
   )
