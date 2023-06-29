@@ -242,12 +242,10 @@ export const ImagemCardTres = styled.img`
 export const ContainerTextImage = styled.div`
    display: flex;
   margin-left: 31px;
-  /* margin-top: -470px; */
    align-items: flex-start; 
   justify-content: center;
-  /* flex-direction: column; */
   text-align: justify;
-  height: 100vh;
+  height: auto;
   width: 100%;
 
 

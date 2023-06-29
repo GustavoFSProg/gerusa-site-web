@@ -13,14 +13,11 @@ export const ContainerFooter
   gap: 10px;
   width: 100%;
   height: 500px;
-  /* margin-left: 11px; */
-  /* margin-bottom: 50px; */
   padding-top: 20px;
 
   margin-top: -40px;
   background: #008080;
   color: white;
-  /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
      flex-direction: column;

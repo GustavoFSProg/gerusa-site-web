@@ -139,7 +139,7 @@ function QuemSomos() {
 
 
 
-        <Footer />
+        <Footer style={{ display: 'flex', paddingBottom: '100px' }} />
       </Container>
     </>
   )
