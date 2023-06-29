@@ -11,6 +11,7 @@ export const Container = styled.div`
 
 
   @media screen and (max-width: 800px) {
+  margin-top: 0px;
    
     height: auto;
   }
@@ -84,7 +85,7 @@ export const ContainerH1 = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
-    /* margin-top: 138px; */
+    margin-top: 18px;
   font-size: 26px;
   align-items: center;
   margin-bottom: 50px;
@@ -124,11 +125,11 @@ export const ContainerText = styled.div`
     justify-content: center;
     /* margin-top: 70px; */
   font-size: 15px;
-  margin-bottom: 260px;
-  width: 88%;
-  margin-top: 40px;
+  margin-bottom: 460px;
+  width: 84%;
+  margin-top: -15px;
   text-indent: 20px;
-  height: 800px;
+  height: 500px;
 
 
   }
@@ -253,7 +254,9 @@ export const ContainerTextImage = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
-  margin-top: 70px; 
+  margin-top: 20px; 
+  height: auto;
+
 
     
   }

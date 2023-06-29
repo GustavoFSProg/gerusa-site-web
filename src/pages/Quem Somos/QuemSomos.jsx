@@ -132,64 +132,12 @@ function QuemSomos() {
               distracted by the readable content of a page when looking at its layout. The point of
               using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
               opposed to using 'Content here, normal distribution of letters,
-              {/* <div
-                style={{
-                  display: 'flex',
-                  width: '50rem',
-                  height: '200px',
-                  marginLeft: '-200px',
-                }}
-              >
-                AAAAAA It is a long established fact that a reader will be distracted by the
-                readable content of a page when looking at its layout. The point of using Lorem
-                Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                using 'Content here, normal distribution of letters,
-              </div> */}
+
             </ContainerText>
           </ContainerTextImage>
         </ContainerTextAll>
 
-        {/* <ContainerCards> */}
-        {/* <Cards> */}
-        {/* <ImagemCard src={card1} alt="alt" />
-            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
-            <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
-            <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
 
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-            </div>
-          </ Cards>
-
-          <Cards>
-            <ImagemCard src={card2} alt="alt" />
-            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Sobre a Profissional</h2>
-            <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
-            <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
-
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-            </div>
-          </ Cards>
-          <Cards>
-            <ImagemCardTres src={card3} alt="alt" />
-            <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
-            <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
-            <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
-              It is a long established fact that a reader will be
-              distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is
-              that it has a more-or-less normal distribution of letters,
-              as opposed to using 'Content here,
-            </div>
-          </ Cards> */}
-        {/* </ ContainerCards> */}
 
         <Footer />
       </Container>

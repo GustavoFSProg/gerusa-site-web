@@ -28,6 +28,7 @@ export const ContainerFooter
   height: auto;
   padding-bottom: 50px;
   padding-top: 50px;
+  margin-top: 160px;
 
     
   }
