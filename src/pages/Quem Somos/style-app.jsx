@@ -3,10 +3,11 @@ import styled from 'styled-components'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: auto;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 300px;
 
 
   @media screen and (max-width: 800px) {
@@ -69,13 +70,13 @@ export const Menu = styled.div`
 export const ContainerH1 = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100px;
-  align-items: center;
+  width: 50%;
+  height: 100vh;
+  align-items: left;
   justify-content: center;
   /* background: green; */
   font-size: 32px;
-  /* margin-top: -548px; */
+  margin-top: 108px;
   color: #595959;
 
   @media screen and (max-width: 800px) {
@@ -89,7 +90,7 @@ export const ContainerH1 = styled.div`
 `
 
 export const Hr = styled.hr`
-  width: 50%;
+  width: 100%;
   margin-top: 7px;
   margin-bottom: 250px;
 
@@ -107,7 +108,7 @@ export const ContainerText = styled.div`
   justify-content: center;
   /* background: green; */
   font-size: 19px;
-  margin-top: -82px;
+  margin-top: -162px;
   margin-bottom: 200px;
   color: #666666;
 
@@ -227,19 +228,37 @@ export const ImagemCardTres = styled.img`
   }
 `
 
-
-
-
-
-
 export const ContainerTextImage = styled.div`
    display: flex;
   /* margin-left: 11px; */
-  margin-top: -470px;
+  /* margin-top: -470px; */
    align-items: center; 
   justify-content: center;
   flex-direction: column;
   text-align: justify;
+  height: 100vh;
+  width: 100%;
+
+
+  @media screen and (max-width: 800px) {
+     flex-direction: column;
+   display: flex;
+    
+  }
+`
+
+
+
+
+export const ContainerTextAll = styled.div`
+   display: flex;
+  /* margin-left: 11px; */
+  /* margin-top: -470px; */
+   /* align-items: top;  */
+  /* justify-content: top; */
+  /* flex-direction: column; */
+  height: 100vh;
+  width: 100vw;
 
 
   @media screen and (max-width: 800px) {
