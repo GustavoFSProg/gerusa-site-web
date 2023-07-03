@@ -23,6 +23,7 @@ import slide from '../../assets/building.jpg'
 import rosto from '../../assets/rosto.jpg'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import MenuMobile from '../../components/MenuMobile/MenuMobile'
 
 function Traduction() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -89,32 +90,7 @@ function Traduction() {
             onClick={() => handleOpenButtonClicked()}
             onMouseLeave={() => handleDismissButtonClicked()}
           >
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
-              <Link to="/" style={{ color: '#213547' }}>
-                <span style={{ color: '#213547' }} >
-                  HOME
-                </span>
-              </Link>
-            </span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
-
-              <Link to="/somos" style={{ color: '#213547' }}>
-
-                <span style={{ color: '#213547' }}>
-                  QUEM SOU
-                </span>
-              </Link>
-            </span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
-              <Link to="/traduction" style={{ color: '#213547' }}>
-
-                <span style={{ color: '#213547' }}>
-                  SERVIÇO DE TRADUÇÃO
-                </span>
-              </Link>
-            </span>
+            <MenuMobile />
 
           </div>
         ) : null}

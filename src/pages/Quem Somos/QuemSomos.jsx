@@ -22,6 +22,7 @@ import {
 import slide from '../../assets/building.jpg'
 import rosto from '../../assets/rosto.jpg'
 import Footer from '../../components/Footer/Footer'
+import MenuMobile from '../../components/MenuMobile/MenuMobile'
 
 function QuemSomos() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -88,19 +89,8 @@ function QuemSomos() {
             onClick={() => handleOpenButtonClicked()}
             onMouseLeave={() => handleDismissButtonClicked()}
           >
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>HOME</span>
+            <MenuMobile />
 
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>QUEM SOMOS</span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>AREAS DE ATUAÇAO</span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>SERVIÇOS DE TRADUÇÃO</span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>BLOG</span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>CLIENTES</span>
-
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>CONTATO</span>
           </div>
         ) : null}
 
