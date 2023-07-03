@@ -12,6 +12,7 @@ import card2 from './assets/peopple.jpg'
 import card3 from './assets/building.jpg'
 import emblema from './assets/emblema.png'
 import Footer from './components/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -78,11 +79,33 @@ function App() {
             onClick={() => handleOpenButtonClicked()}
             onMouseLeave={() => handleDismissButtonClicked()}
           >
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>HOME</span>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
+              <Link to="/" style={{ color: '#213547' }}>
+                <span style={{ color: '#213547' }} >
+                  HOME
+                </span>
+              </Link>
+            </span>
 
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>QUEM SOMOS</span>
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
 
-            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>AREAS DE ATUAÇAO</span>
+              <Link to="/somos" style={{ color: '#213547' }}>
+
+                <span style={{ color: '#213547' }}>
+                  QUEM SOU
+                </span>
+              </Link>
+            </span>
+
+            <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
+              <Link to="/traduction" style={{ color: '#213547' }}>
+
+                <span style={{ color: '#213547' }}>
+                  SERVIÇO DE TRADUÇÃO
+                </span>
+              </Link>
+
+            </span>
 
             <span style={{ marginBottom: '10px', cursor: 'pointer' }}>SERVIÇOS DE TRADUÇÃO</span>
 
