@@ -25,13 +25,18 @@ function HeaderComponent() {
               </span>
             </Link>
 
+            <Link to="/traduction" style={{ color: '#213547' }}>
+
+              <span style={{ color: '#213547' }}>
+                SERVIÇO DE TRADUÇÃO
+              </span>
+            </Link>
+
             <span style={{ color: '#213547' }} >
               AREAS DE ATUAÇÃO
             </span>
 
-            <span style={{ color: '#213547' }} >
-              SERVIÇOS DE TRADUÇÃO
-            </span>
+
 
             <span >
               BLOG
