@@ -106,7 +106,7 @@ function Traduction() {
 
         <ContainerTextAll>
           <ContainerH1>
-            Traduções
+            Serviço de  Tradução
             <Hr />
           </ContainerH1>
           <ContainerTextImage>

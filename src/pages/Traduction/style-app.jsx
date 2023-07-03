@@ -9,9 +9,8 @@ export const Container = styled.div`
   flex-direction: column;
   margin-top: 300px;
 
-
   @media screen and (max-width: 800px) {
-  margin-top: 0px;   
+    margin-top: 0px;
     height: auto;
   }
 `
@@ -85,12 +84,11 @@ export const ContainerH1 = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 18px;
-  font-size: 26px;
-  align-items: center;
-  margin-bottom: 50px;
-  margin-left: 20px;
-
-
+    font-size: 26px;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 20px;
+  width: 70%;
 
   }
 `
@@ -102,8 +100,7 @@ export const Hr = styled.hr`
 
   @media screen and (max-width: 800px) {
     margin-left: 17px;
-  width: 12rem;
-
+    width: 19rem;
   }
 `
 
@@ -116,51 +113,44 @@ export const ContainerText = styled.div`
   justify-content: center;
   font-size: 19px;
   margin-top: -330px;
-  margin-bottom: 200px;  
+  margin-bottom: 200px;
   color: #666666;
 
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;
     justify-content: center;
-    /* margin-top: 70px; */
-  font-size: 15px;
-  margin-bottom: 460px;
-  width: 84%;
-  margin-top: -15px;
-  text-indent: 20px;
-  height: 500px;
-
-
+    margin-top: -230px;
+    font-size: 15px;
+    margin-bottom: 0px;
+    width: 84%;
+    text-indent: 20px;
+    /* height: 500px; */
   }
 
-  @media screen and (min-width: 450px) and (max-width: 850px){
+  @media screen and (min-width: 450px) and (max-width: 850px) {
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
-  font-size: 17px;
+    font-size: 17px;
   }
 `
 
-
-
 export const ContainerCards = styled.div`
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 94%;
   margin-left: 11px;
   margin-bottom: 200px;
   margin-top: -40px;
-   /* align-items: center;  */
+  /* align-items: center;  */
   /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
-     flex-direction: column;
-   display: flex;
-    
+    flex-direction: column;
+    display: flex;
   }
 `
-
 
 export const Cards = styled.div`
   display: flex;
@@ -169,7 +159,7 @@ export const Cards = styled.div`
   height: 80%;
   /* float: left; */
   text-align: left;
-  
+
   /* margin-top: -5px;  */
 
   @media screen and (max-width: 800px) {
@@ -184,17 +174,14 @@ export const Cards = styled.div`
 export const ImagemCard = styled.img`
   display: flex;
   width: 370px;
-  
 
   @media screen and (max-width: 800px) {
     width: 307px;
-
   }
 `
 
-export const ContainerFooter
-  = styled.div`
-   display: grid;
+export const ContainerFooter = styled.div`
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   width: 100%;
@@ -209,84 +196,62 @@ export const ContainerFooter
   /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
-     flex-direction: column;
-   display: flex;
-  height: auto;
-  padding-bottom: 50px;
-  padding-top: 50px;
-
-    
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 `
-
-
-
-
-
 
 export const ImagemCardTres = styled.img`
   display: flex;
   width: 370px;
   height: 248px;
-  
 
   @media screen and (max-width: 800px) {
     width: 307px;
-  height: 200px;
-
-
+    height: 200px;
   }
 `
 
 export const ContainerTextImage = styled.div`
-   display: flex;
+  display: flex;
   margin-left: 31px;
-   align-items: flex-start; 
+  align-items: flex-start;
   justify-content: center;
   text-align: justify;
   height: auto;
   width: 100%;
 
-
   @media screen and (max-width: 800px) {
-     flex-direction: column;
-   display: flex;
-  margin-top: 20px; 
-  height: auto;
-
-
-    
+    flex-direction: column;
+    display: flex;
+    margin-top: -390px;
+    height: auto;
   }
 `
-
-
-
 
 export const ContainerTextAll = styled.div`
-   display: flex;
-  /* margin-left: 11px; */
-  /* margin-top: -470px; */
-   /* align-items: top;  */
-  /* justify-content: top; */
+  display: flex;
+
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
-
+  width: 100vw; 
 
   @media screen and (max-width: 800px) {
-     flex-direction: column;
-   display: flex;
-    
+    flex-direction: column;
+    display: flex;
+    margin-top: -260px;
+    height: auto;
+    z-index: -10;
   }
 `
 
-export const DivFooter = styled.div` 
- margin-top: -90px;
+export const DivFooter = styled.div`
+  margin-top: -90px;
 
-
- @media screen and (max-width: 800px) {
-  margin-top: 0px;
-
-    
+  @media screen and (max-width: 800px) {
+    margin-top: 0px;
   }
 `
