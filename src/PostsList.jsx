@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import api from './api'
 import HeaderComponent from './components/Header/Header'
 import moment from 'moment'
+import MenuMobile from './components/MenuMobile/MenuMobile'
 // import { Link, useNavigate } from 'react-router-dom'
 
 export const Container = styled.div`
@@ -66,9 +67,33 @@ const ContainerMaps = styled.div`
     margin-top: -200px;
   }
 `
+const Menu = styled.div`
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* margin-top: -50px; */
+  }
+`
 
 function PostsList() {
   const [dados, setDados] = useState([])
+  const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+  function handleDismissButtonClicked() {
+    setIsButtonClicked('none')
+  }
+
+  function handleOpenButtonClicked() {
+    setIsButtonClicked('flex')
+  }
 
   // const navigate = useNavigate()
 
@@ -95,8 +120,61 @@ function PostsList() {
   return (
     <Container>
       <HeaderComponent />
+      {isButtonClicked === 'none' ? (
+        <Menu>
+          <button
+            onMouseLeave={() => handleDismissButtonClicked()}
+            type="button"
+            onClick={() => handleOpenButtonClicked()}
+          >
+            MENU
+          </button>
 
-      <ContainerMaps style={{ marginTop: '30px' }}>
+          <button
+            onMouseLeave={() => handleDismissButtonClicked()}
+            type="button"
+            // onClick={() => handleOpenButtonClicked()}
+            style={{ display: 'none' }}
+          ></button>
+        </Menu>
+      ) : (
+        <Menu style={{ display: 'none' }}>
+          <button
+            onMouseLeave={() => handleDismissButtonClicked()}
+            type="button"
+            onClick={() => handleOpenButtonClicked()}
+            style={{ display: 'none' }}
+          >
+            MENU
+          </button>
+        </Menu>
+      )}
+      {isButtonClicked === 'flex' ? (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+            height: '250px',
+            marginTop: '-75px',
+            zIndex: '999',
+            background: 'lightgray',
+            flexDirection: 'column',
+            fontSize: '17px',
+            paddingTop: '25px',
+            paddingBottom: '25px',
+            opacity: '0.6',
+          }}
+          onClick={() => handleOpenButtonClicked()}
+          onMouseLeave={() => handleDismissButtonClicked()}
+        >
+          <MenuMobile />
+
+        </div>
+      ) : null}
+
+      <ContainerMaps style={{ marginTop: '1px' }}>
         {dados.map((item) => {
           return (
             <div key={item.id}>
