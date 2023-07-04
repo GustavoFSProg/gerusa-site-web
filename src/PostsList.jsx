@@ -96,7 +96,7 @@ function PostsList() {
     <Container>
       <HeaderComponent />
 
-      <ContainerMaps style={{ marginTop: '50px' }}>
+      <ContainerMaps style={{ marginTop: '30px' }}>
         {dados.map((item) => {
           return (
             <div key={item.id}>
