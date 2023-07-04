@@ -36,8 +36,15 @@ function MenuMobile() {
 
       </span>
 
+      <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
+        <Link to="/postsList" style={{ color: '#213547' }}>
 
-      <span style={{ marginBottom: '10px', cursor: 'pointer' }}>BLOG</span>
+          <span style={{ color: '#213547' }}>
+            BLOG
+          </span>
+        </Link>
+
+      </span>
 
       <span style={{ marginBottom: '10px', cursor: 'pointer' }}>CLIENTES</span>
 

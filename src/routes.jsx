@@ -10,6 +10,7 @@ import UpdateComponent from './pages/Posts/UpdateComponent'
 import Delete from './pages/Posts/Delete'
 import QuemSomos from './pages/Quem Somos/QuemSomos'
 import Traduction from './pages/Traduction/Traduction'
+import PostsList from './PostsList'
 
 function Routeres() {
   return (
@@ -26,6 +27,7 @@ function Routeres() {
         <Route path="/delete" element={<Delete />} />
         <Route path="/somos" element={<QuemSomos />} />
         <Route path="/traduction" element={<Traduction />} />
+        <Route path="/postsList" element={<PostsList />} />
       </Routes>
     </BrowserRouter>
   )
