@@ -195,7 +195,7 @@ function PostsList() {
                 >
                   <p
                     style={{
-                      width: '520px',
+                      width: '320px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
