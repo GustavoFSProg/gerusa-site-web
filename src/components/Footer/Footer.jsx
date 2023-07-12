@@ -19,13 +19,29 @@ export const ContainerFooter
   background: #008080;
   color: white;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
      flex-direction: column;
    display: flex;
   height: auto;
   padding-bottom: 50px;
   padding-top: 50px;
   margin-top: 160px;
+  width: 100rem;
+
+
+    
+  }
+
+
+  @media screen and (min-width: 900px) and (max-width: 1080px) {
+     /* flex-direction: column; */
+   display: flex;
+  height: auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 160px;
+  width: 100rem;
+
 
     
   }
