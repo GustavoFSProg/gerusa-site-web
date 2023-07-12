@@ -26,7 +26,7 @@ export const ContainerFooter
   padding-bottom: 50px;
   padding-top: 50px;
   margin-top: 160px;
-  width: 100rem;
+  /* width: 100%; */
 
 
     
@@ -52,7 +52,7 @@ function Footer() {
   return (
     <>
       <ContainerFooter>
-        <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
+        {/* <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
           <h1 style={{
             width: '85%',
             marginTop: '10px', color: 'white', fontSize: '22px'
@@ -73,7 +73,7 @@ function Footer() {
             that it has a more-or-less normal distribution of letters,
             as opposed to using 'Content here,
           </div>
-        </div>
+        </div> */}
         <div style={{ width: '90%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
           <h1 style={{
             width: '85%',

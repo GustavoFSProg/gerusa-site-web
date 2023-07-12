@@ -143,9 +143,17 @@ export const ContainerCards = styled.div`
    /* align-items: center;  */
   /* justify-content: center; */
 
-  @media screen and (max-width: 800px) {
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
      flex-direction: column;
-   display: flex;
+     display: grid;
+  grid-template-columns: repeat(2, 1fr);
+    
+  }
+
+
+  @media screen and (max-width: 900px) {
+     flex-direction: column;
+     display: flex;
     
   }
 `
