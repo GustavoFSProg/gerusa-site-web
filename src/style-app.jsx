@@ -18,12 +18,12 @@ export const Container = styled.div`
 export const ContainerImagens = styled.div`
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 50%;
   align-items: center;
   justify-content: space-around;
-  margin-top: -685px;
+  /* margin-top: -685px; */
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 980px) {
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
@@ -36,7 +36,7 @@ export const ImgSlide = styled.img`
   height: 50%;
   margin-bottom: 30px;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 980px) {
     width: 100%;
     height: 50%;
   }
@@ -46,14 +46,14 @@ export const ImgSlideDois = styled.img`
   height: 50%;
   margin-bottom: 30px;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `
 export const Menu = styled.div`
   display: none;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     display: flex;
     width: 90%;
     height: 50px;
@@ -143,9 +143,17 @@ export const ContainerCards = styled.div`
    /* align-items: center;  */
   /* justify-content: center; */
 
-  @media screen and (max-width: 800px) {
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
      flex-direction: column;
-   display: flex;
+     display: grid;
+  grid-template-columns: repeat(2, 1fr);
+    
+  }
+
+
+  @media screen and (max-width: 900px) {
+     flex-direction: column;
+     display: flex;
     
   }
 `
