@@ -9,7 +9,7 @@ function HeaderComponent() {
       <Container>
         <Header>
           <img
-            src={Logo}
+            src=""
             alt="fone"
             width="200"
             height="200"
