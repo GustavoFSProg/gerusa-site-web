@@ -152,7 +152,7 @@ function Footer() {
               </h2>
               <div style={{ marginTop: '-11px', fontSize: '18px' }}>
 
-                Rua Walter Jobin 272
+                Rua Valter Jobin 272
               </div>
             </div>
 
