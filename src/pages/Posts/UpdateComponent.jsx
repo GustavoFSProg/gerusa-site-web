@@ -125,6 +125,7 @@ function UpdateComponent() {
 
       const data = new FormData()
 
+
       data.append('title', title)
       data.append('text', text)
       data.append('author', author)

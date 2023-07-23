@@ -115,7 +115,6 @@ function Delete() {
         </Link>
       </ContainerLinks>
       <h1 style={{ fontSize: "29px" }}>DESEJA REALMENTE APAGAR O POST?</h1>
-
       <br />
       <br />
       <br />
