@@ -26,6 +26,12 @@ function MenuMobile() {
           <span style={{ color: '#213547' }}>BLOG</span>
         </Link>
       </span>
+
+      <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
+        <Link to="/register-contacts" style={{ color: '#213547' }}>
+          <span style={{ color: '#213547' }}>CONTATO</span>
+        </Link>
+      </span>
       <span style={{ marginBottom: '10px', cursor: 'pointer' }}>
         <Link to="/login" style={{ color: '#213547' }}>
           <span style={{ color: '#213547' }}>ADMIN</span>
