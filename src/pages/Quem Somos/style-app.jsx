@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 
   @media screen and (max-width: 1200px) {
-  margin-top: 110px;   
+  margin-top: 10px;   
     height: auto;
     /* background: green; */
   }
@@ -116,7 +116,7 @@ export const ContainerText = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 19px;
-  margin-top: -330px;
+  margin-top: -230px;
   margin-bottom: 200px;  
   color: #666666;
 
@@ -266,10 +266,6 @@ export const ContainerTextImage = styled.div`
 
 export const ContainerTextAll = styled.div`
    display: flex;
-  /* margin-left: 11px; */
-  /* margin-top: -470px; */
-   /* align-items: top;  */
-  /* justify-content: top; */
   flex-direction: column;
   height: 100vh;
   width: 100vw;
