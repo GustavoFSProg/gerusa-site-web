@@ -64,6 +64,18 @@ export const Menu = styled.div`
     margin-bottom: 20px;
     /* margin-top: -50px; */
   }
+
+  @media screen and (min-width: 800px) and (max-width: 1200px) {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* margin-top: -50px; */
+  }
 `
 
 export const ContainerH1 = styled.div`
@@ -119,7 +131,7 @@ export const ContainerText = styled.div`
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: -230px;
+    margin-top: -130px;
     font-size: 15px;
     margin-bottom: 0px;
     width: 84%;
@@ -242,7 +254,15 @@ export const ContainerTextAll = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     display: flex;
-    margin-top: -260px;
+    margin-top: -230px;
+    height: auto;
+    z-index: -10;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 1200px) {
+    flex-direction: column;
+    display: flex;
+    margin-top: 1030px;
     height: auto;
     z-index: -10;
   }
@@ -251,7 +271,7 @@ export const ContainerTextAll = styled.div`
 export const DivFooter = styled.div`
   margin-top: -90px;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     margin-top: 0px;
   }
 `

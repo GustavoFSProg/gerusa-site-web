@@ -39,7 +39,6 @@ function Traduction() {
   return (
     <>
       <Container>
-        {/* <HeaderTop /> */}
         <HeaderComponent />
         {isButtonClicked === 'none' ? (
           <Menu>
