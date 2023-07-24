@@ -215,7 +215,7 @@ function RegisterContacts() {
 
       <br />
       <br />
-      <Form onSubmit={handleSubmit} style={{ marginLeft: '-22px' }}>
+      <Form onSubmit={handleSubmit} style={{ marginLeft: '-24px' }}>
         <div style={{ marginTop: '-20px', width: '100%' }}>
 
           <Input
