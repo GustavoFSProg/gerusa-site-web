@@ -71,6 +71,16 @@ const ContainerMaps = styled.div`
 function PostComponent() {
   const [dados, setDados] = useState([])
 
+  const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+  function handleDismissButtonClicked() {
+    setIsButtonClicked('none')
+  }
+
+  function handleOpenButtonClicked() {
+    setIsButtonClicked('flex')
+  }
+
   const navigate = useNavigate()
 
   function getDateWithoutTime(date) {

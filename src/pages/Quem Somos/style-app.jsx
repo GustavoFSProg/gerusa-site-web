@@ -10,9 +10,10 @@ export const Container = styled.div`
   margin-top: 300px;
 
 
-  @media screen and (max-width: 800px) {
-  margin-top: 0px;   
+  @media screen and (max-width: 1200px) {
+  margin-top: 110px;   
     height: auto;
+    /* background: green; */
   }
 `
 
@@ -54,7 +55,7 @@ export const ImgSlideDois = styled.img`
 export const Menu = styled.div`
   display: none;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1100px) {
     display: flex;
     width: 90%;
     height: 50px;
@@ -122,13 +123,14 @@ export const ContainerText = styled.div`
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;
     justify-content: center;
-    /* margin-top: 70px; */
+    align-items: center;
+
   font-size: 15px;
   margin-bottom: 460px;
   width: 84%;
-  margin-top: -15px;
+  margin-top: 25px;
   text-indent: 20px;
-  height: 500px;
+  height: auto;
 
 
   }
@@ -136,7 +138,7 @@ export const ContainerText = styled.div`
   @media screen and (min-width: 450px) and (max-width: 850px){
     flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 178px;
   font-size: 17px;
   }
 `
@@ -251,7 +253,7 @@ export const ContainerTextImage = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
-  margin-top: 20px; 
+  margin-top: -220px; 
   height: auto;
 
 
@@ -276,6 +278,9 @@ export const ContainerTextAll = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
+  height: auto;
+  margin-top: -220px;
+
     
   }
 `

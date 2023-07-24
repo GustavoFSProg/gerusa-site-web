@@ -24,14 +24,13 @@ export const Header = styled.div`
   display: flex;
   width: 100vw;
   height: 195px;
-  /* height: auto; */
   
   align-items: center;
   justify-content: left;
   font-size: 0.9rem;
   padding-left: 33px;
 
-  @media screen and (max-width: 1020px){
+  @media screen and (max-width: 1100px){
   justify-content: center;
   align-items: center;
   display: flex;

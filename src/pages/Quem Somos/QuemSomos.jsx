@@ -38,7 +38,6 @@ function QuemSomos() {
   return (
     <>
       <Container>
-        {/* <HeaderTop /> */}
         <HeaderComponent />
         {isButtonClicked === 'none' ? (
           <Menu>

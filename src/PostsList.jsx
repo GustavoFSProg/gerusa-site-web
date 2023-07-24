@@ -101,7 +101,7 @@ const ContainerMaps = styled.div`
 const Menu = styled.div`
   display: none;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1080px) {
     display: flex;
     width: 90%;
     height: 50px;
