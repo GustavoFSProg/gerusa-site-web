@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import { Link } from 'react-router-dom'
+import { Menu } from '../../style-app'
+import MenuMobile from '../../components/MenuMobile/MenuMobile'
 
 export const Container = styled.div`
   display: flex;
@@ -60,6 +62,16 @@ export const ContainerInput = styled.div`
 function Dashboard() {
   const [dados, setDados] = useState()
 
+  const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+  function handleDismissButtonClicked() {
+    setIsButtonClicked('none')
+  }
+
+  function handleOpenButtonClicked() {
+    setIsButtonClicked('flex')
+  }
+
   const token = localStorage.getItem('token')
 
   async function HandleAuth() {
@@ -82,6 +94,59 @@ function Dashboard() {
     <>
       <HeaderComponent />
       <Container>
+        {isButtonClicked === 'none' ? (
+          <Menu>
+            <button
+              onMouseLeave={() => handleDismissButtonClicked()}
+              type="button"
+              onClick={() => handleOpenButtonClicked()}
+            >
+              MENU
+            </button>
+
+            <button
+              onMouseLeave={() => handleDismissButtonClicked()}
+              type="button"
+              // onClick={() => handleOpenButtonClicked()}
+              style={{ display: 'none' }}
+            ></button>
+          </Menu>
+        ) : (
+          <Menu style={{ display: 'none' }}>
+            <button
+              onMouseLeave={() => handleDismissButtonClicked()}
+              type="button"
+              onClick={() => handleOpenButtonClicked()}
+              style={{ display: 'none' }}
+            >
+              MENU
+            </button>
+          </Menu>
+        )}
+        {isButtonClicked === 'flex' ? (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              width: '100%',
+              height: '250px',
+              marginTop: '-75px',
+              zIndex: '999',
+              background: 'lightgray',
+              flexDirection: 'column',
+              fontSize: '17px',
+              paddingTop: '25px',
+              paddingBottom: '25px',
+              opacity: '0.6',
+            }}
+            onClick={() => handleOpenButtonClicked()}
+            onMouseLeave={() => handleDismissButtonClicked()}
+          >
+            <MenuMobile />
+
+          </div>
+        ) : null}
         <ContainerLinks>
           <Link to="/dashboard" style={{
             color: 'yellow', marginBottom: '9px'

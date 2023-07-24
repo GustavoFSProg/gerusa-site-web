@@ -34,6 +34,8 @@ export const Header = styled.div`
   @media screen and (max-width: 1020px){
   justify-content: center;
   align-items: center;
+  display: flex;
+
   /* margin-top: 105px; */
   /* margin-bottom: 58px; */
   /* height: auto; */
