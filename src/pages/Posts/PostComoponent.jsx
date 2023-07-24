@@ -13,8 +13,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* background: orange; */
   margin-top: 890px;
+
+
+  @media screen and (max-width: 800px) {
+    /* font-size: 60px; */
+  margin-top: 560px;
+
+  }
 `
 
 
@@ -39,7 +45,7 @@ export const H1 = styled.h1`
   font-size: 60px;
 
   @media screen and (max-width: 800px) {
-    font-size: 60px;
+    font-size: 32px;
   }
 `
 
@@ -81,7 +87,6 @@ const ContainerMaps = styled.div`
     justify-content: space-between;
     margin-top: -200px;
   width: 80%;
-  background: yellow;
 
   }
 `
