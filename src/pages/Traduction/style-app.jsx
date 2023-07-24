@@ -251,21 +251,21 @@ export const ContainerTextAll = styled.div`
   height: 100vh;
   width: 100vw; 
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     flex-direction: column;
     display: flex;
-    margin-top: -230px;
+    margin-top: -150px;
     height: auto;
     z-index: -10;
   }
-
+/* 
   @media screen and (min-width: 800px) and (max-width: 1200px) {
     flex-direction: column;
     display: flex;
     margin-top: 1030px;
     height: auto;
     z-index: -10;
-  }
+  } */
 `
 
 export const DivFooter = styled.div`
