@@ -164,7 +164,7 @@ function RegisterContacts() {
             type="button"
             onClick={() => handleOpenButtonClicked()}
           >
-            MENU
+            LINKS
           </button>
 
           <button
@@ -182,7 +182,7 @@ function RegisterContacts() {
             onClick={() => handleOpenButtonClicked()}
             style={{ display: 'none' }}
           >
-            MENU
+            LINKS
           </button>
         </Menu>
       )}

@@ -15,14 +15,12 @@ export const Container = styled.div`
   /* background: orange; */
 `
 
-
 export const Imagem = styled.img`
   display: flex;
- width: 500px;
+  width: 500px;
 
   @media screen and (max-width: 800px) {
     width: 300px;
-
   }
 `
 
@@ -36,13 +34,10 @@ export const TitleContainer = styled.div`
   font-size: 24px;
   margin-bottom: 15px;
 
-
-
   @media screen and (max-width: 800px) {
     width: 20rem;
 
     font-size: 20px;
-
   }
 `
 
@@ -125,8 +120,7 @@ export const Text = styled.p`
   color: #4d4d4d;
 
   @media screen and (max-width: 800px) {
-  width: 320px;
-
+    width: 320px;
   }
 `
 
@@ -174,7 +168,7 @@ function PostsList() {
             type="button"
             onClick={() => handleOpenButtonClicked()}
           >
-            MENU
+            LINKS
           </button>
 
           <button
@@ -192,7 +186,7 @@ function PostsList() {
             onClick={() => handleOpenButtonClicked()}
             style={{ display: 'none' }}
           >
-            MENU
+            LINKS
           </button>
         </Menu>
       )}
@@ -225,14 +219,10 @@ function PostsList() {
           return (
             <div key={item.id}>
               <button onClick={() => setItem(item.id)} style={{ cursor: 'pointer' }}>
-
                 <TitleContainer>
-                  <h2 style={{ marginBottom: '30px', color: '#404040' }}>
-                    {item.title}
-                  </h2>
+                  <h2 style={{ marginBottom: '30px', color: '#404040' }}>{item.title}</h2>
                   <Imagem src={item.image} alt="imagem" />
                 </TitleContainer>
-
 
                 <div
                   style={{

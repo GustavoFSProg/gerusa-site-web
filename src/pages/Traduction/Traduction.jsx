@@ -48,7 +48,7 @@ function Traduction() {
               type="button"
               onClick={() => handleOpenButtonClicked()}
             >
-              MENU
+              LINKS
             </button>
 
             <button
@@ -66,7 +66,7 @@ function Traduction() {
               onClick={() => handleOpenButtonClicked()}
               style={{ display: 'none' }}
             >
-              MENU
+              LINKS
             </button>
           </Menu>
         )}

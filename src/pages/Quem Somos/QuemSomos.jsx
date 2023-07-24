@@ -46,7 +46,7 @@ function QuemSomos() {
               type="button"
               onClick={() => handleOpenButtonClicked()}
             >
-              MENU
+              LINKS
             </button>
 
             <button
@@ -64,7 +64,7 @@ function QuemSomos() {
               onClick={() => handleOpenButtonClicked()}
               style={{ display: 'none' }}
             >
-              MENU
+              LINKS
             </button>
           </Menu>
         )}

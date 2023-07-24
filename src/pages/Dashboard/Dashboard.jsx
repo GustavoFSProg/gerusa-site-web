@@ -101,7 +101,7 @@ function Dashboard() {
               type="button"
               onClick={() => handleOpenButtonClicked()}
             >
-              MENU
+              LINKS
             </button>
 
             <button
@@ -119,7 +119,7 @@ function Dashboard() {
               onClick={() => handleOpenButtonClicked()}
               style={{ display: 'none' }}
             >
-              MENU
+              LINKS
             </button>
           </Menu>
         )}
