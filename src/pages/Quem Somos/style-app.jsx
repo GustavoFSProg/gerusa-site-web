@@ -85,7 +85,7 @@ export const ContainerH1 = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: -368px;
   font-size: 26px;
   align-items: center;
   margin-bottom: 50px;
@@ -116,7 +116,7 @@ export const ContainerText = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 19px;
-  margin-top: -230px;
+  margin-top: -330px;
   margin-bottom: 200px;  
   color: #666666;
 
@@ -253,7 +253,7 @@ export const ContainerTextImage = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
-  margin-top: -150px; 
+  margin-top: -270px; 
   height: auto;
 
 
@@ -270,6 +270,7 @@ export const ContainerTextAll = styled.div`
   height: 100vh;
   width: 100vw;
   margin-top: -50px;
+  /* background: green; */
 
 
 
@@ -277,7 +278,7 @@ export const ContainerTextAll = styled.div`
      flex-direction: column;
    display: flex;
   height: auto;
-  margin-top: -150px;
+  margin-top: 155px;
 
     
   }

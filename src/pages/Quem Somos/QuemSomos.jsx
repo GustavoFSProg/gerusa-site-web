@@ -40,7 +40,7 @@ function QuemSomos() {
       <Container>
         <HeaderComponent />
         {isButtonClicked === 'none' ? (
-          <Menu>
+          <Menu >
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -92,6 +92,10 @@ function QuemSomos() {
 
           </div>
         ) : null}
+
+        <br />
+
+
 
         <ContainerTextAll>
           <ContainerH1>
