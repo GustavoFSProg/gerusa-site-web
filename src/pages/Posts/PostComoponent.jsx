@@ -11,9 +11,26 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   align-items: center;
-  justify-content: top;
+  justify-content: center;
   flex-direction: column;
   /* background: orange; */
+  margin-top: 890px;
+`
+
+
+export const H2 = styled.div`
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
 `
 
 export const H1 = styled.h1`
@@ -53,9 +70,7 @@ const ContainerMaps = styled.div`
   height: auto;
   align-items: center;
   justify-content: space-around;
-  /* background: pink; */
-  margin-top: -150px;
-  /* margin-bottom: 200px; */
+  margin-top: -140px;
   flex-direction: column;
 
   @media screen and (max-width: 800px) {
@@ -65,6 +80,9 @@ const ContainerMaps = styled.div`
     padding-bottom: 30px;
     justify-content: space-between;
     margin-top: -200px;
+  width: 80%;
+  background: yellow;
+
   }
 `
 
@@ -133,16 +151,12 @@ function PostComponent() {
           return (
             <div key={item.id}>
               <button onClick={() => setItem(item.id)}>
-                <h2 style={{ fontSize: '32px' }}>
+                <H2 >
                   <p>{item.title}</p>
-                </h2>
+                </H2>
 
                 <img src={item.image} alt="imagem" width="300" />
-                {/* <img
-                  src={`https://gerusa-site-api-juab.vercel.app/files/${item.image}`}
-                  alt="imagem"
-                  width="300"
-                /> */}
+
                 <div
                   style={{
                     width: '100%',
@@ -153,7 +167,7 @@ function PostComponent() {
                 >
                   <p
                     style={{
-                      width: '520px',
+                      width: '350px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
