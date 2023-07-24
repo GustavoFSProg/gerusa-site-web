@@ -214,9 +214,8 @@ function RegisterContacts() {
       <H1>ENTRE EM CONTATO CONOSCO</H1>
 
       <br />
-      {/* {dados === 'OK' ? null : <h1>ACESSO PROIBIDO!!!</h1>} */}
       <br />
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} style={{ marginLeft: '-20px' }}>
         <div style={{ marginTop: '-20px', width: '100%' }}>
 
           <Input
