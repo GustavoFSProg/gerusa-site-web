@@ -122,6 +122,7 @@ export const Text = styled.p`
   font-size: 18px;
   line-height: 140%;
   margin-top: 25px;
+  color: #4d4d4d;
 
   @media screen and (max-width: 800px) {
   width: 320px;
@@ -226,7 +227,7 @@ function PostsList() {
               <button onClick={() => setItem(item.id)} style={{ cursor: 'pointer' }}>
 
                 <TitleContainer>
-                  <h2 style={{ marginBottom: '30px' }}>
+                  <h2 style={{ marginBottom: '30px', color: '#404040' }}>
                     {item.title}
                   </h2>
                   <Imagem src={item.image} alt="imagem" />
@@ -244,9 +245,9 @@ function PostsList() {
                   <Text style={{}}>{item.text}</Text>
                 </div>
 
-                <p>{item.desc}</p>
+                {/* <p>{item.desc}</p> */}
 
-                <p>{getDateWithoutTime(item.createdAt)}</p>
+                <p style={{ color: '#404040' }}>{getDateWithoutTime(item.createdAt)}</p>
                 <br />
                 <br />
                 <br />
