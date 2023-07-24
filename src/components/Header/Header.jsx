@@ -37,7 +37,9 @@ function HeaderComponent() {
 
             <span>CLIENTES</span>
 
-            <span>CONTATO</span>
+            <Link to="/register-contacts" style={{ color: '#213547' }}>
+              <span style={{ color: '#213547' }}>CONTATO</span>
+            </Link>
 
             <Link to="/login" style={{ color: '#213547' }}>
               <span>ADMIN</span>

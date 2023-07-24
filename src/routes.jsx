@@ -11,6 +11,7 @@ import Delete from './pages/Posts/Delete'
 import QuemSomos from './pages/Quem Somos/QuemSomos'
 import Traduction from './pages/Traduction/Traduction'
 import PostsList from './PostsList'
+import RegisterContacts from './pages/Contacts/RegisterContacts'
 
 function Routeres() {
   return (
@@ -20,6 +21,7 @@ function Routeres() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/register-contacts" element={<RegisterContacts />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/register-post" element={<RegisterPosts />} />
         <Route path="/profile" element={<Profile />} />
