@@ -215,7 +215,7 @@ function RegisterContacts() {
 
       <br />
       <br />
-      <Form onSubmit={handleSubmit} style={{ marginLeft: '-20px' }}>
+      <Form onSubmit={handleSubmit} style={{ marginLeft: '-22px' }}>
         <div style={{ marginTop: '-20px', width: '100%' }}>
 
           <Input
@@ -259,7 +259,7 @@ function RegisterContacts() {
 
         </ div>
 
-        <Button style={{ marginTop: '20px', marginBottom: '70px' }} type="submit">Enviar</Button>
+        <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
       </Form>
     </Container>
   )
