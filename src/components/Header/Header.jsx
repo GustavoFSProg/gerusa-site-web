@@ -17,7 +17,7 @@ const ContainerLogo = styled.div`
   justify-content: center;
   align-items: center;
   align-self: center;
- margin-left: 0px;
+ margin-left: -30px;
 
 
 
