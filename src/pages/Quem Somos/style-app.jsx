@@ -278,7 +278,7 @@ export const ContainerTextAll = styled.div`
      flex-direction: column;
    display: flex;
   height: auto;
-  margin-top: 115px;
+  margin-top: 185px;
 
     
   }
