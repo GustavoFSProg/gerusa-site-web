@@ -38,7 +38,7 @@ function App() {
               type="button"
               onClick={() => handleOpenButtonClicked()}
             >
-              MENU
+              LINKS
             </button>
 
             <button
@@ -56,7 +56,7 @@ function App() {
               onClick={() => handleOpenButtonClicked()}
               style={{ display: 'none' }}
             >
-              MENU
+              LINKS
             </button>
           </Menu>
         )}
