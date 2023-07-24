@@ -8,11 +8,19 @@ import { Link } from 'react-router-dom'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 20rem;
   align-items: center;
-  justify-content: top;
+  justify-content: center;
   flex-direction: column;
   /* background: orange; */
+  margin-top: 400px;
+
+  @media screen and (max-width: 800px){
+  margin-top: -20px;
+  
+
+
+  }
 
 `
 
@@ -33,6 +41,8 @@ export const ContainerLinks = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   justify-content: space-between;
+  height: auto;
+  font-size: 20px;
 
 
   }
@@ -69,26 +79,43 @@ function Dashboard() {
   }, [])
 
   return (
-    <Container>
+    <>
       <HeaderComponent />
-      <ContainerLinks>
-        <Link to="/dashboard" style={{ color: 'yellow' }}>
-          PAINEL
-        </Link>
+      <Container>
+        <ContainerLinks>
+          <Link to="/dashboard" style={{
+            color: 'yellow', marginBottom: '9px'
+            , fontSize: '18px'
+          }}>
+            PAINEL
+          </Link>
 
-        <Link to="/contacts" style={{ color: 'yellow' }}>
-          CONTATOS
-        </Link>
+          <Link to="/contacts" style={{
+            color: 'yellow'
+            , marginBottom: '9px'
+            , fontSize: '18px'
+          }}>
+            CONTATOS
+          </Link>
 
-        <Link to="/posts" style={{ color: 'yellow' }}>
-          POSTS
-        </Link>
-        <Link to="/posts" style={{ color: 'yellow' }}>
-          USUÁRIOS
-        </Link>
-      </ ContainerLinks>
-      {dados === 'OK' ? <h1>PAINEL</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
-    </Container >
+          <Link to="/posts" style={{
+            color: 'yellow'
+            , marginBottom: '9px'
+            , fontSize: '18px'
+          }}>
+            POSTS
+          </Link>
+          <Link to="/posts" style={{
+            color: 'yellow'
+            , marginBottom: '9px'
+            , fontSize: '18px'
+          }}>
+            USUÁRIOS
+          </Link>
+        </ ContainerLinks>
+        {dados === 'OK' ? <h1>PAINEL</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
+      </Container >
+    </>
   )
 }
 

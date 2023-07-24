@@ -6,7 +6,6 @@ import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 
-
 export const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -14,10 +13,25 @@ export const Container = styled.div`
   align-items: center;
   justify-content: top;
   flex-direction: column;
-  /* background: orange; */
-   margin-top: -20px; 
+  margin-top: -20px;
+  /* margin-bottom: 200px; */
+`
 
+const Card = styled.div`
+  display: flex;
+  width: 50rem;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #c6ecd8;
+  margin-top: 30px;
+  padding: 15px 15px;
+  border-radius: 2rem;
 
+  @media screen and (max-width: 850px) {
+    width: 20rem;
+  }
 `
 
 export const H1 = styled.h1`
@@ -25,7 +39,6 @@ export const H1 = styled.h1`
   align-items: center;
   font-size: 40px;
   margin-top: 80px;
-
 
   @media screen and (max-width: 800px) {
     font-size: 29px;
@@ -43,14 +56,12 @@ export const ContainerLinks = styled.div`
   margin-top: 50px;
   /* margin-bottom: 200px; */
 
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
 `
 
@@ -67,14 +78,9 @@ function ContactComponent() {
   const [dados, setDados] = useState([])
   const [abled, setAbled] = useState(false)
 
-
-
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
   }
-
-
-
 
   const token = localStorage.getItem('token')
 
@@ -85,9 +91,7 @@ function ContactComponent() {
 
     console.log(dados)
 
-    return (< p >
-
-    </p>)
+    return <p></p>
   }
 
   useEffect(() => {
@@ -95,54 +99,68 @@ function ContactComponent() {
   }, [])
 
   return (
-    <Container>
-      <ContainerLinks>
-        <Link to="/dashboard" style={{ color: 'yellow' }}>
-          DASHBOARD
-        </Link>
+    <>
 
-        <Link to="/contacts" style={{ color: 'yellow' }}>
-          CONTATOS
-        </Link>
+      <Container>
+        <ContainerLinks>
+          <Link to="/dashboard" style={{ color: 'yellow' }}>
+            DASHBOARD
+          </Link>
 
-        <Link to="/posts" style={{ color: 'yellow' }}>
-          POSTS
-        </Link>
-        <Link to="/posts" style={{ color: 'yellow' }}>
-          USUÁRIOS
-        </Link>
-      </ ContainerLinks>
+          <Link to="/contacts" style={{ color: 'yellow' }}>
+            CONTATOS
+          </Link>
 
-      <H1>MENSAGENS</H1>
+          <Link to="/posts" style={{ color: 'yellow' }}>
+            POSTS
+          </Link>
+          <Link to="/posts" style={{ color: 'yellow' }}>
+            USUÁRIOS
+          </Link>
+        </ContainerLinks>
 
-      {dados.map(item => {
-        return (
-          <div key={item.id}>
+        <H1>MENSAGENS</H1>
 
-            <p >
-              Nome: {item.nome}
-            </p>
+        {dados.map((item) => {
+          return (
+            <Card>
+              <div key={item.id}>
+                <p style={{ fontSize: '17px' }}>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>
+                    Nome:
+                  </strong>
+                  {item.nome}</p>
 
-            <p >
-              Email: {item.email}
-            </p>
+                <p style={{ fontSize: '17px' }}>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>
+                    Email:
+                  </strong>
+                  {item.email}</p>
 
-            <p >
-              Telefone: {item.telefone}
-            </p>
+                <p style={{ fontSize: '17px' }}>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>
+                    Telefone:
+                  </strong>
+                  {item.telefone}</p>
 
-            <p >
-              Mensagem: {item.message}
-            </p>
-            <br />
-            <br />
-            <br />
-          </div>
+                <p style={{ fontSize: '17px' }}><strong style={{ fontSize: '17px', marginRight: '10px' }}>
+                  Mensagem:
+                </strong> {item.message}</p>
+              </div>
+            </Card>
+          )
+        })}
 
-        )
-      })}
+        <br />
+        <br /><p style={{ color: 'white' }}>
+          colors
 
-    </Container >
+        </p>
+        <br />
+        <br />
+      </Container>
+    </>
+
   )
 }
 
