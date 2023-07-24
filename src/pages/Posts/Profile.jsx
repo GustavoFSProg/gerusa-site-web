@@ -17,8 +17,19 @@ export const Container = styled.div`
   /* background: orange; */
 `
 
+export const ContainerP = styled.div`
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 
 
+  @media screen and (max-width: 800px) {
+    width: 100%;
+
+  }
+`
 
 export const H1 = styled.h1`
   display: flex;
@@ -177,16 +188,7 @@ function Profile() {
               justifyContent: 'center',
             }}
           >
-            <p
-              style={{
-                width: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              {dados.text}
-            </p>
+            <ContainerP style={{}}>{dados.text}</ContainerP>
           </div>
 
           <p>{dados.desc}</p>
@@ -201,23 +203,26 @@ function Profile() {
       <ContainerButtons>
         <Button onClick={HandleEditar}>EDITAR</Button>
 
-        <Link to="/delete" style={{
-
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'lightgray',
-          marginBottom: '20px',
-          transition: 'all ease 0.6s',
-          cursor: 'pointer',
-          color: 'black',
-          padding: '8px',
-          paddingLeft: '12px',
-          paddingRight: '12px',
-          borderRadius: '10px'
-
-
-        }}> DELETAR</Link>
+        <Link
+          to="/delete"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'lightgray',
+            marginBottom: '20px',
+            transition: 'all ease 0.6s',
+            cursor: 'pointer',
+            color: 'black',
+            padding: '8px',
+            paddingLeft: '12px',
+            paddingRight: '12px',
+            borderRadius: '10px',
+          }}
+        >
+          {' '}
+          DELETAR
+        </Link>
       </ContainerButtons>
       <br />
       <br />
