@@ -4,7 +4,6 @@ import api from './api'
 import HeaderComponent from './components/Header/Header'
 import moment from 'moment'
 import MenuMobile from './components/MenuMobile/MenuMobile'
-// import { Link, useNavigate } from 'react-router-dom'
 
 export const Container = styled.div`
   display: flex;
@@ -14,6 +13,37 @@ export const Container = styled.div`
   justify-content: top;
   flex-direction: column;
   /* background: orange; */
+`
+
+
+export const Imagem = styled.img`
+  display: flex;
+ width: 500px;
+
+  @media screen and (max-width: 800px) {
+    width: 300px;
+
+  }
+`
+
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 50rem;
+  font-size: 24px;
+  margin-bottom: 15px;
+
+
+
+  @media screen and (max-width: 800px) {
+    width: 20rem;
+
+    font-size: 20px;
+
+  }
 `
 
 export const H1 = styled.h1`
@@ -65,6 +95,7 @@ const ContainerMaps = styled.div`
     padding-bottom: 30px;
     justify-content: space-between;
     margin-top: -200px;
+    width: 80vw;
   }
 `
 const Menu = styled.div`
@@ -80,6 +111,21 @@ const Menu = styled.div`
     justify-content: center;
     margin-bottom: 20px;
     /* margin-top: -50px; */
+  }
+`
+
+export const Text = styled.p`
+  display: flex;
+  width: 700px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 140%;
+  margin-top: 25px;
+
+  @media screen and (max-width: 800px) {
+  width: 320px;
+
   }
 `
 
@@ -170,7 +216,6 @@ function PostsList() {
           onMouseLeave={() => handleDismissButtonClicked()}
         >
           <MenuMobile />
-
         </div>
       ) : null}
 
@@ -178,12 +223,15 @@ function PostsList() {
         {dados.map((item) => {
           return (
             <div key={item.id}>
-              <button onClick={() => setItem(item.id)}>
-                <h2 style={{ fontSize: '32px' }}>
-                  <p>{item.title}</p>
-                </h2>
+              <button onClick={() => setItem(item.id)} style={{ cursor: 'pointer' }}>
 
-                <img src={item.image} alt="imagem" width="300" />
+                <TitleContainer>
+                  <h2 style={{ marginBottom: '30px' }}>
+                    {item.title}
+                  </h2>
+                  <Imagem src={item.image} alt="imagem" />
+                </TitleContainer>
+
 
                 <div
                   style={{
@@ -193,18 +241,7 @@ function PostsList() {
                     justifyContent: 'center',
                   }}
                 >
-                  <p
-                    style={{
-                      width: '320px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '18px',
-                      lineHeight: '140%',
-                    }}
-                  >
-                    {item.text}
-                  </p>
+                  <Text style={{}}>{item.text}</Text>
                 </div>
 
                 <p>{item.desc}</p>

@@ -119,7 +119,7 @@ function UpdateComponent() {
     const id = localStorage.getItem('ID')
 
     try {
-      console.log(`Token:${token}`)
+      // console.log(`Token:${token}`)
 
       if (!token) return alert('Token Inválido, efetue o Login novamente!!')
 
