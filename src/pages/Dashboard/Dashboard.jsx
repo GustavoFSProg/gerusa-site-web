@@ -95,7 +95,7 @@ function Dashboard() {
       <HeaderComponent />
       <Container>
         {isButtonClicked === 'none' ? (
-          <Menu>
+          <Menu >
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -112,7 +112,7 @@ function Dashboard() {
             ></button>
           </Menu>
         ) : (
-          <Menu style={{ display: 'none' }}>
+          <Menu style={{ display: 'none', }}>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -131,7 +131,7 @@ function Dashboard() {
               justifyContent: 'space-between',
               width: '100%',
               height: '250px',
-              marginTop: '-75px',
+              marginTop: '25px',
               zIndex: '999',
               background: 'lightgray',
               flexDirection: 'column',
