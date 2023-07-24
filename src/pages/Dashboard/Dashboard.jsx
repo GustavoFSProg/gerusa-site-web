@@ -131,7 +131,7 @@ function Dashboard() {
               justifyContent: 'space-between',
               width: '100%',
               height: '250px',
-              marginTop: '25px',
+              marginTop: '75px',
               zIndex: '999',
               background: 'lightgray',
               flexDirection: 'column',
