@@ -131,7 +131,7 @@ export const ContainerText = styled.div`
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: -80px;
+    margin-top: -100px;
     font-size: 15px;
     margin-bottom: 0px;
     width: 84%;
@@ -254,7 +254,7 @@ export const ContainerTextAll = styled.div`
   @media screen and (max-width: 1200px) {
     flex-direction: column;
     display: flex;
-    margin-top: -190px;
+    margin-top: -150px;
     height: auto;
     z-index: -10;
   }
