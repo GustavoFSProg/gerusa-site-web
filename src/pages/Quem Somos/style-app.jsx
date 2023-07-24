@@ -253,7 +253,7 @@ export const ContainerTextImage = styled.div`
   @media screen and (max-width: 800px) {
      flex-direction: column;
    display: flex;
-  margin-top: -220px; 
+  margin-top: -120px; 
   height: auto;
 
 
@@ -273,6 +273,8 @@ export const ContainerTextAll = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  margin-top: -50px;
+
 
 
   @media screen and (max-width: 800px) {
