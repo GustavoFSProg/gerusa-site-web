@@ -80,6 +80,8 @@ export const TextArea = styled.textarea`
   height: auto;
   align-items: center;
   justify-content: center;
+  margin-left: 0px;
+
     
     width: 100%;
   }
