@@ -74,6 +74,7 @@ export const TextArea = styled.textarea`
   box-shadow: 0px 0px 5px 1px rgba(37, 0, 50, 0.25);
   font-family: 'Roboto';
   font-size: 1rem;
+  margin-top: 10px;
 
   @media screen and (max-width: 850px) {
     display: flex;
@@ -91,10 +92,10 @@ function RegisterComponent() {
   const [able, setAble] = useState(false)
 
   const [title, setTitle] = useState('')
-  const [author, setAuthor] = useState('')
   const [text, setText] = useState('')
+  const [author, setAuthor] = useState('default')
   const [image, setImage] = useState([])
-  const [desc, setDesc] = useState('')
+  const [desc, setDesc] = useState('default')
   const [views, setViews] = useState('1')
   const [likes, setLikes] = useState('1')
 
@@ -195,7 +196,9 @@ function RegisterComponent() {
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
-        Texto:{' '}
+        <span style={{ marginTop: '-50px' }}>
+          Texto:
+        </span>
         <TextArea
           rows="22"
           cols="58"
@@ -204,7 +207,7 @@ function RegisterComponent() {
           onChange={(e) => setText(e.target.value)}
         />
         <br />
-        <Input
+        {/* <Input
           placeholder="Descrição"
           invalid={true}
           id="autor"
@@ -218,7 +221,7 @@ function RegisterComponent() {
           id="autor"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        />
+        /> */}
         <br />
         <br />
         {dados === 'OK' ? <Button type="submit">Cadastrar</Button> : 'Botao desabiitado!!'}

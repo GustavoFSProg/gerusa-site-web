@@ -27,6 +27,7 @@ export const ContainerFooter
   padding-top: 50px;
   margin-top: 160px;
   /* width: 100%; */
+  align-items: center;
 
 
     
@@ -45,6 +46,13 @@ export const ContainerFooter
 
     
   }
+`
+
+const ContainerTradutora = styled.div`
+width: 90%;
+ text-indent: 6px;
+  margin-top: 10px;
+   color: white;
 `
 
 function Footer() {
@@ -74,7 +82,7 @@ function Footer() {
             as opposed to using 'Content here,
           </div>
         </div> */}
-        <div style={{ width: '90%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
+        <ContainerTradutora >
           <h1 style={{
             width: '85%',
             marginTop: '10px', color: 'white', fontSize: '22px',
@@ -93,7 +101,7 @@ function Footer() {
           }}>
             <img src={emblema} alt="emblema" width="220" style={{ marginTop: '16px' }} />
           </div>
-        </div>
+        </ContainerTradutora>
 
         <div style={{
           width: '85%', textIndent: '6px', marginTop: '10px',
