@@ -234,3 +234,23 @@ export const ImagemCardTres = styled.img`
 
   }
 `
+
+
+
+
+
+export const WhatsContainer = styled.div`
+            position: fixed;
+
+            top: 760px;
+            right: 34pt;
+
+            z-index: 100;
+
+
+  @media screen and (max-width: 800px) {
+   
+    top: 710px;
+            right: 24pt;
+  }
+`

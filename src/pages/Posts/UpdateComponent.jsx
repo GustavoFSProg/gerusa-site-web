@@ -224,7 +224,8 @@ function UpdateComponent() {
 
         <br />
 
-        Texto{' '}
+        Texto: {' '}
+        <br />
         {datas.text}
 
         <TextArea
