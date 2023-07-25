@@ -210,14 +210,18 @@ export const ImagemCardTres = styled.img`
 
 export const WhatsContainer = styled.div`
   position: fixed;
-
   top: 760px;
   right: 34pt;
-
   z-index: 100;
 
-  @media screen and (max-width: 800px) {
-    top: 626px;
-    right: 35pt;
+
+  @media screen and (max-width: 360px) {
+    top: 580px;
+    right: 30pt;
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 800px) {
+    top: 616px;
+    right: 30pt;
   }
 `
