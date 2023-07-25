@@ -125,14 +125,7 @@ function App() {
             }}
           />
         </ContainerImagens>
-        <WhatsContainer
 
-        >
-          <a href="https://wa.me/5551993965345">
-
-            <img src={whats} width="55" height="55" alt="whatsapp" />
-          </a>
-        </WhatsContainer>
         <ContainerH1>
           Bem vindos, conheçam meu trabalho!
           <Hr />
@@ -147,6 +140,14 @@ function App() {
           normal distribution of letters, as opposed to using 'Content here, normal distribution of
           letters,
         </ContainerText>
+        <WhatsContainer
+
+        >
+          <a href="https://wa.me/5551993965345">
+
+            <img src={whats} width="55" height="55" alt="whatsapp" />
+          </a>
+        </WhatsContainer>
 
         <ContainerCards>
           <Cards>
