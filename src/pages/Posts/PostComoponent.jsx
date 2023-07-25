@@ -42,7 +42,7 @@ export const H2 = styled.div`
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
-  font-size: 60px;
+  font-size: 29px;
 
   @media screen and (max-width: 800px) {
     font-size: 32px;

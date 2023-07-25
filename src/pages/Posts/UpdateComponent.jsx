@@ -89,10 +89,10 @@ function UpdateComponent() {
   const [datas, setDatas] = useState({})
 
   const [title, setTitle] = useState('')
-  const [author, setAuthor] = useState('')
   const [text, setText] = useState('')
   const [image, setImage] = useState([])
-  const [desc, setDesc] = useState('')
+  const [author, setAuthor] = useState('default')
+  const [desc, setDesc] = useState('default')
   const [views, setViews] = useState('1')
   const [likes, setLikes] = useState('1')
 
@@ -213,20 +213,30 @@ function UpdateComponent() {
           style={{ marginTop: '30px' }}
         />
         <br />
+        <br />
+        Titulo Atual:
+        <br />
+        {datas.title}
+        <br />
 
         <Input
-          placeholder={datas.title}
+          placeholder="Copie e Cole aqui o titulo atual e podes modificar ele:"
+
           invalid={true}
           id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
 
+
+        Texto Atual:
+        <br />
         <br />
 
-        Texto: {' '}
-        <br />
         {datas.text}
+        <br />
+        <br />
+        <br />
 
         <TextArea
           rows="22"
@@ -235,16 +245,17 @@ function UpdateComponent() {
           value={text}
           // readOnly="false"
 
-          placeholder={datas.text}
+          placeholder="Copie e Cole aqui o texto atual e podes modificar ele:"
           onChange={(e) => setText(e.target.value)}
           style={{
             borderRadius: '8px',
             border: '1px solid rgba(37, 0, 50, 0.25)',
             boxShadow: '0px 0px 5px 1px rgba(37, 0, 50, 0.25)',
+            padding: '17px 17px'
           }}
         />
         <br />
-        <Input
+        {/* <Input
           placeholder="Descrição"
           invalid={true}
           id="autor"
@@ -258,7 +269,7 @@ function UpdateComponent() {
           id="autor"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        />
+        /> */}
         <br />
         <br />
         {dados === 'OK' ? <Button type="submit">Editar</Button> : 'Botao desabiitado!!'}
