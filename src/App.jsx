@@ -100,6 +100,15 @@ function App() {
           </div>
         ) : null}
 
+        <WhatsContainer
+
+        >
+          <a href="https://wa.me/5551993965345">
+
+            <img src={whats} width="60" height="60" alt="whatsapp" />
+          </a>
+        </WhatsContainer>
+
         <ContainerImagens style={{ zIndex: '-10' }}>
           <ImgSlide
             src={slide}
@@ -172,14 +181,7 @@ function App() {
           </Cards>
         </ContainerCards>
 
-        <WhatsContainer
 
-        >
-          <a href="https://wa.me/5551993965345">
-
-            <img src={whats} width="65" height="65" alt="whatsapp" />
-          </a>
-        </WhatsContainer>
 
         <Footer />
       </Container>
