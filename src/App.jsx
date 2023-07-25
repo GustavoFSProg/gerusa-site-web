@@ -18,7 +18,8 @@ import {
   ImgSlide,
   Menu,
   ContainerImagens,
-  WhatsContainer
+  WhatsContainer,
+  Imagem
 } from './style-app'
 import slide from './assets/building.jpg'
 import bandeira from './assets/bandeira.jpeg'
@@ -29,7 +30,8 @@ import emblema from './assets/emblema.png'
 import Footer from './components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import MenuMobile from './components/MenuMobile/MenuMobile'
-import whats from './assets/whats-trans.png'
+import whats from './assets/canvas.jpeg'
+// import whats from './assets/whats-trans.png'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -136,7 +138,7 @@ function App() {
         >
           <a href="https://wa.me/5551993965345">
 
-            <img src={whats} width="55" height="55" alt="whatsapp" />
+            <Imagem src={whats} width="55" height="55" alt="whatsapp" />
           </a>
         </WhatsContainer>
 

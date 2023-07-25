@@ -210,8 +210,8 @@ export const ImagemCardTres = styled.img`
 
 export const WhatsContainer = styled.div`
   position: fixed;
-  top: 760px;
-  right: 34pt;
+  top: 780px;
+  right: 41pt;
   z-index: 100;
 
 
@@ -223,5 +223,18 @@ export const WhatsContainer = styled.div`
   @media screen and (min-width: 370px) and (max-width: 800px) {
     top: 616px;
     right: 23pt;
+  }
+`
+
+
+
+export const Imagem = styled.img`
+  display: flex;
+  width: 67px;
+  height: 67px;
+
+  @media screen and (max-width: 800px) {
+    width: 55px;
+  height: 55px;
   }
 `
