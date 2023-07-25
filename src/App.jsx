@@ -131,6 +131,15 @@ function App() {
           <Hr />
         </ContainerH1>
 
+        <WhatsContainer
+
+        >
+          <a href="https://wa.me/5551993965345">
+
+            <img src={whats} width="55" height="55" alt="whatsapp" />
+          </a>
+        </WhatsContainer>
+
         <ContainerText>
           It is a long established fact that a reader will be distracted by the readable content of
           a page when looking at its layout. The point of using Lorem Ipsum is that it has a
@@ -140,14 +149,7 @@ function App() {
           normal distribution of letters, as opposed to using 'Content here, normal distribution of
           letters,
         </ContainerText>
-        <WhatsContainer
 
-        >
-          <a href="https://wa.me/5551993965345">
-
-            <img src={whats} width="55" height="55" alt="whatsapp" />
-          </a>
-        </WhatsContainer>
 
         <ContainerCards>
           <Cards>
