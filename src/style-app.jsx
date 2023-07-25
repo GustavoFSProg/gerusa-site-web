@@ -217,7 +217,7 @@ export const WhatsContainer = styled.div`
   z-index: 100;
 
   @media screen and (max-width: 800px) {
-    top: 586px;
+    top: 626px;
     right: 35pt;
   }
 `
