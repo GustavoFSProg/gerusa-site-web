@@ -8,9 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
 
-
   @media screen and (max-width: 800px) {
-   
     height: 220%;
   }
 `
@@ -81,9 +79,7 @@ export const ContainerH1 = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 138px;
-  font-size: 26px;
-
-
+    font-size: 26px;
   }
 `
 
@@ -114,49 +110,40 @@ export const ContainerText = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 70px;
-  font-size: 17px;
-  margin-bottom: 260px;
-
-
-
+    font-size: 17px;
+    margin-bottom: 260px;
   }
 
-  @media screen and (min-width: 450px) and (max-width: 850px){
+  @media screen and (min-width: 450px) and (max-width: 850px) {
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
-  font-size: 17px;
+    font-size: 17px;
   }
 `
 
-
-
 export const ContainerCards = styled.div`
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 94%;
   margin-left: 11px;
   margin-bottom: 200px;
   margin-top: -40px;
-   /* align-items: center;  */
+  /* align-items: center;  */
   /* justify-content: center; */
 
   @media screen and (min-width: 900px) and (max-width: 1200px) {
-     flex-direction: column;
-     display: grid;
-  grid-template-columns: repeat(2, 1fr);
-    
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
-
 
   @media screen and (max-width: 900px) {
-     flex-direction: column;
-     display: flex;
-    
+    flex-direction: column;
+    display: flex;
   }
 `
-
 
 export const Cards = styled.div`
   display: flex;
@@ -165,7 +152,7 @@ export const Cards = styled.div`
   height: 80%;
   /* float: left; */
   text-align: left;
-  
+
   /* margin-top: -5px;  */
 
   @media screen and (max-width: 800px) {
@@ -180,17 +167,14 @@ export const Cards = styled.div`
 export const ImagemCard = styled.img`
   display: flex;
   width: 370px;
-  
 
   @media screen and (max-width: 800px) {
     width: 307px;
-
   }
 `
 
-export const ContainerFooter
-  = styled.div`
-   display: grid;
+export const ContainerFooter = styled.div`
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   width: 100%;
@@ -205,51 +189,35 @@ export const ContainerFooter
   /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
-     flex-direction: column;
-   display: flex;
-  height: auto;
-  padding-bottom: 50px;
-  padding-top: 50px;
-
-    
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
   }
 `
-
-
-
-
-
 
 export const ImagemCardTres = styled.img`
   display: flex;
   width: 370px;
   height: 248px;
-  
 
   @media screen and (max-width: 800px) {
     width: 307px;
-  height: 200px;
-
-
+    height: 200px;
   }
 `
 
-
-
-
-
 export const WhatsContainer = styled.div`
-            position: fixed;
+  position: fixed;
 
-            top: 760px;
-            right: 34pt;
+  top: 760px;
+  right: 34pt;
 
-            z-index: 100;
-
+  z-index: 100;
 
   @media screen and (max-width: 800px) {
-   
-    top: 598px;
-            right: 48pt;
+    top: 558px;
+    right: 48pt;
   }
 `
