@@ -4,6 +4,7 @@ import api from './api'
 import HeaderComponent from './components/Header/Header'
 import moment from 'moment'
 import MenuMobile from './components/MenuMobile/MenuMobile'
+import Footer from './components/Footer/Footer'
 
 export const Container = styled.div`
   display: flex;
@@ -123,6 +124,19 @@ export const Text = styled.p`
     width: 320px;
   }
 `
+
+export const DivFooter = styled.div` 
+ margin-top: 210px;
+ width: 100%;
+
+
+ @media screen and (max-width: 800px) {
+  margin-top: -108px;
+
+    
+  }
+`
+
 
 function PostsList() {
   const [dados, setDados] = useState([])
@@ -246,6 +260,11 @@ function PostsList() {
           )
         })}
       </ContainerMaps>
+
+      <DivFooter >
+
+        <Footer />
+      </DivFooter>
     </Container>
   )
 }

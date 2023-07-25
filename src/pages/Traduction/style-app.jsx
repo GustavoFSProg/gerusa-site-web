@@ -269,6 +269,7 @@ export const ContainerTextAll = styled.div`
 
 export const DivFooter = styled.div`
   margin-top: -90px;
+  width: 100%;
 
   @media screen and (max-width: 1200px) {
     margin-top: 0px;

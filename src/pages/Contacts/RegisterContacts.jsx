@@ -8,6 +8,7 @@ import { Button } from '../../components/Buttons/styled-button'
 import HeaderComponent from '../../components/Header/Header'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
 import { Menu } from '../../style-app'
+import Footer from '../../components/Footer/Footer'
 
 export const Container = styled.div`
   display: flex;
@@ -88,6 +89,19 @@ export const TextArea = styled.textarea`
     width: 100%;
   }
 `
+
+export const DivFooter = styled.div` 
+ margin-top: 190px;
+ width: 100%;
+
+
+ @media screen and (max-width: 800px) {
+  margin-top: -60px;
+
+    
+  }
+`
+
 
 function RegisterContacts() {
   const [dados, setDados] = useState([])
@@ -261,6 +275,11 @@ function RegisterContacts() {
 
         <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
       </Form>
+
+      <DivFooter >
+
+        <Footer />
+      </DivFooter>
     </Container>
   )
 }
