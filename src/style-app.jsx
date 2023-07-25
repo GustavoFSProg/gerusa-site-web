@@ -222,6 +222,6 @@ export const WhatsContainer = styled.div`
 
   @media screen and (min-width: 370px) and (max-width: 800px) {
     top: 616px;
-    right: 24pt;
+    right: 23pt;
   }
 `
