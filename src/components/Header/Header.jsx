@@ -60,7 +60,6 @@ function HeaderComponent() {
               <span style={{ color: '#213547' }}>BLOG</span>
             </Link>
 
-            <span>CLIENTES</span>
 
             <Link to="/register-contacts" style={{ color: '#213547' }}>
               <span style={{ color: '#213547' }}>CONTATO</span>

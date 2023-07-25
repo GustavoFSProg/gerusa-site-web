@@ -167,7 +167,7 @@ function Footer() {
               </h2>
               <div style={{ marginTop: '-11px', fontSize: '18px' }}>
 
-                (51) 9396-5345
+                (51) 9-9396-5345
               </div>
             </div>
 
