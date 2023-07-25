@@ -105,7 +105,7 @@ function App() {
         >
           <a href="https://wa.me/5551993965345">
 
-            <img src={whats} width="60" height="60" alt="whatsapp" />
+            <img src={whats} width="55" height="55" alt="whatsapp" />
           </a>
         </WhatsContainer>
 
