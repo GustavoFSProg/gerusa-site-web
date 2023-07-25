@@ -62,7 +62,6 @@ export const Menu = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    /* margin-top: -50px; */
   }
 `
 
@@ -250,7 +249,7 @@ export const WhatsContainer = styled.div`
 
   @media screen and (max-width: 800px) {
    
-    top: 510px;
+    top: 700px;
             right: 30pt;
   }
 `
