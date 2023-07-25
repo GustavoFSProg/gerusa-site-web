@@ -5,6 +5,8 @@ import api from '../../api'
 import { useNavigate } from 'react-router-dom'
 import HeaderComponent from '../../components/Header/Header'
 import { Button } from '../../components/Buttons/styled-button'
+import MenuMobile from '../../components/MenuMobile/MenuMobile'
+import { Menu } from '../../style-app'
 
 
 export const Container = styled.div`
@@ -51,6 +53,15 @@ export const Form = styled.form`
 function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+  function handleDismissButtonClicked() {
+    setIsButtonClicked('none')
+  }
+
+  function handleOpenButtonClicked() {
+    setIsButtonClicked('flex')
+  }
 
   const navigate = useNavigate()
 
@@ -74,6 +85,58 @@ function Login() {
   return (
     <Container>
       <HeaderComponent />
+      {isButtonClicked === 'none' ? (
+        <Menu>
+          <button
+            onMouseLeave={() => handleDismissButtonClicked()}
+            type="button"
+            onClick={() => handleOpenButtonClicked()}
+          >
+            LINKS
+          </button>
+
+          <button
+            onMouseLeave={() => handleDismissButtonClicked()}
+            type="button"
+            // onClick={() => handleOpenButtonClicked()}
+            style={{ display: 'none' }}
+          ></button>
+        </Menu>
+      ) : (
+        <Menu style={{ display: 'none' }}>
+          <button
+            onMouseLeave={() => handleDismissButtonClicked()}
+            type="button"
+            onClick={() => handleOpenButtonClicked()}
+            style={{ display: 'none' }}
+          >
+            LINKS
+          </button>
+        </Menu>
+      )}
+      {isButtonClicked === 'flex' ? (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            width: '100%',
+            height: '250px',
+            marginTop: '-75px',
+            zIndex: '999',
+            background: 'lightgray',
+            flexDirection: 'column',
+            fontSize: '17px',
+            paddingTop: '25px',
+            paddingBottom: '25px',
+            opacity: '0.6',
+          }}
+          onClick={() => handleOpenButtonClicked()}
+          onMouseLeave={() => handleDismissButtonClicked()}
+        >
+          <MenuMobile />
+        </div>
+      ) : null}
       <h1 >LOGIN</h1>
       <ContainerInput>
         <Form onSubmit={handleSubmit} >
@@ -86,15 +149,18 @@ function Login() {
           // errorMessage="Email inválido"
 
           />
+          <div style={{ marginTop: '-41px', width: '100%' }}>
 
-          <Input
-            type="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            invalid={false}
-            errorMessage="Invalid password"
-          />
+            <Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              invalid={false}
+              errorMessage="Invalid password"
+
+            />
+          </div>
 
           <Button type="submit">Login</Button>
         </Form>
