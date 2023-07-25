@@ -215,12 +215,12 @@ export const WhatsContainer = styled.div`
   z-index: 100;
 
 
-  @media screen and (max-width: 355px) {
+  @media screen and (max-width: 370px) {
     top: 500px;
     right: 26pt;
   }
 
-  @media screen and (min-width: 355px) and (max-width: 800px) {
+  @media screen and (min-width: 370px) and (max-width: 800px) {
     top: 616px;
     right: 28pt;
   }
