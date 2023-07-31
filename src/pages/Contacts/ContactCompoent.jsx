@@ -150,9 +150,10 @@ function ContactComponent() {
             </Card>
           )
         })}
-
         <br />
-        <br /><p style={{ color: 'white' }}>
+        <br />
+
+        <p style={{ color: 'white' }}>
           colors
 
         </p>
