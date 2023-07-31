@@ -111,6 +111,7 @@ export const LinkMobileEmail = styled.a`
   color: #008080;
  display:flex;
  z-index: 9999;
+ width: 98%;
     
   }
 `
