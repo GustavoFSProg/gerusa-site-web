@@ -104,9 +104,11 @@ export const DivFooter = styled.div`
 
 export const LinkMobileEmail = styled.a` 
  display:none;
+ 
 
  @media screen and (max-width: 800px) {
-
+  font-size: 18px;
+  color: green;
  display:flex;
     
   }
@@ -114,9 +116,12 @@ export const LinkMobileEmail = styled.a`
 
 export const LinkDeskTopEmail = styled.a` 
  display:flex;
+ font-size: 18px;
+ color: blue;
+
+
 
  @media screen and (max-width: 800px) {
-
  display:none;
     
   }
@@ -298,19 +303,23 @@ function RegisterContacts() {
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
       >
-        Gerusa Gamm MOBILE
+        Ou pelo email:
+        <br />
+
+        gerusagamm@gmail.com
       </LinkMobileEmail>
 
       <br />
-      <br />
-      <br />
-      <br />
+
 
       <LinkDeskTopEmail
         target="_blank"
         href="http://mailto:gerusagamm@gmail.com"
       >
-        Gerusa gamm
+        Ou pelo email:
+        <br />
+
+        gerusagamm@gmail.com
       </LinkDeskTopEmail>
 
       <DivFooter >
