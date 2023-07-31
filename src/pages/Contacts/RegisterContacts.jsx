@@ -303,8 +303,8 @@ function RegisterContacts() {
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
       >
-        Mobile  Ou pelo email:
-        <br />
+        Ou pelo email:
+
 
         gerusagamm@gmail.com
       </a>
