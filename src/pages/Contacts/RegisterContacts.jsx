@@ -304,7 +304,7 @@ function RegisterContacts() {
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
       >
-        Ou pelo email:  gerusagamm@gmail.com
+        Ou clicando:  gerusagamm@gmail.com
       </LinkMobileEmail>
 
       <br />
@@ -315,7 +315,7 @@ function RegisterContacts() {
       >
 
 
-        Ou pelo email: gerusagamm@gmail.com
+        Ou clicando: gerusagamm@gmail.com
       </LinkDeskTopEmail>
 
       <DivFooter >
