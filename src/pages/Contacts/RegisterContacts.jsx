@@ -107,8 +107,8 @@ export const LinkMobileEmail = styled.a`
  
 
  @media screen and (max-width: 800px) {
-  font-size: 22px;
-  color: green;
+  font-size: 20px;
+  color: #008080;
  display:flex;
  z-index: 9999;
     
@@ -118,7 +118,7 @@ export const LinkMobileEmail = styled.a`
 export const LinkDeskTopEmail = styled.a` 
  display:flex;
  font-size: 18px;
- color: blue;
+ color: #008080;
 
 
 
@@ -302,7 +302,7 @@ function RegisterContacts() {
       </Form>
       <LinkMobileEmail
         target="_blank"
-        href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
+        href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
       >
         Ou pelo email:  gerusagamm@gmail.com
       </LinkMobileEmail>
