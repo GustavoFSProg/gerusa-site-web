@@ -277,7 +277,7 @@ function RegisterContacts() {
       </Form>
       <a
         target="_blank"
-        href="https://mailto:gerusagamm@gmail.com"
+        href="mailto:gerusagamm@gmail.com"
       >
         Gerusa Gamm aa
       </a>
