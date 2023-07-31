@@ -111,7 +111,7 @@ export const LinkMobileEmail = styled.a`
   color: #008080;
  display:flex;
  z-index: 9999;
- width: 90%;
+ width: 88%;
     
   }
 `
@@ -305,7 +305,7 @@ function RegisterContacts() {
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
       >
-        Ou clicando: _____  gerusagamm@gmail.com
+        Ou clicando: gerusagamm@gmail.com
       </LinkMobileEmail>
 
       <br />
@@ -314,8 +314,6 @@ function RegisterContacts() {
         target="_blank"
         href="http://mailto:gerusagamm@gmail.com"
       >
-
-
         Ou clicando: gerusagamm@gmail.com
       </LinkDeskTopEmail>
 
