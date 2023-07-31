@@ -4,7 +4,31 @@ import Logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import emblema from '../../assets/emblema.png'
+import MailOutline from '@material-ui/icons/MailOutline'
 
+
+export const LinkMobileEmail = styled.a` 
+/* font-size: 18px; */
+  color: white;
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 9999;
+ width: 88%;
+ font-weight: 387;
+ 
+/* 
+ @media screen and (max-width: 800px) {
+  font-size: 20px;
+  color: white;
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 9999;
+ width: 88%;
+    
+  } */
+`
 
 export const ContainerFooter
   = styled.div`
@@ -190,8 +214,19 @@ function Footer() {
                 Email:
               </h2>
               <div style={{ marginTop: '-11px', fontSize: '18px' }}>
+                <LinkMobileEmail
+                  target="_blank"
+                  href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
+                >
 
-                gerusagamm@gmail.com
+
+                  <MailOutline style={{
+                    marginTop: '4px',
+                    marginRight: '-1px',
+                    marginLeft: '26px',
+
+                  }} />  gerusagamm@gmail.com
+                </LinkMobileEmail>
               </div>
             </div>
 
