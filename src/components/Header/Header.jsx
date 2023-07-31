@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Container, Header, ContainerLinks } from './style'
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo-10.jpeg'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -29,13 +29,12 @@ function HeaderComponent() {
     <>
       <Container>
         <Header>
-
           {/* <img
-            src=""
+            src={Logo}
             alt="fone"
-            width="200"
-            height="200"
-            style={{ borderRadius: '50px', marginBottom: '10px', zIndex: '-100' }}
+            width="180"
+            height="110"
+            style={{ borderRadius: '10px', marginBottom: '10px', zIndex: '-100' }}
           /> */}
           <ContainerLogo >
             LOGO
@@ -59,8 +58,6 @@ function HeaderComponent() {
             <Link to="/postsList" style={{ color: '#213547' }}>
               <span style={{ color: '#213547' }}>BLOG</span>
             </Link>
-
-
             <Link to="/register-contacts" style={{ color: '#213547' }}>
               <span style={{ color: '#213547' }}>CONTATO</span>
             </Link>

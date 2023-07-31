@@ -218,9 +218,12 @@ function UpdateComponent() {
         <br />
         {datas.title}
         <br />
+        <p>
+          Copie e cole no campo abaixo o  titulo atual e podes modificar ele
 
+        </p>
         <Input
-          placeholder="Copie e Cole aqui o titulo atual e podes modificar ele:"
+          placeholder="Copie e Cole aqui:"
 
           invalid={true}
           id="title"

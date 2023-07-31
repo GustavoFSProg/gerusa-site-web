@@ -9,16 +9,16 @@ import { Link, useNavigate } from 'react-router-dom'
 export const Container = styled.div`
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 890px;
+  margin-top: 690px;
 
 
   @media screen and (max-width: 800px) {
     /* font-size: 60px; */
-  margin-top: 560px;
+  margin-top: 160px;
 
   }
 `

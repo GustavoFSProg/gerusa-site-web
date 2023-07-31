@@ -144,7 +144,6 @@ function Dashboard() {
             onMouseLeave={() => handleDismissButtonClicked()}
           >
             <MenuMobile />
-
           </div>
         ) : null}
         <ContainerLinks>
