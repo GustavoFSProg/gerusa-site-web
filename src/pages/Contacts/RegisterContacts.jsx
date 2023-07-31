@@ -102,6 +102,25 @@ export const DivFooter = styled.div`
   }
 `
 
+export const LinkMobileEmail = styled.a` 
+ display:none;
+
+ @media screen and (max-width: 800px) {
+
+ display:flex;
+    
+  }
+`
+
+export const LinkDeskTopEmail = styled.a` 
+ display:flex;
+
+ @media screen and (max-width: 800px) {
+
+ display:none;
+    
+  }
+`
 
 function RegisterContacts() {
   const [dados, setDados] = useState([])
@@ -275,23 +294,24 @@ function RegisterContacts() {
 
         <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
       </Form>
-      <a
+      <LinkMobileEmail
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
       >
-        Gerusa Gamm aa
-      </a>
+        Gerusa Gamm MOBILE
+      </LinkMobileEmail>
+
       <br />
       <br />
       <br />
       <br />
 
-      <a
+      <LinkDeskTopEmail
         target="_blank"
-        href={`mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia`}
+        href="http://mailto:gerusagamm@gmail.com"
       >
-        Gerusa Gamm MOBILE
-      </a>
+        Gerusa gamm
+      </LinkDeskTopEmail>
 
       <DivFooter >
 
