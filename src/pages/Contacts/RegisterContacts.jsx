@@ -117,7 +117,7 @@ export const LinkMobileEmail = styled.a`
 
 export const LinkDeskTopEmail = styled.a` 
  display:flex;
- font-size: 18px;
+ font-size: 22px;
  color: #008080;
 
 
