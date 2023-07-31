@@ -299,15 +299,15 @@ function RegisterContacts() {
 
         <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
       </Form>
-      <LinkMobileEmail
+      <a
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
       >
-        Ou pelo email:
+        Mobile  Ou pelo email:
         <br />
 
         gerusagamm@gmail.com
-      </LinkMobileEmail>
+      </a>
 
       <br />
 
