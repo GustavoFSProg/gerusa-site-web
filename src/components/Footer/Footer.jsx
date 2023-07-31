@@ -15,7 +15,7 @@ export const LinkMobileEmail = styled.a`
  justify-content: center;
  z-index: 9999;
  width: 88%;
- font-weight: 427;
+ font-weight: 420;
  
 /* 
  @media screen and (max-width: 800px) {
