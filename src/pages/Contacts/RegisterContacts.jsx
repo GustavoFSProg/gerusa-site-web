@@ -110,6 +110,8 @@ export const LinkMobileEmail = styled.a`
   font-size: 20px;
   color: #008080;
  display:flex;
+ align-items: center;
+ justify-content: center;
  z-index: 9999;
  width: 88%;
     
