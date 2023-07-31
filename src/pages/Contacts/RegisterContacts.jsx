@@ -110,6 +110,7 @@ export const LinkMobileEmail = styled.a`
   font-size: 18px;
   color: green;
  display:flex;
+ z-index: 9999;
     
   }
 `
@@ -299,12 +300,12 @@ function RegisterContacts() {
 
         <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
       </Form>
-      <a
+      <LinkMobileEmail
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
       >
-        mobile  gerusagamm@gmail.com
-      </a>
+        mobile gerusagamm@gmail.com
+      </LinkMobileEmail>
 
       <br />
 
