@@ -281,9 +281,13 @@ function RegisterContacts() {
       >
         Gerusa Gamm aa
       </a>
+      <br />
+      <br />
+      <br />
+      <br />
 
       <a
-        href={`mailto:gerusagamm@gmail.com?subject="Email"&body=Olá, Bom dia`}
+        href={`mailto:gerusagamm@gmail.com?subject="Email"&body="Olá, Bom dia"`}
       >
         Gerusa Gamm MOBILE
       </a>
