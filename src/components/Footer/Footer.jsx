@@ -195,25 +195,10 @@ function Footer() {
               marginLeft: '15px'
             }}>
               <h2>
-                Telefone:
-              </h2>
-              <div style={{ marginTop: '-11px', fontSize: '18px' }}>
-
-                (51) 9-9396-5345
-              </div>
-            </div>
-
-
-            <div style={{
-              display: 'flex', flexDirection: 'column',
-              alignItems: 'flex-start',
-              width: '100%', marginTop: '8px', color: 'white',
-              marginLeft: '15px'
-            }}>
-              <h2>
                 Email:
               </h2>
               <div style={{ marginTop: '-11px', fontSize: '18px' }}>
+
                 <LinkMobileEmail
                   target="_blank"
                   href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
@@ -227,6 +212,23 @@ function Footer() {
 
                   }} />  gerusagamm@gmail.com
                 </LinkMobileEmail>
+
+
+              </div>
+            </div>
+
+
+            <div style={{
+              display: 'flex', flexDirection: 'column',
+              alignItems: 'flex-start',
+              width: '100%', marginTop: '8px', color: 'white',
+              marginLeft: '15px'
+            }}>
+              <h2>
+                Telefone:
+              </h2>
+              <div style={{ marginTop: '-11px', fontSize: '18px' }}>
+                (51) 9-9396-5345
               </div>
             </div>
 
