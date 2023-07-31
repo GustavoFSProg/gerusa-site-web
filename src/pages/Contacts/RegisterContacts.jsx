@@ -276,7 +276,7 @@ function RegisterContacts() {
         <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
       </Form>
       <a
-        // target="_blank"
+        target="_blank"
         href="http://mailto:gerusagamm@gmail.com"
       >
         Gerusa Gamm aa
@@ -287,6 +287,8 @@ function RegisterContacts() {
       <br />
 
       <a
+        target="_blank"
+
         href={`mailto:gerusagamm@gmail.com?subject="Email"&body="Olá, Bom dia"`}
       >
         Gerusa Gamm MOBILE
