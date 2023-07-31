@@ -9,6 +9,8 @@ import HeaderComponent from '../../components/Header/Header'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
 import { Menu } from '../../style-app'
 import Footer from '../../components/Footer/Footer'
+// import Mail from '../../assets/gmail.png'
+import MailOutline from '@material-ui/icons/MailOutline'
 
 export const Container = styled.div`
   display: flex;
@@ -97,8 +99,6 @@ export const DivFooter = styled.div`
 
  @media screen and (max-width: 800px) {
   margin-top: -60px;
-
-    
   }
 `
 
@@ -111,7 +111,7 @@ export const LinkMobileEmail = styled.a`
   color: #008080;
  display:flex;
  z-index: 9999;
- width: 88%;
+ width: 100%;
     
   }
 `
@@ -305,16 +305,29 @@ function RegisterContacts() {
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
       >
-        Ou clicando: gerusagamm@gmail.com
+        Ou clicando: <MailOutline style={{
+          marginTop: '7px',
+          marginRight: '2px',
+          marginLeft: '8px'
+        }} />  gerusagamm@gmail.com
       </LinkMobileEmail>
-
       <br />
-
       <LinkDeskTopEmail
         target="_blank"
         href="http://mailto:gerusagamm@gmail.com"
       >
-        Ou clicando: gerusagamm@gmail.com
+        Ou clicando:
+        <MailOutline style={{
+          marginTop: '7px',
+          marginRight: '2px',
+          marginLeft: '8px'
+        }} />
+        gerusagamm@gmail.com
+        {/* <img src={Mail} alt="gmail" width="20" height="20" style={{
+          marginTop: '8px',
+          marginRight: '4px',
+          marginLeft: '8px'
+        }} /> gerusagamm@gmail.com */}
       </LinkDeskTopEmail>
 
       <DivFooter >
