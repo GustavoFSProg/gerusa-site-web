@@ -107,7 +107,7 @@ export const LinkMobileEmail = styled.a`
  
 
  @media screen and (max-width: 800px) {
-  font-size: 18px;
+  font-size: 22px;
   color: green;
  display:flex;
  z-index: 9999;
@@ -304,7 +304,7 @@ function RegisterContacts() {
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Email&body=Olá, Bom dia"
       >
-        mobile gerusagamm@gmail.com
+        Ou pelo email:  gerusagamm@gmail.com
       </LinkMobileEmail>
 
       <br />
@@ -313,10 +313,9 @@ function RegisterContacts() {
         target="_blank"
         href="http://mailto:gerusagamm@gmail.com"
       >
-        Ou pelo email:
-        <br />
 
-        gerusagamm@gmail.com
+
+        Ou pelo email: gerusagamm@gmail.com
       </LinkDeskTopEmail>
 
       <DivFooter >
