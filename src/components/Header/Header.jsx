@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Container, Header, ContainerLinks } from './style'
-import Logo from '../../assets/logo-10.jpeg'
+import Logo from '../../assets/thebandeira.jpg'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -10,7 +10,7 @@ const ContainerLogo = styled.div`
  justify-content: center;
   align-items: center;
   align-self: center;
- margin-left: 80px;
+ margin-left: 40px;
 
  @media screen and (max-width: 1200px){
   display: flex;
@@ -29,15 +29,15 @@ function HeaderComponent() {
     <>
       <Container>
         <Header>
-          {/* <img
-            src={Logo}
-            alt="fone"
-            width="180"
-            height="110"
-            style={{ borderRadius: '10px', marginBottom: '10px', zIndex: '-100' }}
-          /> */}
           <ContainerLogo >
-            LOGO
+            <img
+              src={Logo}
+              alt="fone"
+              width="170"
+              height="100"
+              style={{ borderRadius: '10px', marginBottom: '10px', zIndex: '-100' }}
+            />
+
           </ContainerLogo>
           <ContainerLinks>
             <Link to="/" style={{ color: '#213547' }}>

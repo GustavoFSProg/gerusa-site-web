@@ -54,7 +54,7 @@ export const ContainerLinks = styled.div`
   justify-content: space-around;
   /* color: white; */
   font-size: 1rem;
-  margin-left: 113px;
+  margin-left: 83px;
 
   @media screen and (max-width: 1080px){
     display: none;
