@@ -58,10 +58,10 @@ function Delete() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function deletePost() {
-    const id = localStorage.getItem('ID')
+    const id = sessionStorage.getItem('ID')
     try {
       await api.delete(`/delete-post/${id}`)
 

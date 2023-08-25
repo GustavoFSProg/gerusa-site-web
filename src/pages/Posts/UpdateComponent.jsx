@@ -102,7 +102,7 @@ function UpdateComponent() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function HandlePosts() {
     const { data } = await api.get('/get-all-contacts')
@@ -116,7 +116,9 @@ function UpdateComponent() {
 
   async function handleSubmit(event) {
     event.preventDefault()
-    const id = localStorage.getItem('ID')
+    const id = sessionStorage.getItem('ID')
+
+    console.log(id)
 
     try {
       // console.log(`Token:${token}`)
@@ -157,7 +159,7 @@ function UpdateComponent() {
 
 
   async function ProfileHandle() {
-    const id = localStorage.getItem('ID')
+    const id = sessionStorage.getItem('ID')
 
     const { data } = await api.get(`/get-post/${id}`)
 

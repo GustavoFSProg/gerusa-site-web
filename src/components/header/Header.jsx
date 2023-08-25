@@ -9,7 +9,7 @@ function Header() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
 
   function handleLogout() {
-    localStorage.clear()
+    sessionStorage.clear()
 
     return alert("Logout Efetuado com Sucesso!!")
   }
@@ -159,7 +159,7 @@ function Header() {
             </Link>
           </div>
 
-         
+
         </LinksContainerMobile>
 
       </FormDois>

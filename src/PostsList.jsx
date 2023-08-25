@@ -156,7 +156,7 @@ function PostsList() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.get('/get-all-posts')

@@ -82,7 +82,7 @@ function ContactComponent() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.get('/get-all-contacts')
@@ -123,8 +123,8 @@ function ContactComponent() {
 
         {dados.map((item) => {
           return (
-            <Card>
-              <div key={item.id}>
+            <Card key={item.id}>
+              <div >
                 <p style={{ fontSize: '17px' }}>
                   <strong style={{ fontSize: '17px', marginRight: '10px' }}>
                     Nome:
@@ -146,6 +146,10 @@ function ContactComponent() {
                 <p style={{ fontSize: '17px' }}><strong style={{ fontSize: '17px', marginRight: '10px' }}>
                   Mensagem:
                 </strong> {item.message}</p>
+
+                <p style={{ fontSize: '17px' }}><strong style={{ fontSize: '17px', marginRight: '10px' }}>
+                  Data:
+                </strong> {getDateWithoutTime(item.createdAt)}</p>
               </div>
             </Card>
           )

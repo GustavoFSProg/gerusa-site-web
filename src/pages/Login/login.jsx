@@ -72,7 +72,7 @@ function Login() {
       const { data } = await api.post('/login', { email, password })
 
 
-      localStorage.setItem('token', data.token)
+      sessionStorage.setItem('token', data.token)
       navigate("/dashboard")
 
 

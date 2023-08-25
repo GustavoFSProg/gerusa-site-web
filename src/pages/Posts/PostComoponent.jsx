@@ -111,12 +111,12 @@ function PostComponent() {
   }
 
   function setItem(id) {
-    localStorage.setItem('ID', id)
+    sessionStorage.setItem('ID', id)
 
     navigate('/profile')
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.get('/get-all-posts')

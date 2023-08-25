@@ -72,7 +72,7 @@ function Dashboard() {
     setIsButtonClicked('flex')
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)

@@ -52,7 +52,6 @@ export const ContainerLinks = styled.div`
   height: 120px;
   align-items: center;
   justify-content: space-around;
-  /* color: white; */
   font-size: 1rem;
   margin-left: 83px;
 

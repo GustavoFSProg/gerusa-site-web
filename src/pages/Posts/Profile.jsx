@@ -109,13 +109,13 @@ function Profile() {
   const navigate = useNavigate()
 
   function HandleEditar() {
-    const id = localStorage.getItem('ID')
+    const id = sessionStorage.getItem('ID')
 
     navigate('/update')
   }
 
   async function deletePost() {
-    const id = localStorage.getItem('ID')
+    const id = sessionStorage.getItem('ID')
     try {
       await api.delete(`/delete-post/${id}`)
 
@@ -127,12 +127,12 @@ function Profile() {
     }
   }
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
-  const id = localStorage.getItem('ID')
+  const id = sessionStorage.getItem('ID')
 
   async function HandleAuth() {
-    const id = localStorage.getItem('ID')
+    const id = sessionStorage.getItem('ID')
 
     const { data } = await api.get(`/get-post/${id}`)
 

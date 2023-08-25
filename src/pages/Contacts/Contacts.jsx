@@ -43,7 +43,7 @@ function Contacts() {
   }
 
 
-  const token = localStorage.getItem('token')
+  const token = sessionStorage.getItem('token')
 
   async function HandleContacts() {
     const { data } = await api.get('/get-all-contacts')
