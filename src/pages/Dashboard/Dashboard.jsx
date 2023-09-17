@@ -69,7 +69,6 @@ function Dashboard() {
 
   const { user, setUser } = useContext(userContext)
 
-  console.log(user)
 
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')

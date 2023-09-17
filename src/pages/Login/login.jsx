@@ -50,8 +50,8 @@ export const Form = styled.form`
 `
 
 function Login() {
-  const [email, setEmail] = useState('vera@gmail.com')
-  const [password, setPassword] = useState('buceta')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [isButtonClicked, setIsButtonClicked] = useState('none')
 
   const { user, setUser } = useContext(userContext)
