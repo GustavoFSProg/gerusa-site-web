@@ -56,7 +56,6 @@ function Login() {
 
   const { user, setUser } = useContext(userContext)
 
-  console.log(user)
 
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')
@@ -79,7 +78,6 @@ function Login() {
       sessionStorage.setItem('userName', data.user.name)
 
       setUser(true)
-      // console.log(user)
 
       navigate('/dashboard')
 
@@ -93,7 +91,6 @@ function Login() {
     if (user === true) {
       navigate('/dashboard')
 
-      // console.log(user)
     } else {
       navigate('/login')
     }
