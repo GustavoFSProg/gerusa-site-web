@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
@@ -7,7 +7,8 @@ import HeaderComponent from '../../components/Header/Header'
 import { Button } from '../../components/Buttons/styled-button'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
 import { Menu } from '../../style-app'
-
+import { userContext } from '../../userContext'
+import { useContext } from 'react'
 
 export const Container = styled.div`
   display: flex;
@@ -26,16 +27,14 @@ export const ContainerInput = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  @media screen and (max-width: 850px){
+  @media screen and (max-width: 850px) {
     width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: -26px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -26px;
   }
 `
-
 
 export const Form = styled.form`
   display: flex;
@@ -45,15 +44,19 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
 
-  @media screen and (max-width: 850px){
+  @media screen and (max-width: 850px) {
     width: 70%;
   }
 `
 
 function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('vera@gmail.com')
+  const [password, setPassword] = useState('buceta')
   const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+  const { user, setUser } = useContext(userContext)
+
+  console.log(user)
 
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')
@@ -71,20 +74,34 @@ function Login() {
     try {
       const { data } = await api.post('/login', { email, password })
 
-
       sessionStorage.setItem('token', data.token)
       sessionStorage.setItem('userId', data.user.id)
       sessionStorage.setItem('userName', data.user.name)
 
+      setUser(true)
+      // console.log(user)
 
-      navigate("/dashboard")
-
+      navigate('/dashboard')
 
       return alert('Login  realizado com sucesso!')
     } catch (error) {
       return alert(`Erro no Login ${error}`)
     }
   }
+
+  function CheckUserLogged() {
+    if (user === true) {
+      navigate('/dashboard')
+
+      // console.log(user)
+    } else {
+      navigate('/login')
+    }
+  }
+
+  useEffect(() => {
+    CheckUserLogged()
+  }, [])
 
   return (
     <Container>
@@ -141,9 +158,9 @@ function Login() {
           <MenuMobile />
         </div>
       ) : null}
-      <h1 >LOGIN</h1>
+      <h1>LOGIN</h1>
       <ContainerInput>
-        <Form onSubmit={handleSubmit} >
+        <Form onSubmit={handleSubmit}>
           <Input
             type="email"
             placeholder="Email"
@@ -151,10 +168,8 @@ function Login() {
             value={email}
             invalid={true}
           // errorMessage="Email inválido"
-
           />
           <div style={{ marginTop: '-41px', width: '100%' }}>
-
             <Input
               type="password"
               placeholder="Password"
@@ -162,7 +177,6 @@ function Login() {
               value={password}
               invalid={false}
               errorMessage="Invalid password"
-
             />
           </div>
 

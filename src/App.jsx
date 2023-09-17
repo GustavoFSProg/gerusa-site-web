@@ -31,10 +31,15 @@ import Footer from './components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import whats from './assets/canvas.jpeg'
-// import whats from './assets/whats-trans.png'
+import { userContext } from './userContext'
+import { useContext } from 'react'
+
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+  const { user, setUser } = useContext(userContext)
+
 
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')

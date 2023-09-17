@@ -6,6 +6,8 @@ import HeaderComponent from '../../components/Header/Header'
 import { Link } from 'react-router-dom'
 import { Menu } from '../../style-app'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
+import { userContext } from '../../userContext'
+import { useContext } from 'react'
 
 export const Container = styled.div`
   display: flex;
@@ -63,6 +65,11 @@ function Dashboard() {
   const [dados, setDados] = useState()
 
   const [isButtonClicked, setIsButtonClicked] = useState('none')
+
+
+  const { user, setUser } = useContext(userContext)
+
+  console.log(user)
 
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')
