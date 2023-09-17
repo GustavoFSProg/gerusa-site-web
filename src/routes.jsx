@@ -12,6 +12,9 @@ import QuemSomos from './pages/Quem Somos/QuemSomos'
 import Traduction from './pages/Traduction/Traduction'
 import PostsList from './PostsList'
 import RegisterContacts from './pages/Contacts/RegisterContacts'
+import Users from './pages/Users/Users'
+import MainUpdate from './pages/Users/MainUpdate'
+// import RegisterUser from './pages/Users/RegisterUser'
 
 function Routeres() {
   return (
@@ -30,6 +33,8 @@ function Routeres() {
         <Route path="/somos" element={<QuemSomos />} />
         <Route path="/traduction" element={<Traduction />} />
         <Route path="/postsList" element={<PostsList />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/main-update" element={<MainUpdate />} />
       </Routes>
     </BrowserRouter>
   )

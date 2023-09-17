@@ -6,6 +6,7 @@ import HeaderComponent from '../../components/Header/Header'
 import { Link } from 'react-router-dom'
 import { Menu } from '../../style-app'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
+import RegisterUser from './RegisterUser'
 
 export const Container = styled.div`
   display: flex;
@@ -19,10 +20,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 800px){
   margin-top: -20px;
-  
-
-
-  }
+    }
 
 `
 
@@ -59,7 +57,7 @@ export const ContainerInput = styled.div`
   flex-direction: column;
 `
 
-function Dashboard() {
+function Users() {
   const [dados, setDados] = useState()
 
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -154,22 +152,22 @@ function Dashboard() {
             PAINEL
           </Link>
 
-          <Link to="/contacts" style={{
+          <Link to="/register-user" style={{
             color: 'yellow'
             , marginBottom: '9px'
             , fontSize: '18px'
           }}>
-            CONTATOS
+            CADASTRAR USUÁRIO
           </Link>
 
-          <Link to="/posts" style={{
+          <Link to="/main-update" style={{
             color: 'yellow'
             , marginBottom: '9px'
             , fontSize: '18px'
           }}>
-            POSTS
+            MUDAR A SENHA
           </Link>
-          <Link to="/users" style={{
+          <Link to="/posts" style={{
             color: 'yellow'
             , marginBottom: '9px'
             , fontSize: '18px'
@@ -177,10 +175,10 @@ function Dashboard() {
             USUÁRIOS
           </Link>
         </ ContainerLinks>
-        {dados === 'OK' ? <h1>PAINEL</h1> : <h1>ACESSO PROIBIDO!!!</h1>}
+        {dados === 'OK' ? <RegisterUser /> : <h1>ACESSO PROIBIDO!!!</h1>}
       </Container >
     </>
   )
 }
 
-export default Dashboard
+export default Users

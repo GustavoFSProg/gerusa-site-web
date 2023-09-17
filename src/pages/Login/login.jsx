@@ -73,6 +73,10 @@ function Login() {
 
 
       sessionStorage.setItem('token', data.token)
+      sessionStorage.setItem('userId', data.user.id)
+      sessionStorage.setItem('userName', data.user.name)
+
+
       navigate("/dashboard")
 
 
