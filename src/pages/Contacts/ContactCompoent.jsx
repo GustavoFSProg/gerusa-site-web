@@ -5,6 +5,7 @@ import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 
 export const Container = styled.div`
   display: flex;
@@ -76,13 +77,10 @@ export const ContainerInput = styled.div`
 
 function ContactComponent() {
   const [dados, setDados] = useState([])
-  const [abled, setAbled] = useState(false)
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
   }
-
-  const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.get('/get-all-contacts')
@@ -94,13 +92,24 @@ function ContactComponent() {
     return <p></p>
   }
 
+  async function DeleteMensagem(id) {
+    try {
+      await api.delete(`/delete-contacts/${id}`)
+
+      location.reload()
+
+      return alert('Mensagem Apagada!')
+    } catch (error) {
+      return error
+    }
+  }
+
   useEffect(() => {
     HandleAuth()
   }, [])
 
   return (
     <>
-
       <Container>
         <ContainerLinks>
           <Link to="/dashboard" style={{ color: 'yellow' }}>
@@ -124,32 +133,43 @@ function ContactComponent() {
         {dados.map((item) => {
           return (
             <Card key={item.id}>
-              <div >
+              <div>
+                <button
+                  style={{
+                    background: 'none',
+                    display: 'flex',
+                    alignItems: 'end',
+                    justifyItems: 'flex-end',
+                    marginLeft: '260px'
+                  }}
+                  onClick={() => DeleteMensagem(item.id)}
+                >
+                  <DeleteForeverIcon fontSize="large" />
+                </button>
                 <p style={{ fontSize: '17px' }}>
-                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>
-                    Nome:
-                  </strong>
-                  {item.nome}</p>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>Nome:</strong>
+                  {item.nome}
+                </p>
 
                 <p style={{ fontSize: '17px' }}>
-                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>
-                    Email:
-                  </strong>
-                  {item.email}</p>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>Email:</strong>
+                  {item.email}
+                </p>
 
                 <p style={{ fontSize: '17px' }}>
-                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>
-                    Telefone:
-                  </strong>
-                  {item.telefone}</p>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>Telefone:</strong>
+                  {item.telefone}
+                </p>
 
-                <p style={{ fontSize: '17px' }}><strong style={{ fontSize: '17px', marginRight: '10px' }}>
-                  Mensagem:
-                </strong> {item.message}</p>
+                <p style={{ fontSize: '17px' }}>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>Mensagem:</strong>{' '}
+                  {item.message}
+                </p>
 
-                <p style={{ fontSize: '17px' }}><strong style={{ fontSize: '17px', marginRight: '10px' }}>
-                  Data:
-                </strong> {getDateWithoutTime(item.createdAt)}</p>
+                <p style={{ fontSize: '17px' }}>
+                  <strong style={{ fontSize: '17px', marginRight: '10px' }}>Data:</strong>{' '}
+                  {getDateWithoutTime(item.createdAt)}
+                </p>
               </div>
             </Card>
           )
@@ -157,15 +177,11 @@ function ContactComponent() {
         <br />
         <br />
 
-        <p style={{ color: 'white' }}>
-          colors
-
-        </p>
+        <p style={{ color: 'white' }}>colors</p>
         <br />
         <br />
       </Container>
     </>
-
   )
 }
 

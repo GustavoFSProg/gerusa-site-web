@@ -173,6 +173,30 @@ export const ImagemCard = styled.img`
   }
 `
 
+export const ImagemCardA = styled.img`
+  display: flex;
+  width: 22.8rem;
+  height: 22.8rem;
+
+  @media screen and (max-width: 800px) {
+    /* width: 307px; */
+    width: 18.8rem;
+    height: 14rem;
+  }
+`
+
+export const ImagemCardB = styled.img`
+  display: flex;
+  width: 22.8rem;
+  height: 15.5rem;
+
+  @media screen and (max-width: 800px) {
+    /* width: 307px; */
+    width: 18.8rem;
+    height: 14rem;
+  }
+`
+
 export const ContainerFooter = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -214,7 +238,6 @@ export const WhatsContainer = styled.div`
   right: 41pt;
   z-index: 100;
 
-
   @media screen and (max-width: 370px) {
     top: 576px;
     right: 23pt;
@@ -226,8 +249,6 @@ export const WhatsContainer = styled.div`
   }
 `
 
-
-
 export const Imagem = styled.img`
   display: flex;
   width: 67px;
@@ -235,6 +256,6 @@ export const Imagem = styled.img`
 
   @media screen and (max-width: 800px) {
     width: 55px;
-  height: 55px;
+    height: 55px;
   }
 `

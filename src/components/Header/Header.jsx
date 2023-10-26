@@ -1,27 +1,24 @@
 import { useState } from 'react'
 import { Container, Header, ContainerLinks } from './style'
-import Logo from '../../assets/thebandeira.jpg'
+import Logo from '../../assets/bandeiras-1.jpeg'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const ContainerLogo = styled.div` 
- display: flex;
- font-size: 37px;
- justify-content: center;
-  align-items: center;
-  align-self: center;
- margin-left: 40px;
-
- @media screen and (max-width: 1200px){
+const ContainerLogo = styled.div`
   display: flex;
+  font-size: 37px;
   justify-content: center;
   align-items: center;
   align-self: center;
- margin-left: -30px;
+  margin-left: 40px;
 
-
-
- }
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: -30px;
+  }
 `
 
 function HeaderComponent() {
@@ -29,15 +26,14 @@ function HeaderComponent() {
     <>
       <Container>
         <Header>
-          <ContainerLogo >
+          <ContainerLogo>
             <img
               src={Logo}
               alt="fone"
-              width="170"
-              height="100"
+              width="180"
+              height="110"
               style={{ borderRadius: '10px', marginBottom: '10px', zIndex: '-100' }}
             />
-
           </ContainerLogo>
           <ContainerLinks>
             <Link to="/" style={{ color: '#213547' }}>

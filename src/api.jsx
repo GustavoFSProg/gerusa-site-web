@@ -1,20 +1,20 @@
 import axios from 'axios'
 
 const api = axios.create({
-  // baseURL: 'http://localhost:5000'
-  baseURL: 'https://gerusa-site-api-juab.vercel.app'
+  baseURL: 'http://localhost:5000'
+  // baseURL: 'https://gerusa-site-api-juab.vercel.app'
 })
 
 export const keys = {
   token: 'token',
-  data: 'data',
+  data: 'data'
 }
 
 export const setItem = (key, data) => {
   return sessionStorage.setItem(key, data)
 }
 
-export const getItem = key => {
+export const getItem = (key) => {
   return sessionStorage.getItem(key)
 }
 
@@ -23,19 +23,18 @@ export const clearItems = () => {
   return window.location.reload()
 }
 
-
 api.interceptors.request.use(
-  config => {
+  (config) => {
     const token = getItem(keys.token)
     if (token) return { ...config, headers: { 'x-access-token': token } }
     return config
   },
-  error => Promise.reject(error)
+  (error) => Promise.reject(error)
 )
 
 api.interceptors.response.use(
-  config => config,
-  error => {
+  (config) => config,
+  (error) => {
     if (error.response === undefined) {
       const networkError = { error: JSON.parse(JSON.stringify(error)).message }
       return Promise.reject(networkError)

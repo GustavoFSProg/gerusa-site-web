@@ -19,12 +19,10 @@ export const Container = styled.div`
   /* background: orange; */
   margin-top: 400px;
 
-  @media screen and (max-width: 800px){
-  margin-top: -20px;
-    }
-
+  @media screen and (max-width: 800px) {
+    margin-top: -20px;
+  }
 `
-
 
 export const ContainerLinks = styled.div`
   display: flex;
@@ -36,16 +34,14 @@ export const ContainerLinks = styled.div`
   margin-top: -650px;
   margin-bottom: 200px;
 
-  @media screen and (max-width: 800px){
-  margin-top: 30px;
-  flex-direction: column;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: space-between;
-  height: auto;
-  font-size: 20px;
-
-
+  @media screen and (max-width: 800px) {
+    margin-top: 30px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    height: auto;
+    font-size: 20px;
   }
 `
 
@@ -76,11 +72,9 @@ function MainUpdate() {
   async function HandleAuth() {
     const { data } = await api.post('/auth', token)
 
-
     if (data) {
       setDados('OK')
     }
-
 
     return dados
   }
@@ -94,7 +88,7 @@ function MainUpdate() {
       <HeaderComponent />
       <Container>
         {isButtonClicked === 'none' ? (
-          <Menu >
+          <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -111,7 +105,7 @@ function MainUpdate() {
             ></button>
           </Menu>
         ) : (
-          <Menu style={{ display: 'none', }}>
+          <Menu style={{ display: 'none' }}>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -146,38 +140,51 @@ function MainUpdate() {
           </div>
         ) : null}
         <ContainerLinks>
-          <Link to="/dashboard" style={{
-            color: 'yellow', marginBottom: '9px'
-            , fontSize: '18px'
-          }}>
+          <Link
+            to="/dashboard"
+            style={{
+              color: 'yellow',
+              marginBottom: '9px',
+              fontSize: '18px',
+            }}
+          >
             PAINEL
           </Link>
 
-          <Link to="/register-user" style={{
-            color: 'yellow'
-            , marginBottom: '9px'
-            , fontSize: '18px'
-          }}>
+          <Link
+            to="/register-user"
+            style={{
+              color: 'yellow',
+              marginBottom: '9px',
+              fontSize: '18px',
+            }}
+          >
             CADASTRAR USUÁRIO
           </Link>
 
-          <Link to="/posts" style={{
-            color: 'yellow'
-            , marginBottom: '9px'
-            , fontSize: '18px'
-          }}>
+          <Link
+            to="/posts"
+            style={{
+              color: 'yellow',
+              marginBottom: '9px',
+              fontSize: '18px',
+            }}
+          >
             MUDAR A SENHA
           </Link>
-          <Link to="/posts" style={{
-            color: 'yellow'
-            , marginBottom: '9px'
-            , fontSize: '18px'
-          }}>
+          <Link
+            to="/posts"
+            style={{
+              color: 'yellow',
+              marginBottom: '9px',
+              fontSize: '18px',
+            }}
+          >
             USUÁRIOS
           </Link>
-        </ ContainerLinks>
+        </ContainerLinks>
         {dados === 'OK' ? <UpdatePassword /> : <h1>ACESSO PROIBIDO!!!</h1>}
-      </Container >
+      </Container>
     </>
   )
 }
