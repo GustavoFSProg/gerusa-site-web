@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react'
-import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
-import HeaderComponent from '../../components/Header/Header'
+// import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
+// import SimpleCard from '../../components/BasicCard'
+
+import { makeStyles } from '@material-ui/core/styles'
+import Carder from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import BButton from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
 
 export const Container = styled.div`
   display: flex;
@@ -40,6 +47,7 @@ const Card = styled.div`
   margin-top: 30px;
   padding: 15px 15px;
   border-radius: 2rem;
+  z-index: 0;
 
   @media screen and (max-width: 850px) {
     width: 20rem;
@@ -86,13 +94,78 @@ export const ContainerInput = styled.div`
   flex-direction: column;
 `
 
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)'
+  },
+  title: {
+    fontSize: 14
+  },
+  pos: {
+    marginBottom: 12
+  }
+})
+
 function ContactComponent() {
   const [dados, setDados] = useState([])
+  const [buttonopen, setButtonOpen] = useState(false)
 
   const navigate = useNavigate()
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
+  }
+
+  function SimpleCard(id) {
+    const classes = useStyles()
+    const bull = <span className={classes.bullet}>•</span>
+
+    const Id = sessionStorage.getItem('CONTACT')
+    console.log(`ID: ${id}`)
+
+    return (
+      <Carder style={{ width: '350px', zIndex: '9999' }} className={classes.root}>
+        <CardContent>
+          <Typography
+            style={{ fontSize: '21px' }}
+            className={classes.title}
+            color="textSecondary"
+            gutterBottom
+          >
+            Deseja realmente apagar essa mensagem?
+          </Typography>
+          <Typography variant="h5" component="h2">
+            <BButton
+              style={{ fontSize: '20px', marginRight: '20px' }}
+              size="small"
+              onClick={() => DeleteMensagem(Id)}
+            >
+              SIM
+            </BButton>
+            <BButton style={{ fontSize: '20px' }} size="small" onClick={() => setButtonOpen(false)}>
+              NÃO
+            </BButton>
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <BButton size="small" onClick={() => setButtonOpen(false)}>
+            FECHAR
+          </BButton>
+        </CardActions>
+      </Carder>
+    )
+  }
+
+  function CardButton(id) {
+    sessionStorage.setItem('CONTACT', id)
+    return setButtonOpen(true)
+    // return <SimpleCard />
+    // return alert("Olá")
   }
 
   async function HandleAuth() {
@@ -149,9 +222,27 @@ function ContactComponent() {
           return (
             <Card key={item.id}>
               <div>
-                <Button onClick={() => DeleteMensagem(item.id)}>
+                <Button type="button" onClick={() => CardButton(item.id)}>
                   <DeleteForeverIcon fontSize="large" />
                 </Button>
+
+                {/* <button type="button" onClick={() => CardButton()}>
+                  CardButton
+                </button> */}
+                {buttonopen === true ? (
+                  <div
+                    style={{
+                      display: 'flex',
+                      width: '100%',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <SimpleCard id={item.id} />
+                  </div>
+                ) : (
+                  console.log('Fechado')
+                )}
                 <p style={{ fontSize: '17px' }}>
                   <strong style={{ fontSize: '17px', marginRight: '10px' }}>Nome:</strong>
                   {item.nome}
