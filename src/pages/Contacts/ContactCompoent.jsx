@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import api from '../../api'
 import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 
 export const Container = styled.div`
@@ -78,6 +78,8 @@ export const ContainerInput = styled.div`
 function ContactComponent() {
   const [dados, setDados] = useState([])
 
+  const navigate = useNavigate()
+
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
   }
@@ -96,7 +98,9 @@ function ContactComponent() {
     try {
       await api.delete(`/delete-contacts/${id}`)
 
-      location.reload()
+      // location.reload()
+
+      navigate('/dashboard')
 
       return alert('Mensagem Apagada!')
     } catch (error) {
