@@ -129,10 +129,13 @@ function ContactComponent() {
     console.log(`ID: ${id}`)
 
     return (
-      <Carder style={{ width: '350px', zIndex: '9999' }} className={classes.root}>
+      <Carder
+        style={{ background: '#ffffe6', width: '350px', zIndex: '9999' }}
+        className={classes.root}
+      >
         <CardContent>
           <Typography
-            style={{ fontSize: '21px' }}
+            style={{ fontSize: '21px', color: '#595959' }}
             className={classes.title}
             color="textSecondary"
             gutterBottom
@@ -153,7 +156,7 @@ function ContactComponent() {
           </Typography>
         </CardContent>
         <CardActions>
-          <BButton size="small" onClick={() => setButtonOpen(false)}>
+          <BButton style={{ color: '#e60000' }} size="small" onClick={() => setButtonOpen(false)}>
             FECHAR
           </BButton>
         </CardActions>
