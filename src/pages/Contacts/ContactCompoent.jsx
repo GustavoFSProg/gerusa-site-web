@@ -18,6 +18,17 @@ export const Container = styled.div`
   /* margin-bottom: 200px; */
 `
 
+export const Button = styled.button`
+  background: none;
+  display: flex;
+  align-items: end;
+  margin-left: 560px;
+
+  @media screen and (max-width: 800px) {
+    margin-left: 250px;
+  }
+`
+
 const Card = styled.div`
   display: flex;
   width: 50rem;
@@ -138,18 +149,9 @@ function ContactComponent() {
           return (
             <Card key={item.id}>
               <div>
-                <button
-                  style={{
-                    background: 'none',
-                    display: 'flex',
-                    alignItems: 'end',
-                    justifyItems: 'flex-end',
-                    marginLeft: '260px'
-                  }}
-                  onClick={() => DeleteMensagem(item.id)}
-                >
+                <Button onClick={() => DeleteMensagem(item.id)}>
                   <DeleteForeverIcon fontSize="large" />
-                </button>
+                </Button>
                 <p style={{ fontSize: '17px' }}>
                   <strong style={{ fontSize: '17px', marginRight: '10px' }}>Nome:</strong>
                   {item.nome}
