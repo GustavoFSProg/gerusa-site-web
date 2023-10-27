@@ -130,7 +130,7 @@ function ContactComponent() {
 
     return (
       <Carder
-        style={{ background: '#ffffe6', width: '350px', zIndex: '9999' }}
+        style={{ position: 'fixed', background: '#ffffcc', width: '350px', zIndex: '9999' }}
         className={classes.root}
       >
         <CardContent>
@@ -221,6 +221,22 @@ function ContactComponent() {
 
         <H1>MENSAGENS</H1>
 
+        {buttonopen === true ? (
+          <div
+            style={{
+              display: 'flex',
+              width: '100%',
+              alignItems: 'center',
+              justifyContent: 'center'
+              // marginTop: '600px'
+            }}
+          >
+            <SimpleCard />
+          </div>
+        ) : (
+          console.log('Fechado')
+        )}
+
         {dados.map((item) => {
           return (
             <Card key={item.id}>
@@ -232,20 +248,7 @@ function ContactComponent() {
                 {/* <button type="button" onClick={() => CardButton()}>
                   CardButton
                 </button> */}
-                {buttonopen === true ? (
-                  <div
-                    style={{
-                      display: 'flex',
-                      width: '100%',
-                      alignItems: 'center',
-                      justifyContent: 'center'
-                    }}
-                  >
-                    <SimpleCard id={item.id} />
-                  </div>
-                ) : (
-                  console.log('Fechado')
-                )}
+
                 <p style={{ fontSize: '17px' }}>
                   <strong style={{ fontSize: '17px', marginRight: '10px' }}>Nome:</strong>
                   {item.nome}
