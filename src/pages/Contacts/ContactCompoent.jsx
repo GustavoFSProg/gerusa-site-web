@@ -121,9 +121,9 @@ function ContactComponent() {
     return moment(date).format('DD-MM-YYYY')
   }
 
-  function SimpleCard(id) {
+  function SimpleCard() {
     const classes = useStyles()
-    const bull = <span className={classes.bullet}>•</span>
+    // const bull = <span className={classes.bullet}>•</span>
 
     const Id = sessionStorage.getItem('CONTACT')
     // console.log(`ID: ${id}`)

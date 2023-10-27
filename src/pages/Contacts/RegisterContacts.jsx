@@ -3,7 +3,7 @@ import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
 
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Buttons/styled-button'
 import HeaderComponent from '../../components/Header/Header'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
@@ -135,7 +135,7 @@ export const LinkDeskTopEmail = styled.a`
 
 function RegisterContacts() {
   const [dados, setDados] = useState([])
-  const [able, setAble] = useState(false)
+  // const [able, setAble] = useState(false)
   const [buttonopen, setButtonOpen] = useState(false)
 
   const [isButtonClicked, setIsButtonClicked] = useState('none')

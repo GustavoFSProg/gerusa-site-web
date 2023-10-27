@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Input } from '../../components/Input'
+// import { Input } from '../../components/Input'
 import styled from 'styled-components'
 import api from '../../api'
-import HeaderComponent from '../../components/Header/Header'
+// import HeaderComponent from '../../components/Header/Header'
 import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -90,15 +90,15 @@ const ContainerMaps = styled.div`
 function PostComponent() {
   const [dados, setDados] = useState([])
 
-  const [isButtonClicked, setIsButtonClicked] = useState('none')
+  // const [isButtonClicked, setIsButtonClicked] = useState('none')
 
-  function handleDismissButtonClicked() {
-    setIsButtonClicked('none')
-  }
+  // function handleDismissButtonClicked() {
+  //   setIsButtonClicked('none')
+  // }
 
-  function handleOpenButtonClicked() {
-    setIsButtonClicked('flex')
-  }
+  // function handleOpenButtonClicked() {
+  //   setIsButtonClicked('flex')
+  // }
 
   const navigate = useNavigate()
 
@@ -112,7 +112,7 @@ function PostComponent() {
     navigate('/profile')
   }
 
-  const token = sessionStorage.getItem('token')
+  // const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.get('/get-all-posts')
