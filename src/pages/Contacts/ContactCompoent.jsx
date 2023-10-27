@@ -126,7 +126,7 @@ function ContactComponent() {
     const bull = <span className={classes.bullet}>•</span>
 
     const Id = sessionStorage.getItem('CONTACT')
-    console.log(`ID: ${id}`)
+    // console.log(`ID: ${id}`)
 
     return (
       <Carder
@@ -176,7 +176,7 @@ function ContactComponent() {
 
     setDados(data.data)
 
-    console.log(dados)
+    // console.log(dados)
 
     return <p></p>
   }
@@ -233,9 +233,8 @@ function ContactComponent() {
           >
             <SimpleCard />
           </div>
-        ) : (
-          console.log('Fechado')
-        )}
+        ) : // console.log('Fechado')
+        null}
 
         {dados.map((item) => {
           return (
