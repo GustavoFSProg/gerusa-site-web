@@ -7,6 +7,13 @@ import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Buttons/styled-button'
 
+import { makeStyles } from '@material-ui/core/styles'
+import Carder from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import BButton from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+
 export const Container = styled.div`
   display: flex;
   width: 100vw;
@@ -24,10 +31,8 @@ export const ContainerP = styled.div`
   justify-content: center;
   margin-top: 20px;
 
-
   @media screen and (max-width: 800px) {
     width: 100%;
-
   }
 `
 
@@ -99,8 +104,26 @@ const ContainerMaps = styled.div`
   }
 `
 
+const useStyles = makeStyles({
+  root: {
+    minWidth: 275
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)'
+  },
+  title: {
+    fontSize: 14
+  },
+  pos: {
+    marginBottom: 12
+  }
+})
+
 function Profile() {
   const [dados, setDados] = useState({})
+  const [buttonopen, setButtonOpen] = useState(false)
 
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
@@ -115,7 +138,7 @@ function Profile() {
   }
 
   async function deletePost() {
-    const id = sessionStorage.getItem('ID')
+    const id = sessionStorage.getItem('POST_ID')
     try {
       await api.delete(`/delete-post/${id}`)
 
@@ -125,6 +148,13 @@ function Profile() {
     } catch (error) {
       return alert(error)
     }
+  }
+
+  function CardButton(id) {
+    sessionStorage.setItem('POST_ID', id)
+    return setButtonOpen(true)
+    // return <SimpleCard />
+    // return alert("Olá")
   }
 
   const token = sessionStorage.getItem('token')
@@ -141,6 +171,49 @@ function Profile() {
     console.log(dados)
 
     return dados
+  }
+
+  function SimpleCard(id) {
+    const classes = useStyles()
+    const bull = <span className={classes.bullet}>•</span>
+
+    const Id = sessionStorage.getItem('CONTACT')
+    // console.log(`ID: ${id}`)
+
+    return (
+      <Carder
+        style={{ position: 'fixed', background: '#ffffcc', width: '350px', zIndex: '9999' }}
+        className={classes.root}
+      >
+        <CardContent>
+          <Typography
+            style={{ fontSize: '21px', color: '#595959' }}
+            className={classes.title}
+            color="textSecondary"
+            gutterBottom
+          >
+            Deseja realmente apagar esse Post?
+          </Typography>
+          <Typography variant="h5" component="h2">
+            <BButton
+              style={{ fontSize: '20px', marginRight: '20px' }}
+              size="small"
+              onClick={() => deletePost()}
+            >
+              SIM
+            </BButton>
+            <BButton style={{ fontSize: '20px' }} size="small" onClick={() => setButtonOpen(false)}>
+              NÃO
+            </BButton>
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <BButton style={{ color: '#e60000' }} size="small" onClick={() => setButtonOpen(false)}>
+            FECHAR
+          </BButton>
+        </CardActions>
+      </Carder>
+    )
   }
 
   useEffect(() => {
@@ -170,6 +243,20 @@ function Profile() {
 
       <ContainerMaps>
         <H1>PERFIL</H1>
+        {buttonopen === true ? (
+          <div
+            style={{
+              display: 'flex',
+              width: '100%',
+              alignItems: 'center',
+              justifyContent: 'center'
+              // marginTop: '600px'
+            }}
+          >
+            <SimpleCard />
+          </div>
+        ) : // console.log('Fechado')
+        null}
         <div key={dados.id}>
           <h2 style={{ fontSize: '34px' }}>
             <p>{dados.title}</p>
@@ -185,7 +272,7 @@ function Profile() {
               width: '100%',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
+              justifyContent: 'center'
             }}
           >
             <ContainerP style={{}}>{dados.text}</ContainerP>
@@ -204,7 +291,8 @@ function Profile() {
         <Button onClick={HandleEditar}>EDITAR</Button>
 
         <Link
-          to="/delete"
+          onClick={() => CardButton(dados.id)}
+          // to="/delete"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -217,7 +305,7 @@ function Profile() {
             padding: '8px',
             paddingLeft: '12px',
             paddingRight: '12px',
-            borderRadius: '10px',
+            borderRadius: '10px'
           }}
         >
           {' '}
