@@ -125,18 +125,14 @@ export const Text = styled.p`
   }
 `
 
-export const DivFooter = styled.div` 
- margin-top: 210px;
- width: 100%;
+export const DivFooter = styled.div`
+  margin-top: 210px;
+  width: 100%;
 
-
- @media screen and (max-width: 800px) {
-  margin-top: -108px;
-
-    
+  @media screen and (max-width: 800px) {
+    margin-top: -108px;
   }
 `
-
 
 function PostsList() {
   const [dados, setDados] = useState([])
@@ -219,7 +215,7 @@ function PostsList() {
             fontSize: '17px',
             paddingTop: '25px',
             paddingBottom: '25px',
-            opacity: '0.6',
+            opacity: '0.6'
           }}
           onClick={() => handleOpenButtonClicked()}
           onMouseLeave={() => handleDismissButtonClicked()}
@@ -243,13 +239,11 @@ function PostsList() {
                     width: '100%',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    justifyContent: 'center'
                   }}
                 >
                   <Text style={{}}>{item.text}</Text>
                 </div>
-
-                {/* <p>{item.desc}</p> */}
 
                 <p style={{ color: '#404040' }}>{getDateWithoutTime(item.createdAt)}</p>
                 <br />
@@ -261,8 +255,7 @@ function PostsList() {
         })}
       </ContainerMaps>
 
-      <DivFooter >
-
+      <DivFooter>
         <Footer />
       </DivFooter>
     </Container>

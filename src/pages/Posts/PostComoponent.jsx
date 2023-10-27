@@ -15,17 +15,14 @@ export const Container = styled.div`
   flex-direction: column;
   margin-top: 690px;
 
-
   @media screen and (max-width: 800px) {
     /* font-size: 60px; */
-  margin-top: 160px;
-
+    margin-top: 160px;
   }
 `
 
-
 export const H2 = styled.div`
-   display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 32px;
@@ -34,8 +31,8 @@ export const H2 = styled.div`
     font-size: 24px;
     width: 100%;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 `
 
@@ -86,8 +83,7 @@ const ContainerMaps = styled.div`
     padding-bottom: 30px;
     justify-content: space-between;
     margin-top: -200px;
-  width: 80%;
-
+    width: 80%;
   }
 `
 
@@ -156,7 +152,7 @@ function PostComponent() {
           return (
             <div key={item.id}>
               <button onClick={() => setItem(item.id)}>
-                <H2 >
+                <H2>
                   <p>{item.title}</p>
                 </H2>
 
@@ -167,7 +163,7 @@ function PostComponent() {
                     width: '100%',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
+                    justifyContent: 'center'
                   }}
                 >
                   <p
@@ -177,14 +173,12 @@ function PostComponent() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontSize: '18px',
-                      lineHeight: '140%',
+                      lineHeight: '140%'
                     }}
                   >
                     {item.text}
                   </p>
                 </div>
-
-                <p>{item.desc}</p>
 
                 <p>{getDateWithoutTime(item.createdAt)}</p>
                 <br />
