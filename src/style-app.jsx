@@ -109,15 +109,15 @@ export const ContainerText = styled.div`
   @media screen and (min-width: 300px) and (max-width: 450px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 180px;
     font-size: 17px;
-    margin-bottom: 260px;
+    margin-bottom: 362px;
   }
 
-  @media screen and (min-width: 450px) and (max-width: 850px) {
+  @media screen and (min-width: 450px) and (max-width: 870px) {
     flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 42px;
     font-size: 17px;
   }
 `
