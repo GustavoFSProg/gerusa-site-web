@@ -21,19 +21,14 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
   font-size: 30px;
 
-
-
   @media screen and (max-width: 800px) {
     font-size: 22px;
-  
   }
-
 `
 
 export const ContainerLinks = styled.div`
@@ -53,8 +48,7 @@ export const ContainerLinks = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
     justify-content: center;
-  align-items: center;
-
+    align-items: center;
   }
 `
 
@@ -82,77 +76,67 @@ export const TextArea = styled.textarea`
 
   @media screen and (max-width: 850px) {
     display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
 
-    
     width: 100%;
   }
 `
 
-export const DivFooter = styled.div` 
- margin-top: 190px;
- width: 100%;
+export const DivFooter = styled.div`
+  margin-top: 190px;
+  width: 100%;
 
-
- @media screen and (max-width: 800px) {
-  margin-top: -60px;
+  @media screen and (max-width: 800px) {
+    margin-top: -60px;
   }
 `
 
-export const LinkMobileEmail = styled.a` 
- display:none;
- 
+export const LinkMobileEmail = styled.a`
+  display: none;
 
- @media screen and (max-width: 800px) {
-  font-size: 20px;
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+    color: #008080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    width: 88%;
+  }
+`
+
+export const SpanClick = styled.span`
+  display: none;
+
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+    color: #008080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    width: 88%;
+    margin-bottom: 11px;
+  }
+`
+
+export const LinkDeskTopEmail = styled.a`
+  display: flex;
+  font-size: 22px;
   color: #008080;
- display:flex;
- align-items: center;
- justify-content: center;
- z-index: 9999;
- width: 88%;
-    
-  }
-`
 
-
-export const SpanClick = styled.span` 
- display:none;
- 
-
- @media screen and (max-width: 800px) {
-  font-size: 20px;
-  color: #008080;
- display:flex;
- align-items: center;
- justify-content: center;
- z-index: 9999;
- width: 88%;
- margin-bottom: 11px;
-    
-  }
-`
-
-export const LinkDeskTopEmail = styled.a` 
- display:flex;
- font-size: 22px;
- color: #008080;
-
-
-
- @media screen and (max-width: 800px) {
- display:none;
-    
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `
 
 function RegisterContacts() {
   const [dados, setDados] = useState([])
   const [able, setAble] = useState(false)
-
+  const [buttonopen, setButtonOpen] = useState(false)
 
   const [isButtonClicked, setIsButtonClicked] = useState('none')
 
@@ -169,24 +153,24 @@ function RegisterContacts() {
   const [telefone, setTelefone] = useState('')
   const [message, setMessage] = useState('')
 
-
   const navigate = useNavigate()
 
   async function handleSubmit(event) {
     event.preventDefault()
 
     try {
-
       const data = {
         nome,
         email,
         telefone,
-        message,
+        message
       }
 
       await api.post('/register-contacts', data)
 
-      navigate('/')
+      setButtonOpen(true)
+
+      navigate('/register-contacts')
 
       return alert('Mensagem enviada com sucesso!')
     } catch (error) {
@@ -261,13 +245,12 @@ function RegisterContacts() {
             fontSize: '17px',
             paddingTop: '25px',
             paddingBottom: '25px',
-            opacity: '0.6',
+            opacity: '0.6'
           }}
           onClick={() => handleOpenButtonClicked()}
           onMouseLeave={() => handleDismissButtonClicked()}
         >
           <MenuMobile />
-
         </div>
       ) : null}
 
@@ -277,7 +260,6 @@ function RegisterContacts() {
       <br />
       <Form onSubmit={handleSubmit} style={{ marginLeft: '-24px' }}>
         <div style={{ marginTop: '-20px', width: '100%' }}>
-
           <Input
             placeholder="Nome"
             invalid={true}
@@ -285,7 +267,7 @@ function RegisterContacts() {
             value={nome}
             onChange={(e) => setNome(e.target.value)}
           />
-        </ div>
+        </div>
         <div style={{ marginTop: '-40px', width: '100%' }}>
           <Input
             placeholder="Email"
@@ -294,10 +276,9 @@ function RegisterContacts() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </ div>
+        </div>
 
         <div style={{ marginTop: '-40px', width: '100%' }}>
-
           <Input
             placeholder="Telefone"
             invalid={true}
@@ -305,9 +286,9 @@ function RegisterContacts() {
             value={telefone}
             onChange={(e) => setTelefone(e.target.value)}
           />
-        </ div>
+        </div>
 
-        <div style={{ marginTop: '-22px', }}>
+        <div style={{ marginTop: '-22px' }}>
           <TextArea
             placeholder="Mensagem"
             rows="12"
@@ -316,47 +297,48 @@ function RegisterContacts() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
+        </div>
 
-        </ div>
-
-        <Button style={{ marginTop: '27px', marginBottom: '70px' }} type="submit">Enviar</Button>
+        <Button
+          // onClick={() => setButtonOpen(true)}
+          disabled={buttonopen}
+          style={{ marginTop: '27px', marginBottom: '70px' }}
+          type="submit"
+        >
+          Enviar
+        </Button>
       </Form>
 
-      <SpanClick >
-        Ou clicando:
-      </SpanClick>
+      <SpanClick>Ou clicando:</SpanClick>
       {/* <br /> */}
       <LinkMobileEmail
         target="_blank"
         href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
       >
-
-
-        <MailOutline style={{
-          marginTop: '4px',
-          marginRight: '2px',
-          marginLeft: '8px',
-
-        }} />  gerusagamm@gmail.com
+        <MailOutline
+          style={{
+            marginTop: '4px',
+            marginRight: '2px',
+            marginLeft: '8px'
+          }}
+        />{' '}
+        gerusagamm@gmail.com
       </LinkMobileEmail>
       <br />
 
-      <LinkDeskTopEmail
-        target="_blank"
-        href="http://mailto:gerusagamm@gmail.com"
-      >
+      <LinkDeskTopEmail target="_blank" href="http://mailto:gerusagamm@gmail.com">
         Ou clicando:
-        <MailOutline style={{
-          marginTop: '7px',
-          marginRight: '2px',
-          marginLeft: '10px'
-        }} />
+        <MailOutline
+          style={{
+            marginTop: '7px',
+            marginRight: '2px',
+            marginLeft: '10px'
+          }}
+        />
         gerusagamm@gmail.com
-
       </LinkDeskTopEmail>
 
-      <DivFooter >
-
+      <DivFooter>
         <Footer />
       </DivFooter>
     </Container>
