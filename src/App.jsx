@@ -1,14 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
 import {
   Container,
   ImagemCardTres,
-  ContainerFooter,
-  ImagemCard,
   ImagemCardA,
   ImgSlideDois,
   ContainerCards,
@@ -25,22 +21,15 @@ import {
 } from './style-app'
 import slide from './assets/bandeiras-2.jpeg'
 import bandeira from './assets/foto-england-1.jpg'
-import bandeiraInglesa from './assets/inglesa-2.jpeg'
 import card1 from './assets/foto-england-2.jpg'
 import card2 from './assets/bandeira.jpeg'
 import card3 from './assets/inglaterra-2.jpg'
-import emblema from './assets/emblema.png'
 import Footer from './components/Footer/Footer'
-import { Link } from 'react-router-dom'
 import MenuMobile from './components/MenuMobile/MenuMobile'
 import whats from './assets/canvas.jpeg'
-import { userContext } from './userContext'
-import { useContext } from 'react'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
-
-  const { user, setUser } = useContext(userContext)
 
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')

@@ -6,14 +6,6 @@ import emblema from '../../assets/emblema.png'
 import MailOutline from '@material-ui/icons/MailOutline'
 
 export const LinkMobileEmail = styled.a`
-  /* font-size: 18px; */
-  /* color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  width: 88%; */
-  /* font-weight: 420; */
   display: none;
   @media screen and (max-width: 800px) {
     font-size: 20px;
@@ -44,7 +36,6 @@ export const SpanClick = styled.span`
 
 export const LinkDeskTopEmail = styled.a`
   display: flex;
-  /* font-size: 22px; */
   color: white;
   font-size: 18px;
   font-weight: none;
@@ -74,12 +65,10 @@ export const ContainerFooter = styled.div`
     padding-bottom: 50px;
     padding-top: 50px;
     margin-top: 160px;
-    /* width: 100%; */
     align-items: center;
   }
 
   @media screen and (min-width: 900px) and (max-width: 1080px) {
-    /* flex-direction: column; */
     display: flex;
     height: auto;
     padding-bottom: 50px;
@@ -100,28 +89,6 @@ function Footer() {
   return (
     <>
       <ContainerFooter>
-        {/* <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: 'white' }}>
-          <h1 style={{
-            width: '85%',
-            marginTop: '10px', color: 'white', fontSize: '22px'
-          }}>
-            Quem Somos
-          </h1>
-          <hr style={{
-            width: '88%', marginTop: '-2px', marginLeft: '45px',
-            color: 'white'
-          }} />
-
-
-          <div style={{ width: '100%', marginLeft: '28px', marginTop: '20px', color: 'white' }}>
-
-            It is a long established fact that a reader will be
-            distracted by the readable content of a page when
-            looking at its layout. The point of using Lorem Ipsum is
-            that it has a more-or-less normal distribution of letters,
-            as opposed to using 'Content here,
-          </div>
-        </div> */}
         <ContainerTradutora>
           <h1
             style={{
@@ -255,21 +222,6 @@ function Footer() {
             >
               <h2>Email:</h2>
               <div style={{ marginTop: '-11px', fontSize: '18px' }}>
-                {/* <LinkMobileEmail
-                  target="_blank"
-                  href="mailto:gerusagamm@gmail.com?subject=Olá&body=Olá, Bom dia"
-                >
-                  <MailOutline
-                    style={{
-                      marginTop: '4px',
-                      marginRight: '2px',
-                      marginLeft: '8px'
-                    }}
-                  />{' '}
-                  mobile gerusagamm@gmail.com
-                </LinkMobileEmail>
-                <br /> */}
-
                 <LinkDeskTopEmail target="_blank" href="http://mailto:gerusagamm@gmail.com">
                   <MailOutline
                     style={{

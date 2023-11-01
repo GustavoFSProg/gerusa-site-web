@@ -13,7 +13,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: top;
   flex-direction: column;
-  /* background: orange; */
 `
 
 export const Imagem = styled.img`
@@ -79,9 +78,7 @@ const ContainerMaps = styled.div`
   height: auto;
   align-items: center;
   justify-content: space-around;
-  /* background: pink; */
   margin-top: -150px;
-  /* margin-bottom: 200px; */
   flex-direction: column;
 
   @media screen and (max-width: 800px) {
@@ -106,7 +103,6 @@ const Menu = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
-    /* margin-top: -50px; */
   }
 `
 
@@ -146,13 +142,9 @@ function PostsList() {
     setIsButtonClicked('flex')
   }
 
-  // const navigate = useNavigate()
-
   function getDateWithoutTime(date) {
     return moment(date).format('DD-MM-YYYY')
   }
-
-  const token = sessionStorage.getItem('token')
 
   async function HandleAuth() {
     const { data } = await api.get('/get-all-posts')

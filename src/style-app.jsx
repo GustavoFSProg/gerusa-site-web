@@ -150,17 +150,10 @@ export const Cards = styled.div`
   flex-direction: column;
   width: 100%;
   height: 80%;
-  /* float: left; */
   text-align: left;
-
-  /* margin-top: -5px;  */
+  /* background: #e6e6e6; */
 
   @media screen and (max-width: 800px) {
-    /* flex-direction: column;
-    justify-content: center;
-    margin-top: 30px;
-
-    height: 120%; */
   }
 `
 
@@ -179,7 +172,6 @@ export const ImagemCardA = styled.img`
   height: 22.8rem;
 
   @media screen and (max-width: 800px) {
-    /* width: 307px; */
     width: 18.8rem;
     height: 14rem;
   }
@@ -191,7 +183,6 @@ export const ImagemCardB = styled.img`
   height: 15.5rem;
 
   @media screen and (max-width: 800px) {
-    /* width: 307px; */
     width: 18.8rem;
     height: 14rem;
   }
@@ -203,14 +194,11 @@ export const ContainerFooter = styled.div`
   gap: 10px;
   width: 100%;
   height: 500px;
-  /* margin-left: 11px; */
-  /* margin-bottom: 50px; */
   padding-top: 20px;
 
   margin-top: -40px;
   background: #008080;
   color: white;
-  /* justify-content: center; */
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
