@@ -31,7 +31,7 @@ function HeaderComponent() {
               src={Logo}
               alt="fone"
               width="145"
-              height="130"
+              height="132"
               style={{ borderRadius: '8px', marginBottom: '10px', zIndex: '-100' }}
             />
           </ContainerLogo>

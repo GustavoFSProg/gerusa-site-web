@@ -7,6 +7,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  /* background: #f2f2f2; */
+  z-index: 1;
 
   @media screen and (max-width: 800px) {
     height: 220%;
@@ -20,11 +22,13 @@ export const ContainerImagens = styled.div`
   align-items: center;
   justify-content: space-around;
   /* margin-top: -685px; */
+  z-index: 999;
 
   @media screen and (max-width: 980px) {
     flex-direction: column;
     justify-content: center;
     margin-top: 30px;
+    /* z-index: -10; */
 
     height: 120%;
   }

@@ -96,7 +96,7 @@ function App() {
           </div>
         ) : null}
 
-        <ContainerImagens style={{ zIndex: '-10' }}>
+        <ContainerImagens>
           <ImgSlide
             src={slide}
             alt="slide"
