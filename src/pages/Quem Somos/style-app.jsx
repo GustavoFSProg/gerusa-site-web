@@ -230,6 +230,7 @@ export const ContainerTextImage = styled.div`
     flex-direction: column;
     display: flex;
     margin-top: -150px;
+    margin-bottom: -460px;
     height: auto;
   }
 `
