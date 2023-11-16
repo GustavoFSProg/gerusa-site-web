@@ -143,9 +143,9 @@ function App() {
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here,
+              Sou Gerusa A. Sohne Gamm. Sou tradutora de alemão e inglês. Trabalho há mais de 10
+              anos como tradutora. Sou formada en letras na UFRGS com mestrado em germanística na
+              universidade de Bonn na Alemanha. Morei 6 anos na Alemanha.
             </div>
           </Cards>
 
@@ -154,9 +154,9 @@ function App() {
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Sobre a Profissional</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here,
+              Sou Gerusa A. Sohne Gamm. Sou tradutora de alemão e inglês. Trabalho há mais de 10
+              anos como tradutora. Sou formada en letras na UFRGS com mestrado em germanística na
+              universidade de Bonn na Alemanha. Morei 6 anos na Alemanha.
             </div>
           </Cards>
           <Cards>
@@ -164,9 +164,9 @@ function App() {
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here,
+              Sou Gerusa A. Sohne Gamm. Sou tradutora de alemão e inglês. Trabalho há mais de 10
+              anos como tradutora. Sou formada en letras na UFRGS com mestrado em germanística na
+              universidade de Bonn na Alemanha. Morei 6 anos na Alemanha.
             </div>
           </Cards>
         </ContainerCards>
