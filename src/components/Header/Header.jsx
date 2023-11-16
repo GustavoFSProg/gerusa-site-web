@@ -47,7 +47,7 @@ function HeaderComponent() {
               <span style={{ color: '#213547' }}>SERVIÇO DE TRADUÇÃO</span>
             </Link>
 
-            <Link to="/traduction" style={{ color: '#213547' }}>
+            <Link to="/" style={{ color: '#213547' }}>
               <span style={{ color: '#213547' }}>AREAS DE ATUAÇÃO</span>
             </Link>
 
