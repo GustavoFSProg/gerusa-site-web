@@ -106,7 +106,7 @@ export const ContainerText = styled.div`
   justify-content: center;
   /* background: green; */
   font-size: 19px;
-  margin-top: -67px;
+  margin-top: -100px;
   margin-bottom: 200px;
   color: #666666;
 

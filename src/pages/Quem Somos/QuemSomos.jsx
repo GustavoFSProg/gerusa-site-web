@@ -20,7 +20,7 @@ import {
   DivFooter
 } from './style-app'
 import slide from '../../assets/building.jpg'
-import rosto from '../../assets/rosto.jpg'
+import rosto from '../../assets/gerusa2.jpg'
 import Footer from '../../components/Footer/Footer'
 import MenuMobile from '../../components/MenuMobile/MenuMobile'
 
@@ -40,7 +40,7 @@ function QuemSomos() {
       <Container>
         <HeaderComponent />
         {isButtonClicked === 'none' ? (
-          <Menu >
+          <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
               type="button"
@@ -83,19 +83,16 @@ function QuemSomos() {
               fontSize: '17px',
               paddingTop: '25px',
               paddingBottom: '25px',
-              opacity: '0.6',
+              opacity: '0.6'
             }}
             onClick={() => handleOpenButtonClicked()}
             onMouseLeave={() => handleDismissButtonClicked()}
           >
             <MenuMobile />
-
           </div>
         ) : null}
 
         <br />
-
-
 
         <ContainerTextAll>
           <ContainerH1>
@@ -105,35 +102,25 @@ function QuemSomos() {
           <ContainerTextImage>
             <img
               src={rosto}
-              width="300"
               style={{
                 display: 'flex',
-                width: '300px',
+                width: '220px',
                 justifyContent: 'left',
                 alignItems: 'flex-start',
-                marginTop: '-265px',
-                marginRight: '22px',
+                marginTop: '-286px',
+                marginRight: '26.5px'
               }}
             />
             <ContainerText>
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here, It is
-              a long established fact that a reader will be distracted by the readable content of a
-              page when looking at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using 'Content here, normal
-              distribution of letters, It is a long established fact that a reader will be
-              distracted by the readable content of a page when looking at its layout. The point of
-              using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-              opposed to using 'Content here, normal distribution of letters,
-
+              Sou Gerusa A. Sohne Gamm. Sou tradutora de alemão e inglês. Trabalho há mais de 10
+              anos como tradutora. Sou formada en letras na UFRGS com mestrado em germanística na
+              universidade de Bonn na Alemanha. Morei 6 anos na Alemanha. Tanbém comecei a estudar a
+              língua inglesa, e trabalhar como tradutora de inglês.
             </ContainerText>
           </ContainerTextImage>
         </ContainerTextAll>
 
-
-        <DivFooter >
-
+        <DivFooter>
           <Footer />
         </DivFooter>
       </Container>

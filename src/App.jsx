@@ -132,14 +132,10 @@ function App() {
         </WhatsContainer>
 
         <ContainerText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim convallis
-          augue vitae condimentum. Maecenas aliquam fermentum pulvinar. Pellentesque eu ullamcorper
-          enim. Quisque aliquam finibus sem, vel mollis sapien vestibulum gravida. Morbi aliquet
-          purus vel tellus viverra, pharetra tincidunt sem eleifend. Aenean ac nibh suscipit,
-          suscipit magna in, sagittis neque. Duis at auctor augue. Etiam suscipit ligula a orci
-          convallis mattis. Etiam velit tellus, condimentum efficitur dui a, gravida porttitor
-          ligula. Etiam placerat lacus nec commodo rhoncus. Aliquam ex enim, aliquet quis magna id,
-          dapibus semper dui. Donec nec metus feugiat, eleifend ligula in, dapibus neque.
+          Sou Gerusa A. Sohne Gamm. Sou tradutora de alemão e inglês. Trabalho há mais de 10 anos
+          como tradutora. Sou formada en letras na UFRGS com mestrado em germanística na
+          universidade de Bonn na Alemanha. Morei 6 anos na Alemanha. Tanbém comecei a estudar a
+          língua inglesa, e trabalhar como tradutora de inglês.
         </ContainerText>
         <ContainerCards>
           <Cards>
