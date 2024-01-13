@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000'
+  baseURL: 'https://gerusa-site-api-juab.vercel.app/',
 })
 
 export const keys = {
   token: 'token',
-  data: 'data'
+  data: 'data',
 }
 
 export const setItem = (key, data) => {
