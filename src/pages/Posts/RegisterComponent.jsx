@@ -18,19 +18,14 @@ export const Container = styled.div`
   /* background: orange; */
 `
 
-
 export const H1 = styled.h1`
   display: flex;
   align-items: center;
   font-size: 50px;
 
-
-
   @media screen and (max-width: 800px) {
     font-size: 22px;
-  
   }
-
 `
 
 export const ContainerLinks = styled.div`
@@ -50,8 +45,7 @@ export const ContainerLinks = styled.div`
     padding-top: 30px;
     padding-bottom: 30px;
     justify-content: center;
-  align-items: center;
-
+    align-items: center;
   }
 `
 
@@ -78,11 +72,11 @@ export const TextArea = styled.textarea`
 
   @media screen and (max-width: 850px) {
     display: flex;
-  /* width: 30%; */
-  height: auto;
-  align-items: center;
-  justify-content: center;
-    
+    /* width: 30%; */
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
     width: 110%;
   }
 `
@@ -93,9 +87,9 @@ function RegisterComponent() {
 
   const [title, setTitle] = useState('')
   const [text, setText] = useState('')
-  const [author, setAuthor] = useState('default')
+  const [author, setAuthor] = useState('')
   const [image, setImage] = useState([])
-  const [desc, setDesc] = useState('default')
+  const [desc, setDesc] = useState('')
   const [views, setViews] = useState('1')
   const [likes, setLikes] = useState('1')
 
@@ -180,7 +174,6 @@ function RegisterComponent() {
         Imagem:
         <br />
         <br />
-
         <input
           type="file"
           id="image"
@@ -196,9 +189,7 @@ function RegisterComponent() {
           onChange={(e) => setTitle(e.target.value)}
         />
         <br />
-        <span style={{ marginTop: '-50px' }}>
-          Texto:
-        </span>
+        <span style={{ marginTop: '-50px' }}>Texto:</span>
         <TextArea
           rows="22"
           cols="58"
@@ -207,7 +198,7 @@ function RegisterComponent() {
           onChange={(e) => setText(e.target.value)}
         />
         <br />
-        {/* <Input
+        <Input
           placeholder="Descrição"
           invalid={true}
           id="autor"
@@ -221,7 +212,7 @@ function RegisterComponent() {
           id="autor"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
-        /> */}
+        />
         <br />
         <br />
         {dados === 'OK' ? <Button type="submit">Cadastrar</Button> : 'Botao desabiitado!!'}

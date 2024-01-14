@@ -163,7 +163,7 @@ function PostComponent() {
                     width: '100%',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
                   }}
                 >
                   <p
@@ -173,10 +173,32 @@ function PostComponent() {
                       alignItems: 'center',
                       justifyContent: 'center',
                       fontSize: '18px',
-                      lineHeight: '140%'
+                      lineHeight: '140%',
                     }}
                   >
                     {item.text}
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <p
+                    style={{
+                      width: '350px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '18px',
+                      lineHeight: '140%',
+                    }}
+                  >
+                    {item.author}
                   </p>
                 </div>
 

@@ -207,7 +207,7 @@ function PostsList() {
             fontSize: '17px',
             paddingTop: '25px',
             paddingBottom: '25px',
-            opacity: '0.6'
+            opacity: '0.6',
           }}
           onClick={() => handleOpenButtonClicked()}
           onMouseLeave={() => handleDismissButtonClicked()}
@@ -231,10 +231,21 @@ function PostsList() {
                     width: '100%',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
                   }}
                 >
                   <Text style={{}}>{item.text}</Text>
+                </div>
+
+                <div
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Text style={{}}>{item.author}</Text>
                 </div>
 
                 <p style={{ color: '#404040' }}>{getDateWithoutTime(item.createdAt)}</p>

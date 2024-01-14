@@ -106,19 +106,19 @@ const ContainerMaps = styled.div`
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275
+    minWidth: 275,
   },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
-    transform: 'scale(0.8)'
+    transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14
+    fontSize: 14,
   },
   pos: {
-    marginBottom: 12
-  }
+    marginBottom: 12,
+  },
 })
 
 function Profile() {
@@ -249,7 +249,7 @@ function Profile() {
               display: 'flex',
               width: '100%',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
               // marginTop: '600px'
             }}
           >
@@ -272,13 +272,24 @@ function Profile() {
               width: '100%',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
             }}
           >
             <ContainerP style={{}}>{dados.text}</ContainerP>
           </div>
 
           <p>{dados.desc}</p>
+
+          <div
+            style={{
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <ContainerP style={{}}>{dados.author}</ContainerP>
+          </div>
 
           <p>{getDateWithoutTime(dados.createdAt)}</p>
           <br />
@@ -305,7 +316,7 @@ function Profile() {
             padding: '8px',
             paddingLeft: '12px',
             paddingRight: '12px',
-            borderRadius: '10px'
+            borderRadius: '10px',
           }}
         >
           {' '}
