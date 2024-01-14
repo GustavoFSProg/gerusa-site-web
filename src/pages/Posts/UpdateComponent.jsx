@@ -196,7 +196,7 @@ function UpdateComponent() {
       <br />
       <br />
       <br />
-      <img width="200" height="200" src={datas.image} />
+      <img width="230" height="230" src={datas.image} />
       <br />
       <Form onSubmit={handleSubmit}>
         <br />
