@@ -18,7 +18,7 @@ export const Container = styled.div`
 export const Imagem = styled.img`
   /* display: flex; */
   width: 70%;
-  background: green;
+  /* background: green; */
   /* height: 20rem; */
 
   @media screen and (max-width: 800px) {
@@ -118,7 +118,7 @@ export const Text = styled.p`
   line-height: 140%;
   margin-top: 25px;
   color: #4d4d4d;
-  background: yellow;
+  /* background: yellow; */
 
   @media screen and (max-width: 800px) {
     width: 320px;
