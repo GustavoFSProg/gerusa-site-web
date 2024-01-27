@@ -56,7 +56,6 @@ function Login() {
 
   const { user, setUser } = useContext(userContext)
 
-
   function handleDismissButtonClicked() {
     setIsButtonClicked('none')
   }
@@ -71,11 +70,11 @@ function Login() {
     event.preventDefault()
 
     try {
-      const { data } = await api.post('/login', { email, password })
+      // const { data } = await api.post('/login', { email, password })
 
-      sessionStorage.setItem('token', data.token)
-      sessionStorage.setItem('userId', data.user.id)
-      sessionStorage.setItem('userName', data.user.name)
+      // sessionStorage.setItem('token', data.token)
+      // sessionStorage.setItem('userId', data.user.id)
+      // sessionStorage.setItem('userName', data.user.name)
 
       setUser(true)
 
@@ -90,7 +89,6 @@ function Login() {
   function CheckUserLogged() {
     if (user === true) {
       navigate('/dashboard')
-
     } else {
       navigate('/login')
     }
@@ -164,7 +162,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             invalid={true}
-          // errorMessage="Email inválido"
+            // errorMessage="Email inválido"
           />
           <div style={{ marginTop: '-41px', width: '100%' }}>
             <Input
@@ -177,7 +175,7 @@ function Login() {
             />
           </div>
 
-          <Button type="submit">Login</Button>
+          {/* <Button type="submit">Login</Button> */}
         </Form>
       </ContainerInput>
     </Container>
