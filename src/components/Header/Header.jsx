@@ -3,6 +3,7 @@ import { Container, Header, ContainerLinks } from './style'
 import Logo from '../../assets/Gamm.png'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import rosto from '../../assets/gerusa2.jpg'
 
 const ContainerLogo = styled.div`
   display: flex;
@@ -28,11 +29,16 @@ function HeaderComponent() {
         <Header>
           <ContainerLogo>
             <img
-              src={Logo}
+              src={rosto}
               alt="fone"
-              width="145"
-              height="132"
-              style={{ borderRadius: '8px', marginBottom: '10px', zIndex: '-100' }}
+              width="140"
+              height="127"
+              style={{
+                borderRadius: '12px',
+                opacity: 0.7,
+                marginBottom: '10px',
+                zIndex: '-100',
+              }}
             />
           </ContainerLogo>
           <ContainerLinks>

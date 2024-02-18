@@ -1,9 +1,19 @@
-import { Container, ImgLogo, LinksContainer, LinksContainerMobile, Button, Input, FormDois, Form } from './style'
-import logo from './logo.png'
+import {
+  Container,
+  ImgLogo,
+  LinksContainer,
+  LinksContainerMobile,
+  Button,
+  Input,
+  FormDois,
+  Form,
+} from './style'
+// import logo from './logo.png'
 import { BsSearch } from 'react-icons/bs'
 import { useState } from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
+import rosto from '../../assets/gerusa2.jpg'
 
 function Header() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -11,7 +21,7 @@ function Header() {
   function handleLogout() {
     sessionStorage.clear()
 
-    return alert("Logout Efetuado com Sucesso!!")
+    return alert('Logout Efetuado com Sucesso!!')
   }
 
   function handleLike() {
@@ -25,7 +35,7 @@ function Header() {
   return (
     <Container>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <ImgLogo src={logo} alt="logo" />
+        <ImgLogo src={rosto} alt="logo" />
         <Form>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <Input type="search" name="search" placeholder="Search..." />
@@ -98,7 +108,7 @@ function Header() {
             width: '17rem',
             alignItems: 'center',
             justifyContent: 'center',
-            paddingBottom: '8px'
+            paddingBottom: '8px',
           }}
         >
           <Input
@@ -117,59 +127,69 @@ function Header() {
             color="white"
             style={{ marginLeft: '8px', marginTop: '11px' }}
           />
-
-
         </div>
         <LinksContainerMobile>
           <div style={{ marginLeft: '20px', marginTop: '8px' }}>
-            <Link style={{
-              textDecoration: 'none', fontSize: '21px', fontFamily: 'Roboto', color: 'white',
-              cursor: 'pointer'
-            }} to="/">
+            <Link
+              style={{
+                textDecoration: 'none',
+                fontSize: '21px',
+                fontFamily: 'Roboto',
+                color: 'white',
+                cursor: 'pointer',
+              }}
+              to="/"
+            >
               HOME
             </Link>
           </div>
-          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px' }}>
             <Link
-
-              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              style={{
+                cursor: 'pointer',
+                fontSize: '21px',
+                textDecoration: 'none',
+                fontFamily: 'Roboto',
+                color: 'white  ',
+              }}
               to="/register"
             >
               CADASTRO
             </Link>
           </div>
 
-          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px' }}>
             <Link
-
-              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              style={{
+                cursor: 'pointer',
+                fontSize: '21px',
+                textDecoration: 'none',
+                fontFamily: 'Roboto',
+                color: 'white  ',
+              }}
               to="/login"
             >
               LOGIN
             </Link>
           </div>
-          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px', }}>
+          <div style={{ marginLeft: '25px', marginBottom: '4px', marginTop: '15px' }}>
             <Link
-
-              style={{ cursor: 'pointer', fontSize: '21px', textDecoration: 'none', fontFamily: 'Roboto', color: 'white  ' }}
+              style={{
+                cursor: 'pointer',
+                fontSize: '21px',
+                textDecoration: 'none',
+                fontFamily: 'Roboto',
+                color: 'white  ',
+              }}
               onClick={handleLogout}
-
             >
               LOGOUT
             </Link>
           </div>
-
-
         </LinksContainerMobile>
-
       </FormDois>
 
-
-
       {/* </div> */}
-
-
-
     </Container>
   )
 }
