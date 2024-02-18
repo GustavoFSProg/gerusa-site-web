@@ -97,7 +97,7 @@ function App() {
         ) : null}
 
         <ContainerImagens>
-          {/* <ImgSlide
+          <ImgSlide
             src={slide}
             alt="slide"
             style={{
@@ -117,7 +117,7 @@ function App() {
 
               zIndex: '-10',
             }}
-          /> */}
+          />
         </ContainerImagens>
 
         <ContainerH1>
@@ -139,7 +139,7 @@ function App() {
         </ContainerText>
         <ContainerCards>
           <Cards>
-            {/* <ImagemCardA src={card1} alt="alt" /> */}
+            <ImagemCardA src={card1} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Traduções</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
@@ -150,7 +150,7 @@ function App() {
           </Cards>
 
           <Cards>
-            {/* <ImagemCardB src={card2} alt="alt" /> */}
+            <ImagemCardB src={card2} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Sobre a Profissional</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
@@ -160,7 +160,7 @@ function App() {
             </div>
           </Cards>
           <Cards>
-            {/* <ImagemCardTres src={card3} alt="alt" /> */}
+            <ImagemCardTres src={card3} alt="alt" />
             <h2 style={{ fontSize: '29px', marginTop: '10px' }}>Serviços</h2>
             <hr style={{ width: '88%', marginTop: '-15px', marginLeft: '5px' }} />
             <div style={{ width: '85%', textIndent: '6px', marginTop: '10px', color: '#595959' }}>
