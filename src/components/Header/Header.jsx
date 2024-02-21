@@ -31,10 +31,10 @@ function HeaderComponent() {
             <img
               src={rosto}
               alt="fone"
-              width="140"
-              height="127"
+              width="115"
+              height="108"
               style={{
-                borderRadius: '12px',
+                borderRadius: '100%',
                 opacity: 0.7,
                 marginBottom: '10px',
                 zIndex: '-100',
