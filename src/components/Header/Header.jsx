@@ -35,7 +35,7 @@ function HeaderComponent() {
               height="108"
               style={{
                 borderRadius: '100%',
-                opacity: 0.7,
+                opacity: 0.8,
                 marginBottom: '10px',
                 zIndex: '-100',
               }}
