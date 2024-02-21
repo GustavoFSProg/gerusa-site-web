@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
 import {
   Container,
@@ -41,9 +42,9 @@ function App() {
   return (
     <>
       <Container>
-        {/* <HeaderComponent /> */}
-        <h1>SITE EM CONSTRUÇÃO</h1>
-        {/* {isButtonClicked === 'none' ? (
+        <HeaderTop />
+        <HeaderComponent />
+        {isButtonClicked === 'none' ? (
           <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
@@ -170,7 +171,7 @@ function App() {
           </Cards>
         </ContainerCards>
 
-        <Footer /> */}
+        <Footer />
       </Container>
     </>
   )
