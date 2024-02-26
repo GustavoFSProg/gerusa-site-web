@@ -25,7 +25,7 @@ import card2 from './assets/bandeira.jpeg'
 import card3 from './assets/inglaterra-2.jpg'
 import Footer from './components/Footer/Footer'
 import MenuMobile from './components/MenuMobile/MenuMobile'
-import whats from './assets/canvas.jpeg'
+import whats from './assets/whats.png'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -41,9 +41,9 @@ function App() {
   return (
     <>
       <Container>
-        {/* <HeaderComponent /> */}
-        <h1>SITE EM CONSTRUÇÃO</h1>
-        {/* {isButtonClicked === 'none' ? (
+        <HeaderComponent />
+        {/* <h1>SITE EM CONSTRUÇÃO</h1> */}
+        {isButtonClicked === 'none' ? (
           <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
@@ -170,7 +170,7 @@ function App() {
           </Cards>
         </ContainerCards>
 
-        <Footer /> */}
+        <Footer />
       </Container>
     </>
   )
