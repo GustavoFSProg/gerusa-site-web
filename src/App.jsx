@@ -41,9 +41,12 @@ function App() {
   return (
     <>
       <Container>
-        <HeaderComponent />
+        <h1>UNDER CONSTRUCTION!</h1>
+        <br />
+        <h1>EM CONSTRUÇÃO!</h1>
+        {/* <HeaderComponent /> */}
         {/* <h1>SITE EM CONSTRUÇÃO</h1> */}
-        {isButtonClicked === 'none' ? (
+        {/* {isButtonClicked === 'none' ? (
           <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
@@ -93,9 +96,9 @@ function App() {
           >
             <MenuMobile />
           </div>
-        ) : null}
+        ) : null} */}
 
-        <ContainerImagens>
+        {/* <ContainerImagens>
           <ImgSlide
             src={slide}
             alt="slide"
@@ -170,7 +173,7 @@ function App() {
           </Cards>
         </ContainerCards>
 
-        <Footer />
+        <Footer /> */}
       </Container>
     </>
   )
