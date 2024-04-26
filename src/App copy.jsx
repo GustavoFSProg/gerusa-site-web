@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
 import {
   Container,
@@ -25,7 +26,7 @@ import card2 from './assets/bandeira.jpeg'
 import card3 from './assets/inglaterra-2.jpg'
 import Footer from './components/Footer/Footer'
 import MenuMobile from './components/MenuMobile/MenuMobile'
-import whats from './assets/whats.png'
+import whats from './assets/canvas.jpeg'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -41,12 +42,9 @@ function App() {
   return (
     <>
       <Container>
-        <h1>UNDER CONSTRUCTION!</h1>
-        <br />
-        <h1>EM CONSTRUÇÃO!</h1>
-        {/* <HeaderComponent /> */}
-        {/* <h1>SITE EM CONSTRUÇÃO</h1> */}
-        {/* {isButtonClicked === 'none' ? (
+        <HeaderTop />
+        <HeaderComponent />
+        {isButtonClicked === 'none' ? (
           <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
@@ -96,9 +94,9 @@ function App() {
           >
             <MenuMobile />
           </div>
-        ) : null} */}
+        ) : null}
 
-        {/* <ContainerImagens>
+        <ContainerImagens>
           <ImgSlide
             src={slide}
             alt="slide"
@@ -134,10 +132,10 @@ function App() {
         </WhatsContainer>
 
         <ContainerText>
-          Sou Gerusa A. Sohne Gamm. Sou tradutora de alemão e inglês. Trabalho há mais de 10 anos
-          como tradutora. Sou formada en letras na UFRGS com mestrado em germanística na
-          universidade de Bonn na Alemanha. Morei 6 anos na Alemanha. Tanbém comecei a estudar a
-          língua inglesa, e trabalhar como tradutora de inglês.
+          Sou Gerusa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus arcu ut
+          leo pulvinar porttitor. Donec magna eros, pulvinar et placerat quis, sagittis vel leo.
+          Proin egestas quis enim ac pulvinar. Nunc leo sapien, pretium a tempus ac, blandit a
+          risus. Sed dapibus tristique nisl quis tempor. Morbi fringilla quis enim eu facilisis.
         </ContainerText>
         <ContainerCards>
           <Cards>
@@ -173,7 +171,7 @@ function App() {
           </Cards>
         </ContainerCards>
 
-        <Footer /> */}
+        <Footer />
       </Container>
     </>
   )
