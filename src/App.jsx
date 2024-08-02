@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import HeaderTop from './components/HeaderTop/HeaderTop'
 import HeaderComponent from './components/Header/Header'
 import {
   Container,
@@ -26,7 +25,7 @@ import card2 from './assets/bandeira.jpeg'
 import card3 from './assets/inglaterra-2.jpg'
 import Footer from './components/Footer/Footer'
 import MenuMobile from './components/MenuMobile/MenuMobile'
-import whats from './assets/canvas.jpeg'
+import whats from './assets/whats.png'
 
 function App() {
   const [isButtonClicked, setIsButtonClicked] = useState('none')
@@ -42,9 +41,12 @@ function App() {
   return (
     <>
       <Container>
-        <HeaderTop />
-        <HeaderComponent />
-        {isButtonClicked === 'none' ? (
+        <h1>UNDER CONSTRUCTION!</h1>
+        <br />
+        <h1>EM CONSTRUÇÃO!</h1>
+        {/* <HeaderComponent /> */}
+        {/* <h1>SITE EM CONSTRUÇÃO</h1> */}
+        {/* {isButtonClicked === 'none' ? (
           <Menu>
             <button
               onMouseLeave={() => handleDismissButtonClicked()}
@@ -94,9 +96,9 @@ function App() {
           >
             <MenuMobile />
           </div>
-        ) : null}
+        ) : null} */}
 
-        <ContainerImagens>
+        {/* <ContainerImagens>
           <ImgSlide
             src={slide}
             alt="slide"
@@ -171,7 +173,7 @@ function App() {
           </Cards>
         </ContainerCards>
 
-        <Footer />
+        <Footer /> */}
       </Container>
     </>
   )
